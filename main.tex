@@ -1,2 +1,144 @@
-\document
+\documentclass[12pt, a4paper]{report} % hoặc book
+\input{packages.tex}
+\geometry{
+    top=1cm,          % Lề trên 1cm, bao gồm header
+    bottom=1cm,       % Lề dưới 1cm, bao gồm footer
+    left=1.25cm,
+    right=1cm,
+    headheight=12pt,  % Chiều cao header
+    headsep=5mm,      % Khoảng cách từ header đến text
+    footskip=8mm,     % Khoảng cách từ text đến footer
+    includehead,      % Bao gồm header trong printable area
+    includefoot       % Bao gồm footer trong printable area
+}
+% \usepackage{showframe} % Hiển thị khung lề
+\usepackage{fancyhdr} % tùy chỉnh header & footer
+\usepackage{layouts}   % Thêm gói layouts để hiển thị kích thước
+% \usepackage{fontspec}
+% \setmainfont{Calibri}
+\usepackage[hidelinks]{hyperref}
+\onehalfspacing   % giãn dòng 1.5
+\bibliographystyle{agsm}     % định dạng Harvard (có thể thay đổi)
+% Đặt kiểu header/footer
+\pagestyle{fancy}
+\fancyhf{} % xóa sạch mặc định
+
+% Header: odd/even (tự động lấy Chapter/Section)
+\fancyhead[LO]{\leftmark}   % trang lẻ: Chapter
+\fancyhead[RE]{\rightmark}  % trang chẵn: Section
+
+% Footer: tác giả + số trang
+\fancyfoot[L]{Written by: Doan Quoc Viet - BD00536} 
+\fancyfoot[R]{\thepage}
+
+% Làm Chapter và Section hiện đúng trong header
+\renewcommand{\chaptermark}[1]{%
+  \markboth{Chapter \thechapter: #1}{}} % Đặt \rightmark rỗng khi bắt đầu chương mới
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection: #1}} % Cập nhật \rightmark khi có Section mới
+
+
+
+\begin{document}
+% Dùng title case cho các chapter và tiêu đề sau chapter (1.1)
+% Không viết hoa: mạo từ (a, an, the), giới từ (in, of,...), liên từ đồng đẳng (and, or, but)
+% Không chuyển động từ của tiêu đề sang danh động từ, trừ khi brief yêu cầu
+
+% Hiển thị sơ đồ bố cục chi tiết (chỉ chạy một lần để xem)
+%\currentpage
+%\pagedesign
+
+\tableofcontents 
+
+\newpage
+
+
+\section*{Introduction}
+Mathematics is the foundation of the fields of software engineering and information technology (IT), where discrete mathematics plays an important role in solving complex computational problems. Discrete mathematics, which includes fields such as set theory, graph theory, Boolean algebra, and abstract algebra, equips software engineers with the tools to design efficient algorithms, model data structures, and ensure robust system performance. For example, concepts from discrete mathematics are integral to database query optimization, cryptographic protocols, network routing algorithms, and logic circuit design, enabling practical solutions to real-world challenges (Rosen, 2018).
+
+The application of discrete mathematics in software engineering offers significant benefits. It allows developers to create optimized algorithms with improved time and space complexity, as seen in sorting and searching techniques. Furthermore, discrete structures such as graphs facilitate the modeling of relationships in social networks or communication systems. At the same time, Boolean algebra supports the development of reliable digital circuits, and abstract algebra helps understand symmetries in computational problems (Epp, 2010). By mastering these concepts, engineers can solve complex problems of accuracy and scalability. This assignment explores the practical applications of discrete mathematics in software engineering through a structured analysis organized into four chapters.
+
+Chapter 1 focuses on set theory and its relevance to software engineering \hyperref[chap:LO1]{(LO1)}. In Section 1.1, operations on algebraic sets will be applied to solve a problem \hyperref[sec:P1]{(P1)}. Section 1.2 determines the cardinality of a multiset by factoring it, expressing the result as individual multisets \hyperref[sec:P1]{(P2)}. Section 1.3 discusses finding the inverse of a function using appropriate mathematical techniques \hyperref[sec:M1]{(M1)}. Finally, Section 1.4 develops proof principles for verifying properties of sets using membership tables and subset relations \hyperref[sec:D1]{(D1)}. 
+
+Chapter 2 reviews graph theory and its role in modeling mathematical structures \hyperref[chap:LO2]{(LO2)}. Section 2.1 models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights \hyperref[sec:P3]{(P3)}. Section 2.2 applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph \hyperref[sec:P4]{(P4)}. Section 2.3 evaluates the existence of Euler and Hamiltonian cycles in an undirected graph \hyperref[sec:M2]{(M2)}. Finally, Section 2.4 constructs a proof of the Five Color Theorem \hyperref[sec:D4]{D4}.
+
+Chapter 3 investigates solutions to problem situations using Boolean algebra (LO3). Section 3.1 discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications (P5). Section 3.2 generates truth tables and corresponding Boolean equations from application situations (P6). Section 3.3 simplifies Boolean equations using algebraic methods (M3). Finally, Section 3.4 designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal (D3).
+
+Chapter 4 explores concepts applied in abstract algebra (LO4). Section 4.1 describes the distinguishing features of different binary operations performed on the same set (P7). Section 4.2 determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem (P8). Section 4.3 confirms whether a given set with a binary operation forms a group (M4). Finally, Section 4.4 explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design (D4).
+
+% All sources referenced in this assignment are documented in the References section.
+
+\chapter{Examine Set Theory and Functions Applicable to Software Engineering (LO1)}
+\label{chap:LO1}
+\section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
+% \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
+\label{sec:P1}
+
+\section{Determine the Cardinality of a Given Bag (Multiset) (P2)}
+\label{sec:P2}
+\section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}
+\label{sec:M1}
+
+
+
+\section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
+\label{sec:D1}
+
+\chapter{Analyze Mathematical Structures of Objects Using Graph Theory (LO2)}
+\label{chap:LO2}
+
+\section{Model Contextualized Problems Using Trees, both Quantitatively and Qualitatively (P3)}
+\label{sec:P3}
+
+
+\section{Use Dijkstra’s Algorithm to Find a Shortest Path Spanning Tree in Graph (P4)}
+\label{sec:P4}
+
+\section{Assess whether an Eulerian and Hamiltonian Circuit Exists in an Undirected Graph (M2)}
+\label{sec:M2}
+
+\section{Construct a Proof of the Five-Color Theorem (D2)}
+\label{sec:D2}
+
+\chapter{Investigate Solutions to Problem Situations Using the Application of Boolean Algebra (LO3)}
+\label{chap:LO3}
+
+\section{Diagram a Binary Problem in the Application of Boolean Algebra (P5)}
+\label{sec:P5}
+
+\section{Produce a Truth Table and Its Corresponding Boolean Equation from an Applicable Scenario (P6)}
+\label{sec:P6}
+
+\section{Simplify a Boolean Equation Using Algebraic Methods (M3)}
+\label{sec:M3}
+
+\section{Design a Complex System Using Logic Gates (D1)}
+\label{sec:D1}
+
+\chapter{Explore Applicable Concepts within Abstract Algebra (LO4)}
+\label{chap:LO4}
+
+\section{Describe the Distinguishing Characteristics of Different Binary Operations that are Performed on the same Set (P7)}
+\label{sec:P7}
+
+\section{Determine the Order of a Group and the Order of a Subgroup in Given Examples (P8)}
+\label{sec:P8}
+
+\section{Validate whether a Given Set with a Binary Operation is indeed a Group (M4)}
+\label{sec:M4}
+
+\section{Explore, with the Aid of a Prepared Presentation, the Application of Group Theory Relevant to your Given Example (D4)}
+\label{sec:D4}
+
+
+\cite{doe2021}
+\newpage
+\section*{Conclusion}
+\newpage
+\section*{Evaluation}
+
+\bibliography{references}
+
+\end{document}
+
 
