@@ -58,21 +58,55 @@ Mathematics is the foundation of the fields of software engineering and informat
 
 The application of discrete mathematics in software engineering offers significant benefits. It allows developers to create optimized algorithms with improved time and space complexity, as seen in sorting and searching techniques. Furthermore, discrete structures such as graphs facilitate the modeling of relationships in social networks or communication systems. At the same time, Boolean algebra supports the development of reliable digital circuits, and abstract algebra helps understand symmetries in computational problems (Epp, 2010). By mastering these concepts, engineers can solve complex problems of accuracy and scalability. This assignment explores the practical applications of discrete mathematics in software engineering through a structured analysis organized into four chapters.
 
-Chapter 1 focuses on set theory and its relevance to software engineering \hyperref[chap:LO1]{(LO1)}. In Section 1.1, operations on algebraic sets will be applied to solve a problem \hyperref[sec:P1]{(P1)}. Section 1.2 determines the cardinality of a multiset by factoring it, expressing the result as individual multisets \hyperref[sec:P1]{(P2)}. Section 1.3 discusses finding the inverse of a function using appropriate mathematical techniques \hyperref[sec:M1]{(M1)}. Finally, Section 1.4 develops proof principles for verifying properties of sets using membership tables and subset relations \hyperref[sec:D1]{(D1)}. 
+% Tham chiếu chéo
 
-Chapter 2 reviews graph theory and its role in modeling mathematical structures \hyperref[chap:LO2]{(LO2)}. Section 2.1 models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights \hyperref[sec:P3]{(P3)}. Section 2.2 applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph \hyperref[sec:P4]{(P4)}. Section 2.3 evaluates the existence of Euler and Hamiltonian cycles in an undirected graph \hyperref[sec:M2]{(M2)}. Finally, Section 2.4 constructs a proof of the Five Color Theorem \hyperref[sec:D4]{D4}.
+\begin{itemize}
+  \item Chapter 1 focuses on set theory and its relevance to software engineering \hyperref[chap:LO1]{(LO1)}.
+  \begin{itemize}
+    \item In Section 1.1, operations on algebraic sets will be applied to solve a problem \hyperref[sec:P1]{(P1)}.
+    \item Section 1.2 determines the cardinality of a multiset by factoring it, expressing the result as individual multisets \hyperref[sec:P1]{(P2)}.
+    \item Section 1.3 discusses finding the inverse of a function using appropriate mathematical techniques \hyperref[sec:M1]{(M1)}.
+    \item Finally, Section 1.4 develops proof principles for verifying properties of sets using membership tables and subset relations \hyperref[sec:D1]{(D1)}.
+  \end{itemize}
+  \item Chapter 2 reviews graph theory and its role in modeling mathematical structures \hyperref[chap:LO2]{(LO2)}.
+  \begin{itemize}
+    \item Section 2.1 models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights \hyperref[sec:P3]{(P3)}.
+    \item Section 2.2 applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph \hyperref[sec:P4]{(P4)}.
+    \item Section 2.3 evaluates the existence of Euler and Hamiltonian cycles in an undirected graph \hyperref[sec:M2]{(M2)}.
+    \item Finally, Section 2.4 constructs a proof of the Five Color Theorem \hyperref[sec:D4]{(D4)}.
+  \end{itemize}
+  \item Chapter 3 investigates solutions to problem situations using Boolean algebra (LO3).
+  \begin{itemize}
+    \item Section 3.1 discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications (P5).
+    \item Section 3.2 generates truth tables and corresponding Boolean equations from application situations (P6).
+    \item Section 3.3 simplifies Boolean equations using algebraic methods (M3).
+    \item Finally, Section 3.4 designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal (D3).
+  \end{itemize}
+  \item Chapter 4 explores concepts applied in abstract algebra (LO4).
+  \begin{itemize}
+    \item Section 4.1 describes the distinguishing features of different binary operations performed on the same set (P7).
+    \item Section 4.2 determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem (P8).
+    \item Section 4.3 confirms whether a given set with a binary operation forms a group (M4).
+    \item Finally, Section 4.4 explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design (D4).
+  \end{itemize}
 
-Chapter 3 investigates solutions to problem situations using Boolean algebra (LO3). Section 3.1 discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications (P5). Section 3.2 generates truth tables and corresponding Boolean equations from application situations (P6). Section 3.3 simplifies Boolean equations using algebraic methods (M3). Finally, Section 3.4 designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal (D3).
+\end{itemize}
 
-Chapter 4 explores concepts applied in abstract algebra (LO4). Section 4.1 describes the distinguishing features of different binary operations performed on the same set (P7). Section 4.2 determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem (P8). Section 4.3 confirms whether a given set with a binary operation forms a group (M4). Finally, Section 4.4 explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design (D4).
+
 
 % All sources referenced in this assignment are documented in the References section.
 
 \chapter{Examine Set Theory and Functions Applicable to Software Engineering (LO1)}
-\label{chap:LO1}
+
+\label{chap:LO1}  % Đặt nhãn để tham chiếu chéo (cross-references)
+
+\cite{susanna2020}
 \section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
 % \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
 \label{sec:P1}
+
+\subsection{Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.}
+
 
 \section{Determine the Cardinality of a Given Bag (Multiset) (P2)}
 \label{sec:P2}
