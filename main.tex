@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{report} % hoặc book
+\documentclass[12pt, a4paper, twoside]{report} % hoặc book
 \input{packages.tex}
 \geometry{
     top=1cm,          % Lề trên 1cm, bao gồm header
@@ -35,7 +35,7 @@
 \renewcommand{\chaptermark}[1]{%
   \markboth{Chapter \thechapter: #1}{}} % Đặt \rightmark rỗng khi bắt đầu chương mới
 \renewcommand{\sectionmark}[1]{%
-  \markright{\thesection: #1}} % Cập nhật \rightmark khi có Section mới
+  \markright{\thesection. #1}} % Cập nhật \rightmark khi có Section mới
 
 
 
@@ -102,20 +102,241 @@ The application of discrete mathematics in software engineering offers significa
 
 \cite{susanna2020}
 \section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
-% \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
+% \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)} 
 \label{sec:P1}
+In this assignment
+\begin{itemize}
+  \item the symbol $\overline{9b}$ denotes a two-digit natural number,
+  \item the symbol $\overline{12a}$ represents a three-digit natural number.
+\end{itemize}
 
-\subsection{Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.}
+For example, if $a=3$, then $\overline{12a} = 123$.
 
+For each student, replace a and b with specific numerical values to obtain the final result.
+
+According to the requirement above, I need to address problems in this assignment using my ID, which is BD00536. $a$ and $b$ ($a < b$) represents the two largest numbers in my ID, so $a$ = 5 and $b$ = 6.
+
+I will address the issues listed below in the respective subsections in this Section:
+
+\begin{itemize}
+  \item Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.
+  \item Suppose $|A-B|=\overline{3a}$, $|A \cup B|=\overline {11b}$, and $|A \cap B|=\overline{1a}$. Determine $|B|$.
+  \item At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11a}$ have purchased fruits, $\overline {9b}$ have purchased vegetables, $\overline {8a}$ have purchased bakery items, $\overline{4b}$ have purchased both fruits and vegetables, $\overline{3b}$ have purchased both vegetables and bakery items, $\overline{2a}$ have purchased both fruits and bakery items, and $\overline{1a}$ have purchased all three categories. How many customers have not purchased anything?
+\end{itemize}
+
+In the following subsections I will address these issues and along the way use a = 5 and b = 6 as the two largest digits in my ID to demonstrate.
+
+
+\subsection{Determine the cardinality of set $A \cup B$}
+\subsubsection*{The Problem:}
+
+  Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.
+
+  To solve this problem, I need to determine the cardinality of the set $A \cup B$, based on the given information about the cardinalities of the sets $A$, $B$, and $A \cap B$. Here is the detailed solution:
+
+\subsubsection*{Given:}
+  Using \(a = 5\) and \(b = 6\) from my ID (BD00536), the cardinalities are computed as follows:
+  \begin{itemize}
+    \item The cardinality of set \(A\) is \(\overline{9b} = 96\).
+    \item The cardinality of set \(B\) is \(\overline{2a} = 25\).
+    \item The cardinality of set \(A \cap B\) is \(a + b = 5 + 6 = 11\).
+  \end{itemize}
+  I need to find the cardinality of the set \(A \cup B\).
+
+\subsubsection*{Formula:}
+  The cardinality of the union of two sets is given by the inclusion-exclusion principle:
+  \[
+  |A \cup B| = |A| + |B| - |A \cap B|
+  \]
+
+\subsubsection*{Substitution:}
+  Substituting the given values into the formula:
+  \[
+  |A \cup B| = 96 + 25 - 11
+  \]
+
+  Calculating step-by-step:
+  \begin{enumerate}
+    \item 96 + 25 = 121
+    \item 121 - 11 = 110
+  \end{enumerate}
+
+
+  Thus, the cardinality of the set \( A \cup B \) is:
+  \[
+  |A \cup B| = 110
+  \]
+
+\subsubsection*{Verification:}
+  To ensure the result is correct, I check the conditions:
+
+\begin{itemize}
+  \item \( |A \cap B| = 11 \), meaning the intersection \( A \cap B \) has 11 elements.
+  \item Since \( |A \cap B| \leq |A| \) and \( |A \cap B| \leq |B| \), we have \( 11 \leq 96 \) and \( 11 \leq 25 \), both of which are satisfied.
+  \item The sets \( A \) and \( B \) are non-empty and finite, which aligns with the assumptions.
+\end{itemize}
+
+
+Therefore, there are no contradictions, and the calculation is valid.
+
+\subsubsection*{Conclusion:}
+The cardinality of the set \( A \cup B \) is $\boxed{110}$.
+
+
+\subsection{Determine $| B |$}
+
+\subsubsection*{The Problem:}
+  Suppose $|A-B|=\overline{3a}$, $|A \cup B|=\overline {11b}$, and $|A \cap B|=\overline{1a}$. Determine $|B|$.
+
+\subsubsection*{Given:}
+  Using \(a = 5\) and \(b = 6\) from my ID (BD00536), and based on the given problem we have the following data:
+  \begin{itemize}
+    \item $\vert A - B \vert = \overline{3a} = 35$
+    \item $\vert A \cup B \vert = \overline{11b} = 116$
+    \item $\vert A \cap B \vert = \overline{1a} = 15$
+  \end{itemize}
+  Let's determine $|B|$
+
+\subsubsection*{Formula:}
+  I will use the \textbf{principle of inclusion-exclusion} to determine $|B|$:
+    \[
+    |A \cup B| = |A| + |B| - |A \cap B| \tag{1}
+    \]
+
+\subsubsection*{Substitution:}
+  \[
+  116 = |A| + |B| - 15.
+  \]
+  \[
+  |A| + |B| = 116 + 15 = 131. \tag{2}
+  \]
+
+  For \( |A - B| \):
+  \[
+  |A - B| = |A| - |A \cap B|.
+  \]
+
+  \[
+  35 = |A| - 15.
+  \]
+
+  \[
+  |A| = 35 + 15 = 50.
+  \]
+
+  Substitute \( |A| = 50 \) into equation (2):
+  \[
+  50 + |B| = 131.
+  \]
+
+  \[
+  |B| = 131 - 50 = 81.
+  \]
+
+\subsubsection*{Verification:}
+  \begin{itemize}
+    \item $|A|=50, |B|=81,|A\cap B|=15.$
+    \item Check: $|A \cup B| = |A| + |B| - |A \cap B| = 50 + 81 - 15 = 116$, which matches.
+    \item Check: $|A - B| = |A| - |A \cap B| = 50 - 15 = 35$, which matches.
+  \end{itemize}
+
+\subsubsection*{Conclusion:}
+Final answer: \boxed{81}
+
+\subsection{How many customers have not purchased anything?}
+
+\subsubsection*{The Problem:}
+At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11a}$ have purchased fruits, $\overline {9b}$ have purchased vegetables, $\overline {8a}$ have purchased bakery items, $\overline{4b}$ have purchased both fruits and vegetables, $\overline{3b}$ have purchased both vegetables and bakery items, $\overline{2a}$ have purchased both fruits and bakery items, and $\overline{1a}$ have purchased all three categories. How many customers have not purchased anything?
+\subsubsection*{Given:}
+  Using \(a = 5\) and \(b = 6\) from my ID (BD00536), and based on the given problem we have the following data:
+
+  \begin{itemize}
+    \item There are $\overline{35b} = 356$ customers:
+    \begin{itemize}
+      \item $\overline{11a} = 115$ have purchased fruits.
+      \item $\overline{9b} = 96$ have purchased vegetables.
+      \item $\overline{8a} = 85$ have purchased bakery items.
+      \item $\overline{4b} = 46$ have purchased both fruits and vegetables.
+      \item $\overline{3b} = 36$ have purchased both vegetables and bakery items.
+      \item $\overline{2a} = 25$ have purchased both fruits and bakery items.
+      \item $\overline{1a} = 15$ have purchased all three categories.
+    \end{itemize}
+    \item Let:
+    \begin{itemize}
+      \item $U$ be the set of all customers.
+      \item $A$ is the set of customers who bought fruits.
+      \item $B$ is the set of customers who bought vegetables.
+      \item $C$ is the set of customers who bought bakery items.
+      \item $D$ is the set of customers who bought all there categories.
+      \item $E$ is the set of customers who bought nothing.
+    \end{itemize}
+    \item Based on the given data, we refine the above data to support solving the problem in a simpler way by using the concepts of sets and we will use these facts to find the number of customers who bought nothing:
+    \begin{itemize}
+      \item $|U| = 356$
+      \item $|A| = 115$
+      \item $|B| = 96$
+      \item $|C| = 85$
+      \item $|A \cap B| = 46$
+      \item $|B \cap C| = 36$
+      \item $|A \cap C| = 25$
+      \item $|D| = |A \cup B \cup C| = 15$
+      \item $|E|$?
+    \end{itemize}
+  \end{itemize}
+\subsubsection*{Formula:}
+  We can get \textbf{the number of customers who bought nothing ($|E|$)} by subtracting \textbf{the number of customers who bought at least one category ($|D|$)} from the \textbf{total number of customers ($|U|$)}, which means:
+  \[
+  |E| = |U| - |D|
+  \]
+  or 
+  \[
+  |E| = |U| - |A \cup B \cup C| \tag{1}
+  \]
+
+  I will use the \textbf{principle of inclusion-exclusion} for three sets to determine the number of customers who bought nothing at the store, which is |E|:
+    \[
+    |A \cup B \cup C| = |A| + |B|+|C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C| \tag{2}
+    \]
+
+\subsubsection*{Substitution:}
+  Substitute the data we have in the given part into equation (2), we have:
+  \[
+  |D| = |A \cup B \cup C| = 115 + 96 + 85 - 46 - 36 - 25 + 15 = 204
+  \]
+
+  Substitute $|D|$ we just got above and $|U|$ into the equation (1) to find $|E|$, we have:
+  \[
+  |E| = 356 - 204 = 152
+  \]
+
+
+
+\subsubsection*{Verification:}
+To confirm the union calculation step-by-step:
+\begin{itemize}
+  \item Sum of individual sets: $115 + 96 + 85 = 296$
+  \item Subtract pairwise intersections: $296 - 46 - 36 - 25 = 296 - 107 = 189$
+  \item Add back the triple intersection: $189 + 15 = 204$
+
+\end{itemize}
+This matches the result I did above, so the number of customers who purchased nothing is indeed 152.
+
+
+\subsubsection*{Conclusion:}
+The number of customers who have not purchased anything is \boxed{152}.
 
 \section{Determine the Cardinality of a Given Bag (Multiset) (P2)}
 \label{sec:P2}
+
+
 \section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}
+
 \label{sec:M1}
 
 
 
 \section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
+
 \label{sec:D1}
 
 \chapter{Analyze Mathematical Structures of Objects Using Graph Theory (LO2)}
