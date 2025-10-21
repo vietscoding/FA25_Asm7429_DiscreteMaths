@@ -211,8 +211,8 @@ The cardinality of the set \( A \cup B \) is $\boxed{110}$.
 
 \subsubsection*{Substitution:}
   \begin{align*}
-    116 &= |A| + |B| - 15 //
-    |A| + |B| &= 131. \tag{2}
+    116 = &|A| + |B| - 15 \\
+    &|A| + |B| = 131. \tag{2}
   \end{align*}
 
   For \( |A - B| \):
@@ -239,7 +239,7 @@ The cardinality of the set \( A \cup B \) is $\boxed{110}$.
 
 \subsubsection*{Verification:}
   \begin{itemize}
-    \item $|A|=50, |B|=81,|A\cap B|=15.$
+    \item $|A|=50, |B|=81,|A\cap B|=15$.
     \item Check: $|A \cup B| = |A| + |B| - |A \cap B| = 50 + 81 - 15 = 116$, which matches.
     \item Check: $|A - B| = |A| - |A \cap B| = 50 - 15 = 35$, which matches.
   \end{itemize}
@@ -326,37 +326,6 @@ This matches the result I did above, so the number of customers who purchased no
 The number of customers who have not purchased anything is \boxed{152}.
 \section{Determine the Cardinality of a Given Bag (Multiset) (P2)}
 \label{sec:P2}
-\subsection{List the bag of prime factors for each of the provided numbers}
-\subsubsection*{The Problem:}
-List the bag of prime factors for each of the provided numbers.
-  \begin{itemize}
-    \item $\overline{1a2}$
-    \item $\overline{2b0}$
-  \end{itemize}
-
-
-\subsubsection*{Given:}
-\subsubsection*{Formula:}
-\subsubsection*{Substitution:}
-\subsubsection*{Verification:}
-\subsubsection*{Conclusion:}
-
-\subsection{Find the cardinalities}
-
-\subsubsection*{The Problem:}
-Find the cardinalities of
-  \begin{itemize}
-    \item each of the bags above.
-    \item the intersection of the bags above.
-    \item the union of the bags above.
-    \item the difference of the bags above.
-  \end{itemize}
-
-\subsubsection*{Given:}
-\subsubsection*{Formula:}
-\subsubsection*{Substitution:}
-\subsubsection*{Verification:}
-\subsubsection*{Conclusion:}
 
 \subsection{List the bag of prime factors for each of the provided numbers}
 
@@ -569,12 +538,369 @@ The cardinalities are:
 \]
 
 \section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}
-
 \label{sec:M1}
 
-\section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
+\subsection{Ascertain whether the given functions are invertible}
 
+\subsubsection*{The Problem:}
+Ascertain whether the given functions are invertible. If they are, identify the rule for the inverse function \( f^{-1} \).
+\begin{itemize}
+  \item \( f: \mathbb{R} \rightarrow \mathbb{R} \) with \( f(x) = bx + a \).
+  \item \( f: [-b, +\infty) \rightarrow [0, +\infty) \) with \( f(x) = \sqrt{x + b} \).
+\end{itemize}
+
+\subsubsection*{Given:}
+Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
+\begin{itemize}
+  \item First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \).
+  \item Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \).
+\end{itemize}
+To determine if each function is invertible, we must check if it is bijective (injective and surjective) on its given domain and codomain \cite{epp2020}. If invertible, we find the inverse by solving \( y = f(x) \) for \( x \) in terms of \( y \).
+
+\subsubsection*{Formula:}
+A function \( f: A \rightarrow B \) is invertible if it is bijective \cite{epp2020}:
+\begin{itemize}
+  \item \textbf{Injective} (one-to-one): \( f(x_1) = f(x_2) \implies x_1 = x_2 \).
+  \item \textbf{Surjective} (onto): For every \( y \in B \), there exists \( x \in A \) such that \( f(x) = y \).
+\end{itemize}
+To find the inverse \( f^{-1} \), set \( y = f(x) \), solve for \( x \), and express \( x = f^{-1}(y) \), then swap variables to write \( f^{-1}(x) \).
+
+\subsubsection*{Substitution:}
+We analyze each function separately.
+
+\textbf{First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \):}
+\begin{itemize}
+  \item \textbf{Injectivity}: Suppose \( f(x_1) = f(x_2) \).
+    \[
+    6x_1 + 5 = 6x_2 + 5
+    \]
+    \[
+    6x_1 = 6x_2 \implies x_1 = x_2
+    \]
+    Since the coefficient of \( x \) is non-zero (\( b = 6 \neq 0 \)), the function is injective.
+  \item \textbf{Surjectivity}: For any \( y \in \mathbb{R} \), solve \( y = f(x) = 6x + 5 \):
+    \[
+    y = 6x + 5 \implies 6x = y - 5 \implies x = \frac{y - 5}{6}
+    \]
+    Since \( y \in \mathbb{R} \), \( x \in \mathbb{R} \), so there exists an \( x \) for every \( y \), making \( f \) surjective.
+  \item Since \( f \) is bijective, it is invertible. To find the inverse, set \( y = f(x) \):
+    \[
+    y = 6x + 5 \implies y - 5 = 6x \implies x = \frac{y - 5}{6}
+    \]
+    Thus, the inverse is:
+    \[
+    f^{-1}(y) = \frac{y - 5}{6}
+    \]
+    Swapping variables:
+    \[
+    f^{-1}(x) = \frac{x - 5}{6}
+    \]
+\end{itemize}
+
+\textbf{Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \):}
+\begin{itemize}
+  \item \textbf{Injectivity}: Suppose \( f(x_1) = f(x_2) \).
+    \[
+    \sqrt{x_1 + 6} = \sqrt{x_2 + 6}
+    \]
+    Since the square root function is one-to-one on \( [0, +\infty) \), square both sides:
+    \[
+    x_1 + 6 = x_2 + 6 \implies x_1 = x_2
+    \]
+    Thus, \( f \) is injective.
+  \item \textbf{Surjectivity}: For any \( y \in [0, +\infty) \), solve \( y = f(x) = \sqrt{x + 6} \):
+    \[
+    y = \sqrt{x + 6} \implies y^2 = x + 6 \implies x = y^2 - 6
+    \]
+    For \( x \in [-6, +\infty) \), we need \( y^2 - 6 \geq -6 \), which simplifies to \( y^2 \geq 0 \), true for all \( y \in \mathbb{R} \). Since \( y \geq 0 \), \( x = y^2 - 6 \) is defined and in the domain, so \( f \) is surjective.
+  \item Since \( f \) is bijective, it is invertible. To find the inverse, from the above:
+    \[
+    y = \sqrt{x + 6} \implies y^2 = x + 6 \implies x = y^2 - 6
+    \]
+    Thus:
+    \[
+    f^{-1}(y) = y^2 - 6
+    \]
+    Swapping variables, with the domain of \( f^{-1} \) being the codomain of \( f \), \( [0, +\infty) \):
+    \[
+    f^{-1}(x) = x^2 - 6, \quad x \geq 0
+    \]
+\end{itemize}
+
+\subsubsection*{Verification:}
+\begin{itemize}
+  \item \textbf{First function}: Verify \( f(f^{-1}(x)) = x \):
+    \[
+    f(f^{-1}(x)) = f\left( \frac{x - 5}{6} \right) = 6 \cdot \frac{x - 5}{6} + 5 = (x - 5) + 5 = x
+    \]
+    Verify \( f^{-1}(f(x)) = x \):
+    \[
+    f^{-1}(f(x)) = f^{-1}(6x + 5) = \frac{(6x + 5) - 5}{6} = \frac{6x}{6} = x
+    \]
+    Both compositions confirm the inverse.
+  \item \textbf{Second function}: Verify \( f(f^{-1}(x)) = x \) for \( x \geq 0 \):
+    \[
+    f(f^{-1}(x)) = f(x^2 - 6) = \sqrt{(x^2 - 6) + 6} = \sqrt{x^2} = x \quad (\text{since } x \geq 0)
+    \]
+    Verify \( f^{-1}(f(x)) = x \) for \( x \geq -6 \):
+    \[
+    f^{-1}(f(x)) = f^{-1}(\sqrt{x + 6}) = (\sqrt{x + 6})^2 - 6 = (x + 6) - 6 = x
+    \]
+    Both compositions confirm the inverse.
+\end{itemize}
+
+\subsubsection*{Conclusion:}
+Both functions are invertible:
+\begin{itemize}
+  \item For \( f(x) = 6x + 5 \), the inverse is:
+    \[
+    f^{-1}(x) = \frac{x - 5}{6}
+    \]
+  \item For \( f(x) = \sqrt{x + 6} \), the inverse is:
+    \[
+    f^{-1}(x) = x^2 - 6, \quad x \geq 0
+    \]
+\end{itemize}
+\[
+\boxed{
+\begin{array}{l}
+f(x) = 6x + 5: \quad f^{-1}(x) = \frac{x - 5}{6} \\
+f(x) = \sqrt{x + 6}: \quad f^{-1}(x) = x^2 - 6, \quad x \geq 0
+\end{array}
+}
+\]
+
+\subsection{Find \( g \circ f \)}
+
+\subsubsection*{The Problem:}
+Let \( f, g: \mathbb{R} \rightarrow \mathbb{R} \) be defined as \( f(x) = \begin{cases} 2x + a, & x < 0 \\ x^3 + b, & x \geq 0 \end{cases} \) and \( g(x) = bx - a \). Find \( g \circ f \).
+
+\subsubsection*{Given:}
+Using \( a = 5 \) and \( b = 6 \), we have:
+\begin{itemize}
+  \item \( f(x) = \begin{cases} 2x + 5, & x < 0 \\ x^3 + 6, & x \geq 0 \end{cases} \)
+  \item \( g(x) = 6x - 5 \)
+\end{itemize}
+The composition \( g \circ f \) is defined as \( (g \circ f)(x) = g(f(x)) \).
+
+\subsubsection*{Formula:}
+For functions \( f \) and \( g \), the composition is \( (g \circ f)(x) = g(f(x)) \), where we apply \( f \) first, then \( g \) to the result \cite{rosen2019}. Since \( f \) is piecewise, we compute \( g(f(x)) \) for each case of \( f \).
+
+\subsubsection*{Substitution:}
+Since \( f \) is defined piecewise, we compute \( g \circ f \) for each case.
+
+\textbf{Case 1: \( x < 0 \)}:
+\[
+f(x) = 2x + 5
+\]
+\[
+(g \circ f)(x) = g(f(x)) = g(2x + 5) = 6(2x + 5) - 5 = 12x + 30 - 5 = 12x + 25
+\]
+
+\textbf{Case 2: \( x \geq 0 \)}:
+\[
+f(x) = x^3 + 6
+\]
+\[
+(g \circ f)(x) = g(f(x)) = g(x^3 + 6) = 6(x^3 + 6) - 5 = 6x^3 + 36 - 5 = 6x^3 + 31
+\]
+
+Thus, the composition is:
+\[
+(g \circ f)(x) = \begin{cases} 
+12x + 25, & x < 0 \\
+6x^3 + 31, & x \geq 0 
+\end{cases}
+\]
+
+\subsubsection*{Verification:}
+Test the composition at boundary and interior points:
+\begin{itemize}
+  \item For \( x = -1 \) (Case 1):
+    \[
+    f(-1) = 2(-1) + 5 = -2 + 5 = 3, \quad g(f(-1)) = g(3) = 6 \cdot 3 - 5 = 18 - 5 = 13
+    \]
+    Using the formula: \( 12(-1) + 25 = -12 + 25 = 13 \). Correct.
+  \item For \( x = 0 \) (Case 2):
+    \[
+    f(0) = 0^3 + 6 = 6, \quad g(f(0)) = g(6) = 6 \cdot 6 - 5 = 36 - 5 = 31
+    \]
+    Using the formula: \( 6(0)^3 + 31 = 0 + 31 = 31 \). Correct.
+  \item For \( x = 1 \) (Case 2):
+    \[
+    f(1) = 1^3 + 6 = 1 + 6 = 7, \quad g(f(1)) = g(7) = 6 \cdot 7 - 5 = 42 - 5 = 37
+    \]
+    Using the formula: \( 6(1)^3 + 31 = 6 + 31 = 37 \). Correct.
+\end{itemize}
+The piecewise function correctly represents \( g \circ f \).
+
+\subsubsection*{Conclusion:}
+The composition is:
+\[
+(g \circ f)(x) = \begin{cases} 
+12x + 25, & x < 0 \\
+6x^3 + 31, & x \geq 0 
+\end{cases}
+\]
+\[
+\boxed{
+(g \circ f)(x) = \begin{cases} 
+12x + 25, & x < 0 \\
+6x^3 + 31, & x \geq 0 
+\end{cases}
+}
+\]
+
+\section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
 \label{sec:D1}
+
+\subsubsection*{The Problem:}
+
+
+Show that if $A$, $B$, and $C$ are sets, then $\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}$.
+
+In this section, I will solve the above problem in two ways which are presented respectively in the next two subsections.
+
+\subsection{Demonstrate that each side is a subset of the other side}
+\subsubsection*{Given:}
+\subsubsection*{Formula:}
+\subsubsection*{Substitution:}
+\subsubsection*{Verification:}
+\subsubsection*{Conclusion:}
+
+\subsection{Verify the equality using a membership table}
+\subsubsection*{Given:}
+\subsubsection*{Formula:}
+\subsubsection*{Substitution:}
+\subsubsection*{Verification:}
+\subsubsection*{Conclusion:}
+
+% D1
+\section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
+\label{sec:D1}
+
+\subsubsection*{The Problem:}
+Show that if \( A \), \( B \), and \( C \) are sets, then:
+\[
+\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+\]
+In this section, we will prove the equality in two ways: by demonstrating that each side is a subset of the other and by verifying the equality using a membership table.
+
+\subsection{Demonstrate that each side is a subset of the other side}
+
+\subsubsection*{Given:}
+Let \( A \), \( B \), and \( C \) be subsets of a universal set \( U \). We need to prove:
+\[
+\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+\]
+where \( \overline{S} \) denotes the complement of set \( S \) with respect to \( U \), i.e., \( \overline{S} = \{ x \in U \mid x \notin S \} \).
+
+\subsubsection*{Proof Strategy:}
+To prove set equality, we show that each side is a subset of the other \cite{epp2020}:
+\begin{itemize}
+  \item Show \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \): If \( x \in \overline{A \cup B \cup C} \), then \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \).
+  \item Show \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \): If \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \), then \( x \in \overline{A \cup B \cup C} \).
+\end{itemize}
+This establishes \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \).
+
+\subsubsection*{Proof:}
+\textbf{Part 1: Show \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \).}
+Let \( x \in \overline{A \cup B \cup C} \). By definition of the complement:
+\[
+x \in \overline{A \cup B \cup C} \implies x \notin A \cup B \cup C
+\]
+By the definition of union, \( x \notin A \cup B \cup C \) means:
+\[
+x \notin A \text{ and } x \notin B \text{ and } x \notin C
+\]
+This implies:
+\[
+x \in \overline{A} \text{ and } x \in \overline{B} \text{ and } x \in \overline{C} \implies x \in \overline{A} \cap \overline{B} \cap \overline{C}
+\]
+Thus, \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \).
+
+\textbf{Part 2: Show \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \).}
+Let \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \). By definition of intersection:
+\[
+x \in \overline{A} \cap \overline{B} \cap \overline{C} \implies x \in \overline{A} \text{ and } x \in \overline{B} \text{ and } x \in \overline{C}
+\]
+This means:
+\[
+x \notin A \text{ and } x \notin B \text{ and } x \notin C \implies x \notin A \cup B \cup C \implies x \in \overline{A \cup B \cup C}
+\]
+Thus, \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \).
+
+Since both inclusions hold, we conclude:
+\[
+\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+\]
+
+\subsubsection*{Verification:}
+To verify, consider the logical equivalence of De Morgan’s Law. For any element \( x \):
+\begin{itemize}
+  \item \( x \in \overline{A \cup B \cup C} \) means \( x \notin A \cup B \cup C \), i.e., \( x \) is not in \( A \), \( B \), or \( C \).
+  \item \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \) means \( x \in \overline{A} \), \( x \in \overline{B} \), and \( x \in \overline{C} \), i.e., \( x \notin A \), \( x \notin B \), and \( x \notin C \).
+\end{itemize}
+Both expressions describe the same set of elements, confirming the equality.
+
+\subsubsection*{Conclusion:}
+The set equality \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) is proven by showing mutual subset inclusion.
+
+\subsection{Verify the equality using a membership table}
+
+\subsubsection*{Given:}
+Let \( A \), \( B \), and \( C \) be subsets of a universal set \( U \). We need to verify:
+\[
+\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+\]
+using a membership table, which lists all possible combinations of membership for an element \( x \in U \) in sets \( A \), \( B \), and \( C \).
+
+\subsubsection*{Formula:}
+A membership table lists whether an element \( x \) belongs to each set (1 for in, 0 for not in) and evaluates both sides of the equality \cite{rosen2019}. For three sets, there are \( 2^3 = 8 \) combinations. The table compares membership in \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \). If the columns match, the equality holds.
+
+\subsubsection*{Substitution:}
+Construct the membership table with columns for \( A \), \( B \), \( C \), \( A \cup B \cup C \), \( \overline{A \cup B \cup C} \), \( \overline{A} \), \( \overline{B} \), \( \overline{C} \), and \( \overline{A} \cap \overline{B} \cap \overline{C} \).
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\( A \) & \( B \) & \( C \) & \( A \cup B \cup C \) & \( \overline{A \cup B \cup C} \) & \( \overline{A} \) & \( \overline{B} \) & \( \overline{C} \) & \( \overline{A} \cap \overline{B} \cap \overline{C} \) \\
+\hline
+1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+1 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+0 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
+0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Explanation of columns:}
+\begin{itemize}
+  \item \( A \), \( B \), \( C \): 1 if \( x \in \) the set, 0 if \( x \notin \) the set.
+  \item \( A \cup B \cup C \): 1 if \( x \in A \), \( x \in B \), or \( x \in C \), else 0.
+  \item \( \overline{A \cup B \cup C} \): 1 if \( x \notin A \cup B \cup C \), else 0.
+  \item \( \overline{A} \), \( \overline{B} \), \( \overline{C} \): 1 if \( x \notin \) the set, else 0.
+  \item \( \overline{A} \cap \overline{B} \cap \overline{C} \): 1 if \( \overline{A} = 1 \), \( \overline{B} = 1 \), and \( \overline{C} = 1 \), else 0.
+\end{itemize}
+
+\subsubsection*{Verification:}
+The columns for \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \) are identical (0, 0, 0, 0, 0, 0, 0, 1). This confirms that an element is in \( \overline{A \cup B \cup C} \) if and only if it is in \( \overline{A} \cap \overline{B} \cap \overline{C} \), verifying the equality.
+
+\subsubsection*{Conclusion:}
+The membership table shows that \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) for all possible membership combinations.
+
+\[
+\boxed{\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}}
+\]
+
+% D1
+
+
+
 
 \chapter{Analyze Mathematical Structures of Objects Using Graph Theory (LO2)}
 \label{chap:LO2}
