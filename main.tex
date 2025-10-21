@@ -16,9 +16,16 @@
 \usepackage{layouts}   % Thêm gói layouts để hiển thị kích thước
 % \usepackage{fontspec}
 % \setmainfont{Calibri}
+
+% References & Citiations
+\usepackage{natbib}
+
 \usepackage[hidelinks]{hyperref}
+
 \onehalfspacing   % giãn dòng 1.5
+
 \bibliographystyle{agsm}     % định dạng Harvard (có thể thay đổi)
+
 % Đặt kiểu header/footer
 \pagestyle{fancy}
 \fancyhf{} % xóa sạch mặc định
@@ -100,7 +107,6 @@ The application of discrete mathematics in software engineering offers significa
 
 \label{chap:LO1}  % Đặt nhãn để tham chiếu chéo (cross-references)
 
-\cite{susanna2020}
 \section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}
 % \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)} 
 \label{sec:P1}
@@ -132,7 +138,7 @@ In the following subsections I will address these issues and along the way use a
 
   Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.
 
-  To solve this problem, I need to determine the cardinality of the set $A \cup B$, based on the given information about the cardinalities of the sets $A$, $B$, and $A \cap B$. Here is the detailed solution:
+  To solve this problem, I need to determine the cardinality of the set $A \cup B$, based on the given information about the cardinalities of the sets $A$, $B$, and $A \cap B$.
 
 \subsubsection*{Given:}
   Using \(a = 5\) and \(b = 6\) from my ID (BD00536), the cardinalities are computed as follows:
@@ -144,7 +150,7 @@ In the following subsections I will address these issues and along the way use a
   I need to find the cardinality of the set \(A \cup B\).
 
 \subsubsection*{Formula:}
-  The cardinality of the union of two sets is given by the inclusion-exclusion principle:
+  The cardinality of the union of two sets is given by the inclusion-exclusion principle \citep{rosen2019}:
   \[
   |A \cup B| = |A| + |B| - |A \cap B|
   \]
@@ -204,12 +210,10 @@ The cardinality of the set \( A \cup B \) is $\boxed{110}$.
     \]
 
 \subsubsection*{Substitution:}
-  \[
-  116 = |A| + |B| - 15.
-  \]
-  \[
-  |A| + |B| = 116 + 15 = 131. \tag{2}
-  \]
+  \begin{align*}
+    116 &= |A| + |B| - 15 //
+    |A| + |B| &= 131. \tag{2}
+  \end{align*}
 
   For \( |A - B| \):
   \[
@@ -296,13 +300,8 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
 \subsubsection*{Substitution:}
   Substitute the data we have in the given part into equation (2), we have:
   \begin{align*}
-    % |A \cup B \cup C| &= |A| &+ |B|&+|C| &- |A \cap B| &- |B \cap C| &- |A \cap C| &+ |A \cap B \cap C|\\
-    %                   &= 115 &+ 96 &+ 85 &- 46 &- 36 &- 25 &+ 15 \\
-    %                   &= 204
     (2) \Leftrightarrow |A \cup B \cup C| &= 115 + 96 + 85 - 46 - 36 - 25 + 15 \\
                       &= (115 + 96 + 85) - (46 + 36 + 25) + 15 \\
-                      % &= 211 + 85 - (46 + 36 + 25) + 15 \\
-                      % &= 296 - (46 + 36 + 25) + 15 \\
                       &= 296 - 107 + 15 \\
                       &= 189 + 15 \\
                       &= 204
@@ -315,33 +314,263 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
         &= 152
   \end{align*}
 
-
-
-
 \subsubsection*{Verification:}
 To confirm the union calculation step-by-step:
 \begin{itemize}
   \item Sum of individual sets: $115 + 96 + 85 = 296$
   \item Subtract pairwise intersections: $296 - 46 - 36 - 25 = 296 - 107 = 189$
   \item Add back the triple intersection: $189 + 15 = 204$
-
 \end{itemize}
 This matches the result I did above, so the number of customers who purchased nothing is indeed 152.
-
-
 \subsubsection*{Conclusion:}
 The number of customers who have not purchased anything is \boxed{152}.
-
 \section{Determine the Cardinality of a Given Bag (Multiset) (P2)}
 \label{sec:P2}
+\subsection{List the bag of prime factors for each of the provided numbers}
+\subsubsection*{The Problem:}
+List the bag of prime factors for each of the provided numbers.
+  \begin{itemize}
+    \item $\overline{1a2}$
+    \item $\overline{2b0}$
+  \end{itemize}
 
 
+\subsubsection*{Given:}
+\subsubsection*{Formula:}
+\subsubsection*{Substitution:}
+\subsubsection*{Verification:}
+\subsubsection*{Conclusion:}
+
+\subsection{Find the cardinalities}
+
+\subsubsection*{The Problem:}
+Find the cardinalities of
+  \begin{itemize}
+    \item each of the bags above.
+    \item the intersection of the bags above.
+    \item the union of the bags above.
+    \item the difference of the bags above.
+  \end{itemize}
+
+\subsubsection*{Given:}
+\subsubsection*{Formula:}
+\subsubsection*{Substitution:}
+\subsubsection*{Verification:}
+\subsubsection*{Conclusion:}
+
+\subsection{List the bag of prime factors for each of the provided numbers}
+
+\subsubsection*{The Problem:}
+List the bag of prime factors for each of the provided numbers:
+\begin{itemize}
+  \item \(\overline{1a2} = \overline{152}\)
+  \item \(\overline{2b0} = \overline{260}\)
+\end{itemize}
+
+\subsubsection*{Given:}
+Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
+\begin{itemize}
+  \item \(\overline{1a2} = 152\), since \( a = 5 \).
+  \item \(\overline{2b0} = 260\), since \( b = 6 \).
+\end{itemize}
+We need to find the prime factorization of each number and represent them as bags (multisets), where a bag allows repeated elements, and the multiplicity of each prime factor is the number of times it appears in the factorization.
+
+\subsubsection*{Formula:}
+To find the bag of prime factors for a number, we perform prime factorization by dividing the number by the smallest possible prime numbers repeatedly until the quotient is 1 \cite{burton2010}. The bag contains all prime factors, including repetitions, based on their multiplicity in the factorization.
+
+\subsubsection*{Substitution:}
+Let’s compute the prime factorization for each number.
+
+\textbf{For \(\overline{1a2} = 152\):}
+\begin{itemize}
+  \item Divide by 2: \( 152 \div 2 = 76 \)
+  \item Divide by 2: \( 76 \div 2 = 38 \)
+  \item Divide by 2: \( 38 \div 2 = 19 \)
+  \item 19 is a prime number.
+\end{itemize}
+Thus, the prime factorization of 152 is:
+\[
+152 = 2^3 \cdot 19
+\]
+The bag of prime factors for 152 is:
+\[
+B_1 = \{2, 2, 2, 19\}
+\]
+
+\textbf{For \(\overline{2b0} = 260\):}
+\begin{itemize}
+  \item Divide by 2: \( 260 \div 2 = 130 \)
+  \item Divide by 2: \( 130 \div 2 = 65 \)
+  \item Divide by 5: \( 65 \div 5 = 13 \)
+  \item 13 is a prime number.
+\end{itemize}
+Thus, the prime factorization of 260 is:
+\[
+260 = 2^2 \cdot 5 \cdot 13
+\]
+The bag of prime factors for 260 is:
+\[
+B_2 = \{2, 2, 5, 13\}
+\]
+
+\subsubsection*{Verification:}
+To verify:
+\begin{itemize}
+  \item For 152: \( 2 \cdot 2 \cdot 2 \cdot 19 = 8 \cdot 19 = 152 \). Correct.
+  \item For 260: \( 2 \cdot 2 \cdot 5 \cdot 13 = 4 \cdot 5 \cdot 13 = 20 \cdot 13 = 260 \). Correct.
+\end{itemize}
+The bags are:
+\begin{itemize}
+  \item \( B_1 = \{2, 2, 2, 19\} \)
+  \item \( B_2 = \{2, 2, 5, 13\} \)
+\end{itemize}
+
+\subsubsection*{Conclusion:}
+The bags of prime factors are:
+\begin{itemize}
+  \item For \(\overline{1a2} = 152\): \( \{2, 2, 2, 19\} \)
+  \item For \(\overline{2b0} = 260\): \( \{2, 2, 5, 13\} \)
+\end{itemize}
+
+\subsection{Find the cardinalities}
+
+\subsubsection*{The Problem:}
+Find the cardinalities of:
+\begin{itemize}
+  \item Each of the bags above (\( B_1 \) and \( B_2 \)).
+  \item The intersection of the bags (\( B_1 \cap B_2 \)).
+  \item The union of the bags (\( B_1 \cup B_2 \)).
+  \item The difference of the bags (\( B_1 \setminus B_2 \)).
+\end{itemize}
+
+\subsubsection*{Given:}
+From the previous subsection:
+\begin{itemize}
+  \item \( B_1 = \{2, 2, 2, 19\} \)
+  \item \( B_2 = \{2, 2, 5, 13\} \)
+\end{itemize}
+
+\subsubsection*{Formula:}
+For multisets (bags), as defined in \cite{epp2020}:
+\begin{itemize}
+  \item The \textbf{cardinality} of a bag is the total number of elements, counting repetitions.
+  \item The \textbf{intersection} \( B_1 \cap B_2 \) contains the elements common to both bags, with the multiplicity of each element being the minimum of its multiplicities in \( B_1 \) and \( B_2 \).
+  \item The \textbf{union} \( B_1 \cup B_2 \) contains all elements from both bags, with the multiplicity of each element being the maximum of its multiplicities in \( B_1 \) and \( B_2 \).
+  \item The \textbf{difference} \( B_1 \setminus B_2 \) contains elements in \( B_1 \) that remain after removing elements that appear in \( B_2 \), with multiplicities adjusted accordingly (if an element’s multiplicity in \( B_2 \) is less than in \( B_1 \), the difference includes the remaining occurrences).
+  \item The cardinality of a bag \( B \), denoted \( |B| \), is the sum of the multiplicities of its distinct elements.
+\end{itemize}
+Additionally, the cardinality of the union can be verified using the inclusion-exclusion principle for multisets \cite{rosen2019}:
+\[
+|B_1 \cup B_2| = |B_1| + |B_2| - |B_1 \cap B_2|
+\]
+
+\subsubsection*{Substitution:}
+Let’s compute each part.
+
+\textbf{Cardinality of each bag:}
+\begin{itemize}
+  \item For \( B_1 = \{2, 2, 2, 19\} \):
+    \[
+    |B_1| = 3 \text{ (for the three 2’s)} + 1 \text{ (for the one 19)} = 4
+    \]
+  \item For \( B_2 = \{2, 2, 5, 13\} \):
+    \[
+    |B_2| = 2 \text{ (for the two 2’s)} + 1 \text{ (for the one 5)} + 1 \text{ (for the one 13)} = 4
+    \]
+\end{itemize}
+
+\textbf{Intersection \( B_1 \cap B_2 \):}
+To find the intersection, we take the common elements with the minimum multiplicity for each:
+\begin{itemize}
+  \item Element 2: Multiplicity in \( B_1 \) is 3, in \( B_2 \) is 2. Minimum is 2. Include \( \{2, 2\} \).
+  \item Element 19: Multiplicity in \( B_1 \) is 1, in \( B_2 \) is 0. Minimum is 0. Exclude 19.
+  \item Element 5: Multiplicity in \( B_1 \) is 0, in \( B_2 \) is 1. Minimum is 0. Exclude 5.
+  \item Element 13: Multiplicity in \( B_1 \) is 0, in \( B_2 \) is 1. Minimum is 0. Exclude 13.
+\end{itemize}
+Thus:
+\[
+B_1 \cap B_2 = \{2, 2\}
+\]
+Cardinality:
+\[
+|B_1 \cap B_2| = 2
+\]
+
+\textbf{Union \( B_1 \cup B_2 \):}
+For the union, we take all elements with the maximum multiplicity for each:
+\begin{itemize}
+  \item Element 2: Multiplicity in \( B_1 \) is 3, in \( B_2 \) is 2. Maximum is 3. Include \( \{2, 2, 2\} \).
+  \item Element 19: Multiplicity in \( B_1 \) is 1, in \( B_2 \) is 0. Maximum is 1. Include \( \{19\} \).
+  \item Element 5: Multiplicity in \( B_1 \) is 0, in \( B_2 \) is 1. Maximum is 1. Include \( \{5\} \).
+  \item Element 13: Multiplicity in \( B_1 \) is 0, in \( B_2 \) is 1. Maximum is 1. Include \( \{13\} \).
+\end{itemize}
+Thus:
+\[
+B_1 \cup B_2 = \{2, 2, 2, 19, 5, 13\}
+\]
+Cardinality:
+\[
+|B_1 \cup B_2| = 3 \text{ (for 2)} + 1 \text{ (for 19)} + 1 \text{ (for 5)} + 1 \text{ (for 13)} = 6
+\]
+
+\textbf{Difference \( B_1 \setminus B_2 \):}
+For the difference, we remove from \( B_1 \) the elements that appear in \( B_2 \), respecting multiplicities:
+\begin{itemize}
+  \item Element 2: Multiplicity in \( B_1 \) is 3, in \( B_2 \) is 2. After removing two 2’s, \( 3 - 2 = 1 \). Include \( \{2\} \).
+  \item Element 19: Multiplicity in \( B_1 \) is 1, in \( B_2 \) is 0. Remains 1. Include \( \{19\} \).
+  \item Elements 5 and 13: Not in \( B_1 \), so they don’t affect the difference.
+\end{itemize}
+Thus:
+\[
+B_1 \setminus B_2 = \{2, 19\}
+\]
+Cardinality:
+\[
+|B_1 \setminus B_2| = 1 \text{ (for 2)} + 1 \text{ (for 19)} = 2
+\]
+
+\subsubsection*{Verification:}
+To verify:
+\begin{itemize}
+  \item Cardinality of \( B_1 \): Counts \( \{2, 2, 2, 19\} \), which has 4 elements. Correct.
+  \item Cardinality of \( B_2 \): Counts \( \{2, 2, 5, 13\} \), which has 4 elements. Correct.
+  \item Intersection: \( \{2, 2\} \) has 2 elements. Matches the minimum multiplicities.
+  \item Union: \( \{2, 2, 2, 19, 5, 13\} \) has 6 elements. Matches the maximum multiplicities.
+  \item Difference: Removing two 2’s from \( B_1 \) leaves one 2 and one 19, so \( \{2, 19\} \) has 2 elements. Correct.
+  \item Using the inclusion-exclusion principle \cite{rosen2019}:
+    \[
+    |B_1 \cup B_2| = |B_1| + |B_2| - |B_1 \cap B_2|
+    \]
+    \[
+    6 = 4 + 4 - 2 = 6
+    \]
+    This confirms the union’s cardinality.
+\end{itemize}
+
+\subsubsection*{Conclusion:}
+The cardinalities are:
+\begin{itemize}
+  \item Cardinality of \( B_1 = \{2, 2, 2, 19\} \): \( |B_1| = 4 \)
+  \item Cardinality of \( B_2 = \{2, 2, 5, 13\} \): \( |B_2| = 4 \)
+  \item Cardinality of the intersection \( B_1 \cap B_2 = \{2, 2\} \): \( |B_1 \cap B_2| = 2 \)
+  \item Cardinality of the union \( B_1 \cup B_2 = \{2, 2, 2, 19, 5, 13\} \): \( |B_1 \cup B_2| = 6 \)
+  \item Cardinality of the difference \( B_1 \setminus B_2 = \{2, 19\} \): \( |B_1 \setminus B_2| = 2 \)
+\end{itemize}
+\[
+\boxed{
+\begin{array}{l}
+|B_1| = 4, \\
+|B_2| = 4, \\
+|B_1 \cap B_2| = 2, \\
+|B_1 \cup B_2| = 6, \\
+|B_1 \setminus B_2| = 2
+\end{array}
+}
+\]
 
 \section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}
 
 \label{sec:M1}
-
-
 
 \section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
 
@@ -394,14 +623,19 @@ The number of customers who have not purchased anything is \boxed{152}.
 \label{sec:D4}
 
 
-\cite{doe2021}
+
 \newpage
 \section*{Conclusion}
 \newpage
 \section*{Evaluation}
-
 \bibliography{references}
 
 \end{document}
+
+% Run as following order:
+% pdflatex main 
+% bibtex main
+% pdflatex main
+% pdflatex main
 
 
