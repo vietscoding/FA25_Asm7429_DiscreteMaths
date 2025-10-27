@@ -283,7 +283,7 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
       \item $|B \cap C| = 36$
       \item $|A \cap C| = 25$
       \item $|A \cap B \cap C| = 15$
-      \item $|E|$?
+      \item $|E| = $?
     \end{itemize}
   \end{itemize}
 \subsubsection*{Formula:}
@@ -540,389 +540,741 @@ The cardinalities are:
 \section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}
 \label{sec:M1}
 
-\subsection{Ascertain whether the given functions are invertible}
+% \subsection{Ascertain whether the given functions are invertible}
 
-\subsubsection*{The Problem:}
-Ascertain whether the given functions are invertible. If they are, identify the rule for the inverse function \( f^{-1} \).
-\begin{itemize}
-  \item \( f: \mathbb{R} \rightarrow \mathbb{R} \) with \( f(x) = bx + a \).
-  \item \( f: [-b, +\infty) \rightarrow [0, +\infty) \) with \( f(x) = \sqrt{x + b} \).
-\end{itemize}
+% \subsubsection*{The Problem:}
+% Ascertain whether the given functions are invertible. If they are, identify the rule for the inverse function \( f^{-1} \).
+% \begin{itemize}
+%   \item \( f: \mathbb{R} \rightarrow \mathbb{R} \) with \( f(x) = bx + a \).
+%   \item \( f: [-b, +\infty) \rightarrow [0, +\infty) \) with \( f(x) = \sqrt{x + b} \).
+% \end{itemize}
 
-\subsubsection*{Given:}
-Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
-\begin{itemize}
-  \item First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \).
-  \item Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \).
-\end{itemize}
-To determine if each function is invertible, we must check if it is bijective (injective and surjective) on its given domain and codomain \cite{epp2020}. If invertible, we find the inverse by solving \( y = f(x) \) for \( x \) in terms of \( y \).
+% \subsubsection*{Given:}
+% Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
+% \begin{itemize}
+%   \item First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \).
+%   \item Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \).
+% \end{itemize}
+% To determine if each function is invertible, we must check if it is bijective (injective and surjective) on its given domain and codomain \cite{epp2020}. If invertible, we find the inverse by solving \( y = f(x) \) for \( x \) in terms of \( y \).
 
-\subsubsection*{Formula:}
-A function \( f: A \rightarrow B \) is invertible if it is bijective \cite{epp2020}:
-\begin{itemize}
-  \item \textbf{Injective} (one-to-one): \( f(x_1) = f(x_2) \implies x_1 = x_2 \).
-  \item \textbf{Surjective} (onto): For every \( y \in B \), there exists \( x \in A \) such that \( f(x) = y \).
-\end{itemize}
-To find the inverse \( f^{-1} \), set \( y = f(x) \), solve for \( x \), and express \( x = f^{-1}(y) \), then swap variables to write \( f^{-1}(x) \).
+% \subsubsection*{Formula:}
+% A function \( f: A \rightarrow B \) is invertible if it is bijective \cite{epp2020}:
+% \begin{itemize}
+%   \item \textbf{Injective} (one-to-one): \( f(x_1) = f(x_2) \implies x_1 = x_2 \).
+%   \item \textbf{Surjective} (onto): For every \( y \in B \), there exists \( x \in A \) such that \( f(x) = y \).
+% \end{itemize}
+% To find the inverse \( f^{-1} \), set \( y = f(x) \), solve for \( x \), and express \( x = f^{-1}(y) \), then swap variables to write \( f^{-1}(x) \).
 
-\subsubsection*{Substitution:}
-We analyze each function separately.
+% \subsubsection*{Substitution:}
+% We analyze each function separately.
 
-\textbf{First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \):}
-\begin{itemize}
-  \item \textbf{Injectivity}: Suppose \( f(x_1) = f(x_2) \).
-    \[
-    6x_1 + 5 = 6x_2 + 5
-    \]
-    \[
-    6x_1 = 6x_2 \implies x_1 = x_2
-    \]
-    Since the coefficient of \( x \) is non-zero (\( b = 6 \neq 0 \)), the function is injective.
-  \item \textbf{Surjectivity}: For any \( y \in \mathbb{R} \), solve \( y = f(x) = 6x + 5 \):
-    \[
-    y = 6x + 5 \implies 6x = y - 5 \implies x = \frac{y - 5}{6}
-    \]
-    Since \( y \in \mathbb{R} \), \( x \in \mathbb{R} \), so there exists an \( x \) for every \( y \), making \( f \) surjective.
-  \item Since \( f \) is bijective, it is invertible. To find the inverse, set \( y = f(x) \):
-    \[
-    y = 6x + 5 \implies y - 5 = 6x \implies x = \frac{y - 5}{6}
-    \]
-    Thus, the inverse is:
-    \[
-    f^{-1}(y) = \frac{y - 5}{6}
-    \]
-    Swapping variables:
-    \[
-    f^{-1}(x) = \frac{x - 5}{6}
-    \]
-\end{itemize}
+% \textbf{First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \):}
+% \begin{itemize}
+%   \item \textbf{Injectivity}: Suppose \( f(x_1) = f(x_2) \).
+%     \[
+%     6x_1 + 5 = 6x_2 + 5
+%     \]
+%     \[
+%     6x_1 = 6x_2 \implies x_1 = x_2
+%     \]
+%     Since the coefficient of \( x \) is non-zero (\( b = 6 \neq 0 \)), the function is injective.
+%   \item \textbf{Surjectivity}: For any \( y \in \mathbb{R} \), solve \( y = f(x) = 6x + 5 \):
+%     \[
+%     y = 6x + 5 \implies 6x = y - 5 \implies x = \frac{y - 5}{6}
+%     \]
+%     Since \( y \in \mathbb{R} \), \( x \in \mathbb{R} \), so there exists an \( x \) for every \( y \), making \( f \) surjective.
+%   \item Since \( f \) is bijective, it is invertible. To find the inverse, set \( y = f(x) \):
+%     \[
+%     y = 6x + 5 \implies y - 5 = 6x \implies x = \frac{y - 5}{6}
+%     \]
+%     Thus, the inverse is:
+%     \[
+%     f^{-1}(y) = \frac{y - 5}{6}
+%     \]
+%     Swapping variables:
+%     \[
+%     f^{-1}(x) = \frac{x - 5}{6}
+%     \]
+% \end{itemize}
 
-\textbf{Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \):}
-\begin{itemize}
-  \item \textbf{Injectivity}: Suppose \( f(x_1) = f(x_2) \).
-    \[
-    \sqrt{x_1 + 6} = \sqrt{x_2 + 6}
-    \]
-    Since the square root function is one-to-one on \( [0, +\infty) \), square both sides:
-    \[
-    x_1 + 6 = x_2 + 6 \implies x_1 = x_2
-    \]
-    Thus, \( f \) is injective.
-  \item \textbf{Surjectivity}: For any \( y \in [0, +\infty) \), solve \( y = f(x) = \sqrt{x + 6} \):
-    \[
-    y = \sqrt{x + 6} \implies y^2 = x + 6 \implies x = y^2 - 6
-    \]
-    For \( x \in [-6, +\infty) \), we need \( y^2 - 6 \geq -6 \), which simplifies to \( y^2 \geq 0 \), true for all \( y \in \mathbb{R} \). Since \( y \geq 0 \), \( x = y^2 - 6 \) is defined and in the domain, so \( f \) is surjective.
-  \item Since \( f \) is bijective, it is invertible. To find the inverse, from the above:
-    \[
-    y = \sqrt{x + 6} \implies y^2 = x + 6 \implies x = y^2 - 6
-    \]
-    Thus:
-    \[
-    f^{-1}(y) = y^2 - 6
-    \]
-    Swapping variables, with the domain of \( f^{-1} \) being the codomain of \( f \), \( [0, +\infty) \):
-    \[
-    f^{-1}(x) = x^2 - 6, \quad x \geq 0
-    \]
-\end{itemize}
+% \textbf{Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \):}
+% \begin{itemize}
+%   \item \textbf{Injectivity}: Suppose \( f(x_1) = f(x_2) \).
+%     \[
+%     \sqrt{x_1 + 6} = \sqrt{x_2 + 6}
+%     \]
+%     Since the square root function is one-to-one on \( [0, +\infty) \), square both sides:
+%     \[
+%     x_1 + 6 = x_2 + 6 \implies x_1 = x_2
+%     \]
+%     Thus, \( f \) is injective.
+%   \item \textbf{Surjectivity}: For any \( y \in [0, +\infty) \), solve \( y = f(x) = \sqrt{x + 6} \):
+%     \[
+%     y = \sqrt{x + 6} \implies y^2 = x + 6 \implies x = y^2 - 6
+%     \]
+%     For \( x \in [-6, +\infty) \), we need \( y^2 - 6 \geq -6 \), which simplifies to \( y^2 \geq 0 \), true for all \( y \in \mathbb{R} \). Since \( y \geq 0 \), \( x = y^2 - 6 \) is defined and in the domain, so \( f \) is surjective.
+%   \item Since \( f \) is bijective, it is invertible. To find the inverse, from the above:
+%     \[
+%     y = \sqrt{x + 6} \implies y^2 = x + 6 \implies x = y^2 - 6
+%     \]
+%     Thus:
+%     \[
+%     f^{-1}(y) = y^2 - 6
+%     \]
+%     Swapping variables, with the domain of \( f^{-1} \) being the codomain of \( f \), \( [0, +\infty) \):
+%     \[
+%     f^{-1}(x) = x^2 - 6, \quad x \geq 0
+%     \]
+% \end{itemize}
 
-\subsubsection*{Verification:}
-\begin{itemize}
-  \item \textbf{First function}: Verify \( f(f^{-1}(x)) = x \):
-    \[
-    f(f^{-1}(x)) = f\left( \frac{x - 5}{6} \right) = 6 \cdot \frac{x - 5}{6} + 5 = (x - 5) + 5 = x
-    \]
-    Verify \( f^{-1}(f(x)) = x \):
-    \[
-    f^{-1}(f(x)) = f^{-1}(6x + 5) = \frac{(6x + 5) - 5}{6} = \frac{6x}{6} = x
-    \]
-    Both compositions confirm the inverse.
-  \item \textbf{Second function}: Verify \( f(f^{-1}(x)) = x \) for \( x \geq 0 \):
-    \[
-    f(f^{-1}(x)) = f(x^2 - 6) = \sqrt{(x^2 - 6) + 6} = \sqrt{x^2} = x \quad (\text{since } x \geq 0)
-    \]
-    Verify \( f^{-1}(f(x)) = x \) for \( x \geq -6 \):
-    \[
-    f^{-1}(f(x)) = f^{-1}(\sqrt{x + 6}) = (\sqrt{x + 6})^2 - 6 = (x + 6) - 6 = x
-    \]
-    Both compositions confirm the inverse.
-\end{itemize}
+% \subsubsection*{Verification:}
+% \begin{itemize}
+%   \item \textbf{First function}: Verify \( f(f^{-1}(x)) = x \):
+%     \[
+%     f(f^{-1}(x)) = f\left( \frac{x - 5}{6} \right) = 6 \cdot \frac{x - 5}{6} + 5 = (x - 5) + 5 = x
+%     \]
+%     Verify \( f^{-1}(f(x)) = x \):
+%     \[
+%     f^{-1}(f(x)) = f^{-1}(6x + 5) = \frac{(6x + 5) - 5}{6} = \frac{6x}{6} = x
+%     \]
+%     Both compositions confirm the inverse.
+%   \item \textbf{Second function}: Verify \( f(f^{-1}(x)) = x \) for \( x \geq 0 \):
+%     \[
+%     f(f^{-1}(x)) = f(x^2 - 6) = \sqrt{(x^2 - 6) + 6} = \sqrt{x^2} = x \quad (\text{since } x \geq 0)
+%     \]
+%     Verify \( f^{-1}(f(x)) = x \) for \( x \geq -6 \):
+%     \[
+%     f^{-1}(f(x)) = f^{-1}(\sqrt{x + 6}) = (\sqrt{x + 6})^2 - 6 = (x + 6) - 6 = x
+%     \]
+%     Both compositions confirm the inverse.
+% \end{itemize}
 
-\subsubsection*{Conclusion:}
-Both functions are invertible:
-\begin{itemize}
-  \item For \( f(x) = 6x + 5 \), the inverse is:
-    \[
-    f^{-1}(x) = \frac{x - 5}{6}
-    \]
-  \item For \( f(x) = \sqrt{x + 6} \), the inverse is:
-    \[
-    f^{-1}(x) = x^2 - 6, \quad x \geq 0
-    \]
-\end{itemize}
-\[
-\boxed{
-\begin{array}{l}
-f(x) = 6x + 5: \quad f^{-1}(x) = \frac{x - 5}{6} \\
-f(x) = \sqrt{x + 6}: \quad f^{-1}(x) = x^2 - 6, \quad x \geq 0
-\end{array}
-}
-\]
+% \subsubsection*{Conclusion:}
+% Both functions are invertible:
+% \begin{itemize}
+%   \item For \( f(x) = 6x + 5 \), the inverse is:
+%     \[
+%     f^{-1}(x) = \frac{x - 5}{6}
+%     \]
+%   \item For \( f(x) = \sqrt{x + 6} \), the inverse is:
+%     \[
+%     f^{-1}(x) = x^2 - 6, \quad x \geq 0
+%     \]
+% \end{itemize}
+% \[
+% \boxed{
+% \begin{array}{l}
+% f(x) = 6x + 5: \quad f^{-1}(x) = \frac{x - 5}{6} \\
+% f(x) = \sqrt{x + 6}: \quad f^{-1}(x) = x^2 - 6, \quad x \geq 0
+% \end{array}
+% }
+% \]
 
-\subsection{Find \( g \circ f \)}
+% \subsection{Find \( g \circ f \)}
 
-\subsubsection*{The Problem:}
-Let \( f, g: \mathbb{R} \rightarrow \mathbb{R} \) be defined as \( f(x) = \begin{cases} 2x + a, & x < 0 \\ x^3 + b, & x \geq 0 \end{cases} \) and \( g(x) = bx - a \). Find \( g \circ f \).
+% \subsubsection*{The Problem:}
+% Let \( f, g: \mathbb{R} \rightarrow \mathbb{R} \) be defined as \( f(x) = \begin{cases} 2x + a, & x < 0 \\ x^3 + b, & x \geq 0 \end{cases} \) and \( g(x) = bx - a \). Find \( g \circ f \).
 
-\subsubsection*{Given:}
-Using \( a = 5 \) and \( b = 6 \), we have:
-\begin{itemize}
-  \item \( f(x) = \begin{cases} 2x + 5, & x < 0 \\ x^3 + 6, & x \geq 0 \end{cases} \)
-  \item \( g(x) = 6x - 5 \)
-\end{itemize}
-The composition \( g \circ f \) is defined as \( (g \circ f)(x) = g(f(x)) \).
+% \subsubsection*{Given:}
+% Using \( a = 5 \) and \( b = 6 \), we have:
+% \begin{itemize}
+%   \item \( f(x) = \begin{cases} 2x + 5, & x < 0 \\ x^3 + 6, & x \geq 0 \end{cases} \)
+%   \item \( g(x) = 6x - 5 \)
+% \end{itemize}
+% The composition \( g \circ f \) is defined as \( (g \circ f)(x) = g(f(x)) \).
 
-\subsubsection*{Formula:}
-For functions \( f \) and \( g \), the composition is \( (g \circ f)(x) = g(f(x)) \), where we apply \( f \) first, then \( g \) to the result \cite{rosen2019}. Since \( f \) is piecewise, we compute \( g(f(x)) \) for each case of \( f \).
+% \subsubsection*{Formula:}
+% For functions \( f \) and \( g \), the composition is \( (g \circ f)(x) = g(f(x)) \), where we apply \( f \) first, then \( g \) to the result \cite{rosen2019}. Since \( f \) is piecewise, we compute \( g(f(x)) \) for each case of \( f \).
 
-\subsubsection*{Substitution:}
-Since \( f \) is defined piecewise, we compute \( g \circ f \) for each case.
+% \subsubsection*{Substitution:}
+% Since \( f \) is defined piecewise, we compute \( g \circ f \) for each case.
 
-\textbf{Case 1: \( x < 0 \)}:
-\[
-f(x) = 2x + 5
-\]
-\[
-(g \circ f)(x) = g(f(x)) = g(2x + 5) = 6(2x + 5) - 5 = 12x + 30 - 5 = 12x + 25
-\]
+% \textbf{Case 1: \( x < 0 \)}:
+% \[
+% f(x) = 2x + 5
+% \]
+% \[
+% (g \circ f)(x) = g(f(x)) = g(2x + 5) = 6(2x + 5) - 5 = 12x + 30 - 5 = 12x + 25
+% \]
 
-\textbf{Case 2: \( x \geq 0 \)}:
-\[
-f(x) = x^3 + 6
-\]
-\[
-(g \circ f)(x) = g(f(x)) = g(x^3 + 6) = 6(x^3 + 6) - 5 = 6x^3 + 36 - 5 = 6x^3 + 31
-\]
+% \textbf{Case 2: \( x \geq 0 \)}:
+% \[
+% f(x) = x^3 + 6
+% \]
+% \[
+% (g \circ f)(x) = g(f(x)) = g(x^3 + 6) = 6(x^3 + 6) - 5 = 6x^3 + 36 - 5 = 6x^3 + 31
+% \]
 
-Thus, the composition is:
-\[
-(g \circ f)(x) = \begin{cases} 
-12x + 25, & x < 0 \\
-6x^3 + 31, & x \geq 0 
-\end{cases}
-\]
+% Thus, the composition is:
+% \[
+% (g \circ f)(x) = \begin{cases} 
+% 12x + 25, & x < 0 \\
+% 6x^3 + 31, & x \geq 0 
+% \end{cases}
+% \]
 
-\subsubsection*{Verification:}
-Test the composition at boundary and interior points:
-\begin{itemize}
-  \item For \( x = -1 \) (Case 1):
-    \[
-    f(-1) = 2(-1) + 5 = -2 + 5 = 3, \quad g(f(-1)) = g(3) = 6 \cdot 3 - 5 = 18 - 5 = 13
-    \]
-    Using the formula: \( 12(-1) + 25 = -12 + 25 = 13 \). Correct.
-  \item For \( x = 0 \) (Case 2):
-    \[
-    f(0) = 0^3 + 6 = 6, \quad g(f(0)) = g(6) = 6 \cdot 6 - 5 = 36 - 5 = 31
-    \]
-    Using the formula: \( 6(0)^3 + 31 = 0 + 31 = 31 \). Correct.
-  \item For \( x = 1 \) (Case 2):
-    \[
-    f(1) = 1^3 + 6 = 1 + 6 = 7, \quad g(f(1)) = g(7) = 6 \cdot 7 - 5 = 42 - 5 = 37
-    \]
-    Using the formula: \( 6(1)^3 + 31 = 6 + 31 = 37 \). Correct.
-\end{itemize}
-The piecewise function correctly represents \( g \circ f \).
+% \subsubsection*{Verification:}
+% Test the composition at boundary and interior points:
+% \begin{itemize}
+%   \item For \( x = -1 \) (Case 1):
+%     \[
+%     f(-1) = 2(-1) + 5 = -2 + 5 = 3, \quad g(f(-1)) = g(3) = 6 \cdot 3 - 5 = 18 - 5 = 13
+%     \]
+%     Using the formula: \( 12(-1) + 25 = -12 + 25 = 13 \). Correct.
+%   \item For \( x = 0 \) (Case 2):
+%     \[
+%     f(0) = 0^3 + 6 = 6, \quad g(f(0)) = g(6) = 6 \cdot 6 - 5 = 36 - 5 = 31
+%     \]
+%     Using the formula: \( 6(0)^3 + 31 = 0 + 31 = 31 \). Correct.
+%   \item For \( x = 1 \) (Case 2):
+%     \[
+%     f(1) = 1^3 + 6 = 1 + 6 = 7, \quad g(f(1)) = g(7) = 6 \cdot 7 - 5 = 42 - 5 = 37
+%     \]
+%     Using the formula: \( 6(1)^3 + 31 = 6 + 31 = 37 \). Correct.
+% \end{itemize}
+% The piecewise function correctly represents \( g \circ f \).
 
-\subsubsection*{Conclusion:}
-The composition is:
-\[
-(g \circ f)(x) = \begin{cases} 
-12x + 25, & x < 0 \\
-6x^3 + 31, & x \geq 0 
-\end{cases}
-\]
-\[
-\boxed{
-(g \circ f)(x) = \begin{cases} 
-12x + 25, & x < 0 \\
-6x^3 + 31, & x \geq 0 
-\end{cases}
-}
-\]
-
+% \subsubsection*{Conclusion:}
+% The composition is:
+% \[
+% (g \circ f)(x) = \begin{cases} 
+% 12x + 25, & x < 0 \\
+% 6x^3 + 31, & x \geq 0 
+% \end{cases}
+% \]
+% \[
+% \boxed{
+% (g \circ f)(x) = \begin{cases} 
+% 12x + 25, & x < 0 \\
+% 6x^3 + 31, & x \geq 0 
+% \end{cases}
+% }
+% \]
+% % D1
 \section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
 \label{sec:D1}
 
-\subsubsection*{The Problem:}
+% \subsubsection*{The Problem:}
+% Show that if \( A \), \( B \), and \( C \) are sets, then:
+% \[
+% \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+% \]
+% In this section, we will prove the equality in two ways: by demonstrating that each side is a subset of the other and by verifying the equality using a membership table.
 
+% \subsection{Demonstrate that each side is a subset of the other side}
 
-Show that if $A$, $B$, and $C$ are sets, then $\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}$.
+% \subsubsection*{Given:}
+% Let \( A \), \( B \), and \( C \) be subsets of a universal set \( U \). We need to prove:
+% \[
+% \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+% \]
+% where \( \overline{S} \) denotes the complement of set \( S \) with respect to \( U \), i.e., \( \overline{S} = \{ x \in U \mid x \notin S \} \).
 
-In this section, I will solve the above problem in two ways which are presented respectively in the next two subsections.
+% \subsubsection*{Proof Strategy:}
+% To prove set equality, we show that each side is a subset of the other \cite{epp2020}:
+% \begin{itemize}
+%   \item Show \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \): If \( x \in \overline{A \cup B \cup C} \), then \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \).
+%   \item Show \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \): If \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \), then \( x \in \overline{A \cup B \cup C} \).
+% \end{itemize}
+% This establishes \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \).
 
-\subsection{Demonstrate that each side is a subset of the other side}
-\subsubsection*{Given:}
-\subsubsection*{Formula:}
-\subsubsection*{Substitution:}
-\subsubsection*{Verification:}
-\subsubsection*{Conclusion:}
+% \subsubsection*{Proof:}
+% \textbf{Part 1: Show \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \).}
+% Let \( x \in \overline{A \cup B \cup C} \). By definition of the complement:
+% \[
+% x \in \overline{A \cup B \cup C} \implies x \notin A \cup B \cup C
+% \]
+% By the definition of union, \( x \notin A \cup B \cup C \) means:
+% \[
+% x \notin A \text{ and } x \notin B \text{ and } x \notin C
+% \]
+% This implies:
+% \[
+% x \in \overline{A} \text{ and } x \in \overline{B} \text{ and } x \in \overline{C} \implies x \in \overline{A} \cap \overline{B} \cap \overline{C}
+% \]
+% Thus, \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \).
 
-\subsection{Verify the equality using a membership table}
-\subsubsection*{Given:}
-\subsubsection*{Formula:}
-\subsubsection*{Substitution:}
-\subsubsection*{Verification:}
-\subsubsection*{Conclusion:}
+% \textbf{Part 2: Show \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \).}
+% Let \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \). By definition of intersection:
+% \[
+% x \in \overline{A} \cap \overline{B} \cap \overline{C} \implies x \in \overline{A} \text{ and } x \in \overline{B} \text{ and } x \in \overline{C}
+% \]
+% This means:
+% \[
+% x \notin A \text{ and } x \notin B \text{ and } x \notin C \implies x \notin A \cup B \cup C \implies x \in \overline{A \cup B \cup C}
+% \]
+% Thus, \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \).
 
-% D1
-\section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}
-\label{sec:D1}
+% Since both inclusions hold, we conclude:
+% \[
+% \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+% \]
 
-\subsubsection*{The Problem:}
-Show that if \( A \), \( B \), and \( C \) are sets, then:
-\[
-\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
-\]
-In this section, we will prove the equality in two ways: by demonstrating that each side is a subset of the other and by verifying the equality using a membership table.
+% \subsubsection*{Verification:}
+% To verify, consider the logical equivalence of De Morgan’s Law. For any element \( x \):
+% \begin{itemize}
+%   \item \( x \in \overline{A \cup B \cup C} \) means \( x \notin A \cup B \cup C \), i.e., \( x \) is not in \( A \), \( B \), or \( C \).
+%   \item \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \) means \( x \in \overline{A} \), \( x \in \overline{B} \), and \( x \in \overline{C} \), i.e., \( x \notin A \), \( x \notin B \), and \( x \notin C \).
+% \end{itemize}
+% Both expressions describe the same set of elements, confirming the equality.
 
-\subsection{Demonstrate that each side is a subset of the other side}
+% \subsubsection*{Conclusion:}
+% The set equality \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) is proven by showing mutual subset inclusion.
 
-\subsubsection*{Given:}
-Let \( A \), \( B \), and \( C \) be subsets of a universal set \( U \). We need to prove:
-\[
-\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
-\]
-where \( \overline{S} \) denotes the complement of set \( S \) with respect to \( U \), i.e., \( \overline{S} = \{ x \in U \mid x \notin S \} \).
+% \subsection{Verify the equality using a membership table}
 
-\subsubsection*{Proof Strategy:}
-To prove set equality, we show that each side is a subset of the other \cite{epp2020}:
-\begin{itemize}
-  \item Show \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \): If \( x \in \overline{A \cup B \cup C} \), then \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \).
-  \item Show \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \): If \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \), then \( x \in \overline{A \cup B \cup C} \).
-\end{itemize}
-This establishes \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \).
+% \subsubsection*{Given:}
+% Let \( A \), \( B \), and \( C \) be subsets of a universal set \( U \). We need to verify:
+% \[
+% \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
+% \]
+% using a membership table, which lists all possible combinations of membership for an element \( x \in U \) in sets \( A \), \( B \), and \( C \).
 
-\subsubsection*{Proof:}
-\textbf{Part 1: Show \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \).}
-Let \( x \in \overline{A \cup B \cup C} \). By definition of the complement:
-\[
-x \in \overline{A \cup B \cup C} \implies x \notin A \cup B \cup C
-\]
-By the definition of union, \( x \notin A \cup B \cup C \) means:
-\[
-x \notin A \text{ and } x \notin B \text{ and } x \notin C
-\]
-This implies:
-\[
-x \in \overline{A} \text{ and } x \in \overline{B} \text{ and } x \in \overline{C} \implies x \in \overline{A} \cap \overline{B} \cap \overline{C}
-\]
-Thus, \( \overline{A \cup B \cup C} \subseteq \overline{A} \cap \overline{B} \cap \overline{C} \).
+% \subsubsection*{Formula:}
+% A membership table lists whether an element \( x \) belongs to each set (1 for in, 0 for not in) and evaluates both sides of the equality \cite{rosen2019}. For three sets, there are \( 2^3 = 8 \) combinations. The table compares membership in \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \). If the columns match, the equality holds.
 
-\textbf{Part 2: Show \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \).}
-Let \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \). By definition of intersection:
-\[
-x \in \overline{A} \cap \overline{B} \cap \overline{C} \implies x \in \overline{A} \text{ and } x \in \overline{B} \text{ and } x \in \overline{C}
-\]
-This means:
-\[
-x \notin A \text{ and } x \notin B \text{ and } x \notin C \implies x \notin A \cup B \cup C \implies x \in \overline{A \cup B \cup C}
-\]
-Thus, \( \overline{A} \cap \overline{B} \cap \overline{C} \subseteq \overline{A \cup B \cup C} \).
+% \subsubsection*{Substitution:}
+% Construct the membership table with columns for \( A \), \( B \), \( C \), \( A \cup B \cup C \), \( \overline{A \cup B \cup C} \), \( \overline{A} \), \( \overline{B} \), \( \overline{C} \), and \( \overline{A} \cap \overline{B} \cap \overline{C} \).
 
-Since both inclusions hold, we conclude:
-\[
-\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
-\]
+% \begin{center}
+% \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+% \hline
+% \( A \) & \( B \) & \( C \) & \( A \cup B \cup C \) & \( \overline{A \cup B \cup C} \) & \( \overline{A} \) & \( \overline{B} \) & \( \overline{C} \) & \( \overline{A} \cap \overline{B} \cap \overline{C} \) \\
+% \hline
+% 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+% 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+% 1 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\
+% 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+% 0 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+% 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
+% 0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\
+% 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+% \hline
+% \end{tabular}
+% \end{center}
 
-\subsubsection*{Verification:}
-To verify, consider the logical equivalence of De Morgan’s Law. For any element \( x \):
-\begin{itemize}
-  \item \( x \in \overline{A \cup B \cup C} \) means \( x \notin A \cup B \cup C \), i.e., \( x \) is not in \( A \), \( B \), or \( C \).
-  \item \( x \in \overline{A} \cap \overline{B} \cap \overline{C} \) means \( x \in \overline{A} \), \( x \in \overline{B} \), and \( x \in \overline{C} \), i.e., \( x \notin A \), \( x \notin B \), and \( x \notin C \).
-\end{itemize}
-Both expressions describe the same set of elements, confirming the equality.
+% \textbf{Explanation of columns:}
+% \begin{itemize}
+%   \item \( A \), \( B \), \( C \): 1 if \( x \in \) the set, 0 if \( x \notin \) the set.
+%   \item \( A \cup B \cup C \): 1 if \( x \in A \), \( x \in B \), or \( x \in C \), else 0.
+%   \item \( \overline{A \cup B \cup C} \): 1 if \( x \notin A \cup B \cup C \), else 0.
+%   \item \( \overline{A} \), \( \overline{B} \), \( \overline{C} \): 1 if \( x \notin \) the set, else 0.
+%   \item \( \overline{A} \cap \overline{B} \cap \overline{C} \): 1 if \( \overline{A} = 1 \), \( \overline{B} = 1 \), and \( \overline{C} = 1 \), else 0.
+% \end{itemize}
 
-\subsubsection*{Conclusion:}
-The set equality \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) is proven by showing mutual subset inclusion.
+% \subsubsection*{Verification:}
+% The columns for \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \) are identical (0, 0, 0, 0, 0, 0, 0, 1). This confirms that an element is in \( \overline{A \cup B \cup C} \) if and only if it is in \( \overline{A} \cap \overline{B} \cap \overline{C} \), verifying the equality.
 
-\subsection{Verify the equality using a membership table}
+% \subsubsection*{Conclusion:}
+% The membership table shows that \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) for all possible membership combinations.
 
-\subsubsection*{Given:}
-Let \( A \), \( B \), and \( C \) be subsets of a universal set \( U \). We need to verify:
-\[
-\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
-\]
-using a membership table, which lists all possible combinations of membership for an element \( x \in U \) in sets \( A \), \( B \), and \( C \).
-
-\subsubsection*{Formula:}
-A membership table lists whether an element \( x \) belongs to each set (1 for in, 0 for not in) and evaluates both sides of the equality \cite{rosen2019}. For three sets, there are \( 2^3 = 8 \) combinations. The table compares membership in \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \). If the columns match, the equality holds.
-
-\subsubsection*{Substitution:}
-Construct the membership table with columns for \( A \), \( B \), \( C \), \( A \cup B \cup C \), \( \overline{A \cup B \cup C} \), \( \overline{A} \), \( \overline{B} \), \( \overline{C} \), and \( \overline{A} \cap \overline{B} \cap \overline{C} \).
-
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline
-\( A \) & \( B \) & \( C \) & \( A \cup B \cup C \) & \( \overline{A \cup B \cup C} \) & \( \overline{A} \) & \( \overline{B} \) & \( \overline{C} \) & \( \overline{A} \cap \overline{B} \cap \overline{C} \) \\
-\hline
-1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
-1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
-1 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\
-1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
-0 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
-0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\
-0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-\end{tabular}
-\end{center}
-
-\textbf{Explanation of columns:}
-\begin{itemize}
-  \item \( A \), \( B \), \( C \): 1 if \( x \in \) the set, 0 if \( x \notin \) the set.
-  \item \( A \cup B \cup C \): 1 if \( x \in A \), \( x \in B \), or \( x \in C \), else 0.
-  \item \( \overline{A \cup B \cup C} \): 1 if \( x \notin A \cup B \cup C \), else 0.
-  \item \( \overline{A} \), \( \overline{B} \), \( \overline{C} \): 1 if \( x \notin \) the set, else 0.
-  \item \( \overline{A} \cap \overline{B} \cap \overline{C} \): 1 if \( \overline{A} = 1 \), \( \overline{B} = 1 \), and \( \overline{C} = 1 \), else 0.
-\end{itemize}
-
-\subsubsection*{Verification:}
-The columns for \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \) are identical (0, 0, 0, 0, 0, 0, 0, 1). This confirms that an element is in \( \overline{A \cup B \cup C} \) if and only if it is in \( \overline{A} \cap \overline{B} \cap \overline{C} \), verifying the equality.
-
-\subsubsection*{Conclusion:}
-The membership table shows that \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) for all possible membership combinations.
-
-\[
-\boxed{\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}}
-\]
+% \[
+% \boxed{\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}}
+% \]
 
 % D1
-
-
-
 
 \chapter{Analyze Mathematical Structures of Objects Using Graph Theory (LO2)}
 \label{chap:LO2}
 
+% P3
 \section{Model Contextualized Problems Using Trees, both Quantitatively and Qualitatively (P3)}
 \label{sec:P3}
 
+\subsection{What is a Binary Tree?}
+
+A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child \cite{epp2020}. Formally, a binary tree is either empty or consists of a root node connected to a left subtree and a right subtree, both of which are binary trees. Binary trees are widely used in computer science for tasks such as searching, sorting, and hierarchical data representation due to their efficient structure for operations like traversal and insertion \cite{rosen2019}.
+
+Key properties include:
+\begin{itemize}
+  \item \textbf{Nodes}: Each node contains a value and pointers to its left and right children (possibly null).
+  \item \textbf{Height}: The length of the longest path from the root to a leaf.
+  \item \textbf{Depth}: The length of the path from the root to a specific node.
+  \item \textbf{Leaves}: Nodes with no children.
+\end{itemize}
+Binary trees are foundational in applications like binary search trees, expression trees, and heap data structures.
+
+\subsection{Common Types of Binary Trees}
+
+Several types of binary trees are commonly used, each with specific properties suited to particular applications \cite{rosen2019}:
+
+\begin{itemize}
+  \item \textbf{Complete Binary Tree}: A binary tree in which all levels, except possibly the last, are fully filled, and all nodes in the last level are as far left as possible. For a complete binary tree with height \( h \), the number of nodes \( n \) satisfies \( 2^h \leq n < 2^{h+1} \).
+  \item \textbf{Full Binary Tree}: Every node has either zero or two children. The number of leaves is \( \frac{n+1}{2} \), where \( n \) is the total number of nodes.
+  \item \textbf{Balanced Binary Tree}: The heights of the left and right subtrees of every node differ by at most one. This ensures \( O(\log n) \) time for operations like search and insertion (e.g., AVL trees, Red-Black trees).
+  \item \textbf{Binary Search Tree (BST)}: A binary tree where the left subtree of a node contains values less than the node’s value, and the right subtree contains values greater, enabling efficient searching and sorting.
+  \item \textbf{Heap}: A complete binary tree where each node’s value is greater than or equal to (max-heap) or less than or equal to (min-heap) its children’s values, used in priority queues and sorting (e.g., heapsort).
+\end{itemize}
+
+These types are tailored to specific computational needs, balancing efficiency and structural constraints.
+
+
+\subsection{Discuss Two Notable Instances of Binary Trees}
+
+We discuss two notable applications of binary trees: Binary Search Trees (BSTs) for database indexing and Min-Heaps for priority queue implementations. Each is analyzed quantitatively (e.g., height, node count) and qualitatively (context, benefits, limitations).
+
+\subsubsection*{Instance 1: Binary Search Tree for Database Indexing}
+
+\textbf{Quantitative Analysis:}
+A Binary Search Tree (BST) is used to index a database with \( n \) records. Assume we have \( n = \overline{9b} = 96 \) records (using \( b = 6 \)) to index, with keys inserted in a random order to maintain approximate balance \citep{rosen2019}. For a balanced BST:
+\begin{itemize}
+  \item \textbf{Height}: The height \( h \) of a balanced BST with \( n = 96 \) nodes is approximately \( \lfloor \log_2(96) \rfloor \approx 6 \), since \( 2^6 = 64 \leq 96 < 128 = 2^7 \).
+  \item \textbf{Search Time}: The average time complexity for search, insertion, and deletion is \( O(\log n) \approx O(\log 96) \approx O(6.58) \).
+  \item \textbf{Node Count}: With \( a = 5 \), assume we query the top \( \overline{2a} = 25 \) keys. The number of comparisons per search is at most the height plus one, i.e., \( 6 + 1 = 7 \).
+\end{itemize}
+Thus, a BST with 96 nodes has a height of approximately 6, enabling efficient searches in about 7 comparisons per query.
+
+\textbf{Qualitative Analysis:}
+\begin{itemize}
+  \item \textbf{Context}: BSTs are used in database systems to index records, allowing fast retrieval of data based on key values (e.g., user IDs in a customer database). For example, a retail database might use a BST to index customer transactions by order ID.
+  \item \textbf{Benefits}: BSTs provide efficient search, insertion, and deletion operations when balanced, with \( O(\log n) \) complexity. They support dynamic updates, unlike static arrays, and are simple to implement.
+  \item \textbf{Limitations}: If insertions are not randomized, the BST can become unbalanced (e.g., resembling a linked list), leading to \( O(n) \) worst-case complexity. Self-balancing BSTs (e.g., AVL, Red-Black trees) mitigate this but add complexity. Additionally, BSTs may not scale well for very large datasets compared to B-trees used in modern databases.
+\end{itemize}
+
+\subsubsection*{Instance 2: Min-Heap for Priority Queue in Task Scheduling}
+
+\textbf{Quantitative Analysis:}
+A Min-Heap is used to implement a priority queue for scheduling \( n = \overline{11b} = 116 \) tasks (using \( b = 6 \)) in a system, where lower values indicate higher priority \cite{rosen2019}. The heap is a complete binary tree:
+\begin{itemize}
+  \item \textbf{Height}: For \( n = 116 \), the height \( h = \lfloor \log_2(116) \rfloor \approx 6 \), since \( 2^6 = 64 \leq 116 < 128 = 2^7 \).
+  \item \textbf{Operations}: Inserting a task or extracting the minimum takes \( O(\log n) \approx O(\log 116) \approx O(6.86) \). Assume \( a = 5 \), and we perform \( \overline{1a} = 15 \) extractions (e.g., processing the top 15 tasks). Total time is \( 15 \cdot O(\log 116) \approx 15 \cdot 6.86 \approx 103 \) operations.
+  \item \textbf{Node Count}: The heap stores 116 tasks, with the minimum priority task at the root.
+\end{itemize}
+Thus, a Min-Heap with 116 tasks has a height of 6, allowing efficient task prioritization.
+
+\textbf{Qualitative Analysis:}
+\begin{itemize}
+  \item \textbf{Context}: Min-Heaps are used in operating systems for task scheduling, where tasks with the highest priority (lowest value) are executed first. For example, a real-time system might use a Min-Heap to prioritize critical processes.
+  \item \textbf{Benefits}: Min-Heaps ensure \( O(\log n) \) insertion and deletion of the minimum element, ideal for dynamic priority queues. Their complete binary tree structure minimizes memory usage and supports efficient array-based implementations.
+  \item \textbf{Limitations}: Min-Heaps are less effective for searching arbitrary elements (requiring \( O(n) \) time). They are also sensitive to priority ties, which may require additional logic to resolve. For large-scale systems, more complex structures like Fibonacci heaps may offer better amortized performance.
+\end{itemize}
+
+% \subsubsection*{Conclusion:}
 
 \section{Use Dijkstra’s Algorithm to Find a Shortest Path Spanning Tree in Graph (P4)}
 \label{sec:P4}
 
+% \subsection{State Dijkstra’s Algorithm in an undirected graph}
+% \begin{figure}[h!]
+%   \centering
+%   \includegraphics[scale=1]{./images/P4graph.png}
+%   \caption{The given undirected graph}
+%   \label{fig:p4graph}
+% \end{figure}
+% \subsubsection*{Description:}
+% Dijkstra’s algorithm finds the shortest path from a single source vertex to all other vertices in a weighted, undirected graph with non-negative edge weights \cite{rosen2019}. In an undirected graph, edges are bidirectional, meaning the weight from vertex \( u \) to \( v \) equals the weight from \( v \) to \( u \). The algorithm proceeds as follows:
+
+% \begin{enumerate}
+%   \item Initialize a distance array \( d \) where \( d[source] = 0 \) and \( d[v] = \infty \) for all other vertices \( v \).
+%   \item Maintain a set of unvisited vertices \( S \).
+%   \item While \( S \) is not empty:
+%     \begin{enumerate}
+%       \item Select the unvisited vertex \( u \) with the minimum \( d[u] \).
+%       \item Mark \( u \) as visited (remove from \( S \)).
+%       \item For each unvisited neighbor \( v \) of \( u \):
+%         \begin{itemize}
+%           \item Update \( d[v] = \min(d[v], d[u] + w(u, v)) \), where \( w(u, v) \) is the weight of edge \( (u, v) \).
+%         \end{itemize}
+%     \end{enumerate}
+%   \item The value \( d[v] \) represents the shortest path length from the source to \( v \) for all \( v \).
+% \end{enumerate}
+
+% The algorithm constructs a shortest path spanning tree rooted at the source, with a time complexity of \( O((V + E) \log V) \) using a priority queue, where \( V \) is the number of vertices and \( E \) is the number of edges.
+
+\subsection{Apply Dijkstra’s algorithm to determine the shortest path length between vertices \( A \) and \( Z \) in the provided weighted graph}
+
+% \subsubsection*{Given:}
+% Consider the undirected weighted graph provided, with vertices \( A, B, C, D, E, F, G, Z \) and the following edges with weights:
+% \begin{itemize}
+%   \item \( A-B = a \), \( A-C = 4 \)
+%   \item \( B-D = 6 \)
+%   \item \( C-D = 4 \), \( C-E = 7 \)
+%   \item \( D-E = 1 \), \( D-F = 6 \)
+%   \item \( E-F = b \), \( E-G = 6 \)
+%   \item \( F-G = 3 \), \( F-Z = 8 \)
+%   \item \( G-Z = 5 \)
+% \end{itemize}
+% Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), the weights are:
+% \begin{itemize}
+%   \item \( A-B = 5 \), \( A-C = 4 \)
+%   \item \( B-D = 6 \)
+%   \item \( C-D = 4 \), \( C-E = 7 \)
+%   \item \( D-E = 1 \), \( D-F = 6 \)
+%   \item \( E-F = 6 \), \( E-G = 6 \)
+%   \item \( F-G = 3 \), \( F-Z = 8 \)
+%   \item \( G-Z = 5 \)
+% \end{itemize}
+% The source vertex is \( A \), and the target is \( Z \). We apply Dijkstra’s algorithm to find the shortest path length from \( A \) to \( Z \).
+
+% \subsubsection*{Steps:}
+% Initialize:
+% - \( d[A] = 0 \), \( d[B] = d[C] = d[D] = d[E] = d[F] = d[G] = d[Z] = \infty \)
+% - Unvisited set \( S = \{A, B, C, D, E, F, G, Z\} \)
+
+% Iterate:
+% \begin{center}
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% Step & Current Vertex (\( u \)) & \( d[u] \) & Unvisited Set \( S \) and Distances & Updated \( d \) Values \\
+% \hline
+% 1 & \( A \) & 0 & \( d[B] = 5 \), \( d[C] = 4 \) & \( d[B] = 5 \), \( d[C] = 4 \) \\
+% 2 & \( C \) & 4 & \( d[B] = 5 \), \( d[D] = 8 \), \( d[E] = 11 \) & \( d[D] = 8 \), \( d[E] = 11 \) \\
+% 3 & \( B \) & 5 & \( d[D] = 8 \), \( d[E] = 11 \) & \( d[D] = 8 \) (no change) \\
+% 4 & \( D \) & 8 & \( d[E] = 9 \), \( d[F] = 14 \) & \( d[E] = 9 \), \( d[F] = 14 \) \\
+% 5 & \( E \) & 9 & \( d[F] = 14 \), \( d[G] = 15 \) & \( d[F] = 14 \), \( d[G] = 15 \) \\
+% 6 & \( F \) & 14 & \( d[G] = 15 \), \( d[Z] = 22 \) & \( d[G] = 15 \), \( d[Z] = 22 \) \\
+% 7 & \( G \) & 15 & \( d[Z] = 20 \) & \( d[Z] = 20 \) \\
+% 8 & \( Z \) & 20 & \( \emptyset \) & - \\
+% \hline
+% \end{tabular}
+% \end{center}
+
+% \begin{itemize}
+%   \item \textbf{Step 1}: Select \( A \) (\( d[A] = 0 \)). Update \( d[B] = 5 \) (via \( A-B \)), \( d[C] = 4 \) (via \( A-C \)). \( S = \{B, C, D, E, F, G, Z\} \).
+%   \item \textbf{Step 2}: Select \( C \) (\( d[C] = 4 \)). Update \( d[D] = 4 + 4 = 8 \) (via \( C-D \)), \( d[E] = 4 + 7 = 11 \) (via \( C-E \)). \( S = \{B, D, E, F, G, Z\} \).
+%   \item \textbf{Step 3}: Select \( B \) (\( d[B] = 5 \)). Update \( d[D] = \min(8, 5 + 6) = 8 \) (via \( B-D \)). \( S = \{D, E, F, G, Z\} \).
+%   \item \textbf{Step 4}: Select \( D \) (\( d[D] = 8 \)). Update \( d[E] = \min(11, 8 + 1) = 9 \) (via \( D-E \)), \( d[F] = \min(\infty, 8 + 6) = 14 \) (via \( D-F \)). \( S = \{E, F, G, Z\} \).
+%   \item \textbf{Step 5}: Select \( E \) (\( d[E] = 9 \)). Update \( d[F] = \min(14, 9 + 6) = 14 \) (via \( E-F \)), \( d[G] = \min(\infty, 9 + 6) = 15 \) (via \( E-G \)). \( S = \{F, G, Z\} \).
+%   \item \textbf{Step 6}: Select \( F \) (\( d[F] = 14 \)). Update \( d[G] = \min(15, 14 + 3) = 15 \) (via \( F-G \)), \( d[Z] = \min(\infty, 14 + 8) = 22 \) (via \( F-Z \)). \( S = \{G, Z\} \).
+%   \item \textbf{Step 7}: Select \( G \) (\( d[G] = 15 \)). Update \( d[Z] = \min(22, 15 + 5) = 20 \) (via \( G-Z \)). \( S = \{Z\} \).
+%   \item \textbf{Step 8}: Select \( Z \) (\( d[Z] = 20 \)). No unvisited neighbors. \( S = \emptyset \).
+% \end{itemize}
+
+% Final distances: \( d[A] = 0 \), \( d[B] = 5 \), \( d[C] = 4 \), \( d[D] = 8 \), \( d[E] = 9 \), \( d[F] = 14 \), \( d[G] = 15 \), \( d[Z] = 20 \).
+
+% \subsubsection*{Verification:}
+% Check the shortest path:
+% \begin{itemize}
+%   \item Path \( A \to C \to D \to E \to G \to Z \): \( 4 + 4 + 1 + 6 + 5 = 20 \), matches \( d[Z] = 20 \).
+%   \item Path \( A \to C \to D \to E \to F \to Z \): \( 4 + 4 + 1 + 6 + 8 = 23 \).
+%   \item Path \( A \to B \to D \to E \to G \to Z \): \( 5 + 6 + 1 + 6 + 5 = 23 \).
+%   \item Path \( A \to C \to E \to G \to Z \): \( 4 + 7 + 6 + 5 = 22 \).
+% \end{itemize}
+
+% The minimum is 20, confirming the algorithm’s result via \( A \to C \to D \to E \to G \to Z \).
+
+% \subsubsection*{Conclusion:}
+% The shortest path length from \( A \) to \( Z \) is 20, achieved via the path \( A \to C \to D \to E \to G \to Z \) with weights 4, 4, 1, 6, and 5.
+
+% \[
+% \boxed{20}
+% \]
+
+
+
 \section{Assess whether an Eulerian and Hamiltonian Circuit Exists in an Undirected Graph (M2)}
 \label{sec:M2}
 
+
+
 \section{Construct a Proof of the Five-Color Theorem (D2)}
 \label{sec:D2}
+
+% \subsubsection*{The Problem:}
+% Prove the Five-Color Theorem: Every planar graph can be colored with at most five colors such that no two adjacent vertices share the same color.
+
+% \subsubsection*{Given:}
+% A planar graph \( G = (V, E) \) is a graph that can be embedded in the plane without edge crossings. A proper coloring assigns a color to each vertex such that no two vertices connected by an edge have the same color. We aim to show that \( G \) is 5-colorable, meaning it can be colored using at most five colors (e.g., \{1, 2, 3, 4, 5\}) \cite{rosen2019}.
+
+% \subsubsection*{Proof Strategy:}
+% We use mathematical induction on the number of vertices \( |V| = n \) in the planar graph \( G \), leveraging the fact that every planar graph has at least one vertex of degree at most 5 \cite{diestel2017}. The strategy is:
+% \begin{itemize}
+%   \item \textbf{Base Case}: Verify the theorem for small graphs (e.g., \( n \leq 5 \)).
+%   \item \textbf{Inductive Step}: Assume the theorem holds for graphs with fewer than \( n \) vertices. For a graph with \( n \) vertices, remove a vertex of degree at most 5, color the resulting graph with at most five colors, and reintroduce the vertex. For vertices of degree 5, use a Kempe chain argument to adjust colors if necessary to ensure a valid coloring \cite{rosen2019}.
+% \end{itemize}
+% This approach ensures a proper 5-coloring \cite{epp2020}.
+
+% \subsubsection*{Proof:}
+% We proceed by induction on the number of vertices \( n = |V| \).
+
+% \textbf{Base Case (\( n \leq 5 \)):}
+% For a planar graph with \( n \leq 5 \) vertices, the number of edges is limited by planarity. By Euler’s formula for planar graphs (\( |V| - |E| + |F| = 2 \), where \( |F| \) is the number of faces), and since each face (including the outer face) has at least three edges, we have \( 3|F| \leq 2|E| \). Combining with Euler’s formula, for a simple planar graph:
+% \[
+% |E| \leq 3n - 6 \quad \text{for } n \geq 3
+% \]
+% For \( n \leq 5 \), the maximum degree is small, and the graph can be colored with at most five colors. For example:
+% \begin{itemize}
+%   \item If \( n = 1 \): A single vertex requires one color.
+%   \item If \( n = 2 \): Two vertices (with at most one edge) need at most two colors.
+%   \item If \( n = 3 \): A triangle (complete graph \( K_3 \)) needs three colors.
+%   \item If \( n = 4 \): A planar graph like \( K_4 \) (tetrahedron) needs at most four colors.
+%   \item If \( n = 5 \): A planar graph (e.g., a cycle \( C_5 \)) needs at most three colors.
+% \end{itemize}
+% Since \( n \leq 5 \), five colors are sufficient for the base case.
+
+% \textbf{Inductive Hypothesis:}
+% Assume that every planar graph with \( k < n \) vertices (\( n \geq 6 \)) can be properly colored with at most five colors.
+
+% \textbf{Inductive Step:}
+% Consider a planar graph \( G = (V, E) \) with \( n \) vertices. By a standard result in graph theory, every planar graph has at least one vertex of degree at most 5 \cite{diestel2017}. Choose a vertex \( v \in V \) with degree \( \deg(v) \leq 5 \), and let its neighbors be \( \{ u_1, u_2, \ldots, u_k \} \), where \( k \leq 5 \).
+
+% Form the graph \( G' = G - v \), obtained by removing \( v \) and its incident edges. Since \( G' \) is planar and has \( n-1 \) vertices, by the inductive hypothesis, \( G' \) can be properly colored with at most five colors, say \{1, 2, 3, 4, 5\}.
+
+% Now, reintroduce vertex \( v \) to form \( G \). We need to assign a color to \( v \) such that it differs from the colors of its neighbors \( u_1, \ldots, u_k \).
+
+% \begin{itemize}
+%   \item \textbf{Case 1: \( \deg(v) \leq 4 \)}:
+%     The neighbors \( u_1, \ldots, u_k \) (where \( k \leq 4 \)) use at most four colors. Since there are five colors available, at least one color (say, color 1) is not used by any neighbor. Assign \( c(v) = 1 \). This ensures a proper coloring, as \( v \)’s color differs from its neighbors’ colors, and the coloring of \( G' \) remains valid.
+
+%   \item \textbf{Case 2: \( \deg(v) = 5 \)}:
+%     Suppose the neighbors \( u_1, u_2, u_3, u_4, u_5 \) are colored with \( c(u_i) = i \) for \( i = 1, 2, 3, 4, 5 \), using all five colors. If the neighbors use fewer than five distinct colors (e.g., two neighbors share a color), then at least one color is available for \( v \), and we can assign it directly. Assume the worst case: all five neighbors have distinct colors.
+
+%     To resolve this, use a Kempe chain argument \cite{rosen2019}:
+%     \begin{itemize}
+%       \item Consider the subgraph \( G'_{1,3} \) of \( G' \) induced by vertices colored 1 or 3 (i.e., vertices with colors 1 or 3 and edges between them where one endpoint is color 1 and the other is color 3).
+%       \item Let \( u_1 \) have color 1 and \( u_3 \) have color 3. Analyze the connected component in \( G'_{1,3} \):
+%         \begin{itemize}
+%           \item \textbf{Subcase A: \( u_1 \) and \( u_3 \) are in different connected components of \( G'_{1,3} \).}
+%             Swap the colors 1 and 3 in the component containing \( u_1 \). Since \( G'_{1,3} \) is bipartite (its vertices are partitioned into colors 1 and 3, with edges only between different colors), swapping colors 1 and 3 in \( u_1 \)’s component preserves the proper coloring of \( G' \). Now, \( u_1 \) has color 3, and since \( u_3 \) is in a different component, its color remains 3. Thus, color 1 is no longer used by any neighbor of \( v \). Assign \( c(v) = 1 \).
+
+%           \item \textbf{Subcase B: \( u_1 \) and \( u_3 \) are in the same connected component of \( G'_{1,3} \).}
+%             There exists a path \( P \) in \( G'_{1,3} \) from \( u_1 \) to \( u_3 \) with alternating colors 1 and 3. In the planar embedding of \( G \), the edges \( (v, u_1) \) and \( (v, u_3) \), combined with path \( P \), form a cycle \( C \) (since \( v \) connects to both \( u_1 \) and \( u_3 \)). By planarity, this cycle separates the plane into an interior and exterior region.
+
+%             Now, consider neighbors \( u_2 \) (color 2) and \( u_4 \) (color 4). Since \( C \) is a cycle in the planar embedding, \( u_2 \) and \( u_4 \) must lie in different regions (e.g., one inside and one outside \( C \)). Thus, in the subgraph \( G'_{2,4} \) induced by vertices colored 2 or 4, there cannot be a path from \( u_2 \) to \( u_4 \), as such a path would cross \( C \), violating planarity (since \( C \)’s vertices are colored 1 and 3, not 2 or 4).
+
+%             Therefore, \( u_2 \) and \( u_4 \) are in different connected components of \( G'_{2,4} \). Swap colors 2 and 4 in the component containing \( u_2 \). This preserves the proper coloring of \( G' \), as \( G'_{2,4} \) is bipartite. Now, \( u_2 \) has color 4, and \( u_4 \)’s color remains 4 (since it’s in a different component). Thus, color 2 is no longer used by any neighbor of \( v \). Assign \( c(v) = 2 \).
+%         \end{itemize}
+%     \end{itemize}
+%     In both subcases, we free up a color for \( v \), ensuring a proper 5-coloring of \( G \).
+% \end{itemize}
+
+% Thus, in all cases (\( \deg(v) \leq 4 \) or \( \deg(v) = 5 \)), we can assign a color to \( v \) such that the coloring of \( G \) is proper.
+
+% By the principle of mathematical induction \cite{epp2020}, the Five-Color Theorem holds for all planar graphs.
+
+% \subsubsection*{Verification:}
+% The key property is that every planar graph has a vertex of degree at most 5, derived from \( |E| \leq 3n - 6 \) and the degree sum \( 2|E| \leq 6n - 12 \), so the average degree is less than 6. The induction step ensures that:
+% \begin{itemize}
+%   \item For \( \deg(v) \leq 4 \), at least one of the five colors is available.
+%   \item For \( \deg(v) = 5 \), the Kempe chain argument guarantees that we can recolor \( G' \) to free up a color for \( v \), leveraging planarity to ensure that neighbors like \( u_2 \) and \( u_4 \) are in different components when \( u_1 \) and \( u_3 \) are connected.
+% \end{itemize}
+% Testing on small planar graphs (e.g., \( K_4 \), \( C_5 \)) confirms that fewer than five colors often suffice, but the proof guarantees five colors are always sufficient. The Kempe chain argument addresses the critical case where all five neighbors have distinct colors, ensuring the proof is complete.
+
+% \subsubsection*{Conclusion:}
+% The Five-Color Theorem is proven: every planar graph can be properly colored with at most five colors.
+% \[
+% \boxed{\text{Every planar graph is 5-colorable}}
+% \]
+
 
 \chapter{Investigate Solutions to Problem Situations Using the Application of Boolean Algebra (LO3)}
 \label{chap:LO3}
 
 \section{Diagram a Binary Problem in the Application of Boolean Algebra (P5)}
 \label{sec:P5}
+
+% \subsection{Introduction to Boolean Algebra in Binary Problems}
+
+% Boolean algebra is a mathematical framework used to analyze and design systems involving binary variables, which take values of 0 (false) or 1 (true)\cite{rosen2019}. It is fundamental in computer science for modeling and solving binary problems, particularly in digital circuit design and logic optimization. This section diagrams binary problems in two real-world domains—digital circuit design for a voting system and network security for access control—illustrating number representation, logic gate usage, and their practical applications.
+
+% \subsection{Domain 1: Digital Circuit Design for a Voting System}
+% \subsubsection*{Problem Description}
+
+% Consider a voting system for a three-member committee where a decision is approved if at least two members vote in favor. Each member’s vote is a binary input: 1 (approve) or 0 (reject). The system outputs 1 if the decision is approved, and 0 otherwise. Let the votes of members A, B, and C be represented by Boolean variables \( A \), \( B \), and \( C \), respectively. The problem is to design a circuit that computes the majority vote using Boolean algebra.
+
+% \subsubsection*{Number Representation}
+
+% The inputs \( A \), \( B \), and \( C \) are binary (0 or 1), representing the votes. The output \( Y \) is also binary, where:
+% - \( Y = 1 \): At least two of \( A \), \( B \), or \( C \) are 1 (decision approved).
+% - \( Y = 0 \): Fewer than two are 1 (decision rejected).
+
+% The Boolean function for the majority vote can be expressed as:
+% \[
+% Y = (A \land B) \lor (A \land C) \lor (B \land C)
+% \]
+% This equation outputs 1 when at least two inputs are 1, capturing combinations \( A \land B \), \( A \land C \), or \( B \land C \).
+
+% \subsubsection*{Logic Gate Diagram}
+
+% The circuit is implemented using AND, OR, and NOT gates:
+% - \textbf{AND gates}: Compute pairwise conjunctions \( A \land B \), \( A \land C \), and \( B \land C \).
+% - \textbf{OR gate}: Combines the outputs of the AND gates to produce \( Y \).
+
+% The logic gate diagram is as follows:
+
+% \begin{figure}[h!]
+%   \centering
+%   \includegraphics[scale=0.8]{./images/P4graph.png}
+%   \caption{Logic gate diagram for the majority voting system}
+%   \label{fig:voting_circuit}
+% \end{figure}
+
+% (Note: In practice, the diagram would be drawn using a tool like Logisim or LaTeX’s circuitikz package, showing three AND gates feeding into a single OR gate.)
+
+% \subsubsection*{Practical Applications}
+
+% This circuit has applications in:
+% - \textbf{Fault-tolerant systems}: Used in redundant systems (e.g., aerospace control systems) to ensure decisions are made based on majority agreement among multiple processors.
+% - \textbf{Democratic voting systems}: Implements electronic voting mechanisms in small committees or distributed systems.
+% - \textbf{Error detection}: Similar logic is used in majority voting for error correction in data transmission, ensuring reliability \cite{rosen2019}.
+
+% \subsubsection*{Qualitative Analysis}
+
+% \begin{itemize}
+%   \item \textbf{Benefits}: The circuit is simple, using only AND and OR gates, and is scalable for more inputs by extending the logic (e.g., for \( n \) voters, check combinations of at least \( \lceil n/2 \rceil \) votes). It provides fast, real-time decision-making.
+%   \item \textbf{Limitations}: The circuit assumes binary inputs and does not handle weighted votes or tie-breaking mechanisms. For large systems, the number of AND gates grows combinatorially (\( \binom{n}{k} \)).
+% \end{itemize}
+
+% \subsection{Domain 2: Network Security for Access Control}
+
+% \subsubsection*{Problem Description}
+
+% In a secure facility, access is granted if the access card is swiped (\( C = 1 \)) OR the correct PIN is entered (\( P = 1 \)) AND the security system is NOT in maintenance mode (\( M = 0 \)). The system outputs 1 (unlock) or 0 (lock). The Boolean expression is:
+% \[
+% Y = C \lor (P \land \neg M)
+% \]
+% where \( C \), \( P \), and \( M \) are binary variables, and \( \neg M \) is the negation of \( M \).
+
+% \subsubsection*{Number Representation}
+
+% The variables are:
+% \begin{itemize}
+%   \item \( C \): 1 (card swiped), 0 (not swiped).
+%   \item \( P \): 1 (correct PIN), 0 (incorrect PIN).
+%   \item \( M \): 1 (maintenance mode), 0 (normal mode).
+%   \item \( Y \): 1 (door unlocks), 0 (door remains locked).
+% \end{itemize}
+
+% The expression \( Y = C \lor (P \land \neg M) \) outputs 1 if either the card is swiped or both the PIN is correct and the system is not in maintenance mode.
+
+% \subsubsection*{Logic Gate Diagram}
+
+% The circuit uses:
+% \begin{itemize}
+%   \item \textbf{NOT gate}: Inverts \( M \) to produce \( \neg M \).
+%   \item \textbf{AND gate}: Computes \( P \land \neg M \).
+%   \item \textbf{OR gate}: Combines \( C \) with \( P \land \neg M \) to produce \( Y \).
+% \end{itemize}
+
+% \begin{figure}[h!]
+%   \centering
+%   \includegraphics[scale=0.8]{./images/P4graph.png}
+%   \caption{Logic gate diagram for the access control system}
+%   \label{fig:access_control_circuit}
+% \end{figure}
+
+% (Note: The diagram would show a NOT gate on \( M \), an AND gate for \( P \land \neg M \), and an OR gate combining \( C \) with the AND output.)
+
+% \subsubsection*{Practical Applications}
+
+% This circuit is used in:
+% \begin{itemize}
+%   \item \textbf{Security systems}: Controls access to buildings, data centers, or restricted areas, ensuring multiple authentication methods.
+%   \item \textbf{Computer login systems}: Similar logic governs multi-factor authentication, combining passwords, biometrics, or tokens.
+%   \item \textbf{Automated control systems}: Used in industrial settings to enforce safety protocols based on multiple conditions \cite{epp2020}.
+% \end{itemize}
+
+% \subsubsection*{Qualitative Analysis}
+
+% \begin{itemize}
+%   \item \textbf{Benefits}: The circuit is robust, combining multiple authentication methods to enhance security. It is simple to implement with basic gates and easily extensible (e.g., adding biometric inputs).
+%   \item \textbf{Limitations}: The system assumes binary conditions and does not account for partial failures (e.g., card reader malfunctions). Additional logic may be needed for timeouts or emergency overrides.
+% \end{itemize}
+
+% \subsection{Conclusion}
+
+% Boolean algebra effectively models binary problems in digital circuit design and network security. The voting system demonstrates how majority logic ensures reliable decision-making, while the access control system illustrates multi-factor authentication. Both use AND, OR, and NOT gates to implement Boolean functions, showcasing their versatility in real-world applications. These examples highlight the power of Boolean algebra in simplifying complex binary decisions \cite{rosen2019}.
+
 
 \section{Produce a Truth Table and Its Corresponding Boolean Equation from an Applicable Scenario (P6)}
 \label{sec:P6}
