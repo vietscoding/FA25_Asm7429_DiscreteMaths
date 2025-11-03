@@ -839,11 +839,15 @@ using a membership table, which lists all possible combinations of membership fo
 \subsubsection*{Formula:}
 A membership table lists whether an element \( x \) belongs to each set (1 for in, 0 for not in) and evaluates both sides of the equality~\citep{rosen2019}. For three sets, there are \( 2^3 = 8 \) combinations. The table compares membership in \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \). If the columns match, the equality holds.
 
-\subsubsection*{Substitution:}
+\subsubsection*{Solution:}
 Construct the membership table with columns for \( A \), \( B \), \( C \), \( A \cup B \cup C \), \( \overline{A \cup B \cup C} \), \( \overline{A} \), \( \overline{B} \), \( \overline{C} \), and \( \overline{A} \cap \overline{B} \cap \overline{C} \).
 
-\begin{center}
+\begin{table}[h]
+  \centering
+  \caption{The membership table verifying the equality of the equation}\label{table:membershipTableVerifyingTheEqualityOfTwoSet}
+
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+
 \hline
 \( A \) & \( B \) & \( C \) & \( A \cup B \cup C \) & \( \overline{A \cup B \cup C} \) & \( \overline{A} \) & \( \overline{B} \) & \( \overline{C} \) & \( \overline{A} \cap \overline{B} \cap \overline{C} \) \\
 \hline
@@ -857,7 +861,7 @@ Construct the membership table with columns for \( A \), \( B \), \( C \), \( A 
 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
 
 \textbf{Explanation of columns:}
 \begin{itemize}
@@ -929,7 +933,7 @@ Thus, a BST with 96 nodes has a height of approximately 6, enabling efficient se
 
 \textbf{Qualitative Analysis:}
 \begin{itemize}
-  \item \textbf{Context}: BSTs are used in database systems to index records, allowing fast retrieval of data based on key values (e.g., user IDs in a customer database). For example, a retail database might use a BST to index customer transactions by order ID.\\
+  \item \textbf{Context}: BSTs are used in database systems to index records, allowing fast retrieval of data based on key values (e.g., user IDs in a customer database). For example, a retail database might use a BST to index customer transactions by order ID.
   \item \textbf{Benefits}: BSTs provide efficient search, insertion, and deletion operations when balanced, with \( O(\log n) \) complexity. They support dynamic updates, unlike static arrays, and are simple to implement.
   \item \textbf{Limitations}: If insertions are not randomized, the BST can become unbalanced (e.g., resembling a linked list), leading to \( O(n) \) worst-case complexity. Self-balancing BSTs (e.g., AVL, Red-Black trees) mitigate this but add complexity. Additionally, BSTs may not scale well for very large datasets compared to B-trees used in modern databases.
 \end{itemize}
@@ -1196,8 +1200,8 @@ This equation outputs 1 when at least two inputs are 1, capturing combinations \
 
 \subsubsection*{Logic Gate Diagram}
 
-The circuit is implemented using AND, OR, and NOT gates:
-- \textbf{AND gates}: Compute pairwise conjunctions \( A \land B \), \( A \land C \), and \( B \land C \).
+The circuit is implemented using AND, OR, and NOT gates:\\
+- \textbf{AND gates}: Compute pairwise conjunctions \( A \land B \), \( A \land C \), and \( B \land C \).\\
 - \textbf{OR gate}: Combines the outputs of the AND gates to produce \( Y \).
 
 The logic gate diagram is as follows:
@@ -1205,19 +1209,19 @@ The logic gate diagram is as follows:
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.8]{./images/P4graph.png}
-  \caption{Logic gate diagram for the majority voting system}
-  \label{fig:voting_circuit}
+  \caption{Logic gate diagram for the majority voting system}\label{fig:voting_circuit}
 \end{figure}
 
 (Note: In practice, the diagram would be drawn using a tool like Logisim or LaTeX’s circuitikz package, showing three AND gates feeding into a single OR gate.)
 
 \subsubsection*{Practical Applications}
 
-This circuit has applications in:\\
-- \textbf{Fault-tolerant systems}: Used in redundant systems (e.g., aerospace control systems) to ensure decisions are made based on majority agreement among multiple processors.\\
-- \textbf{Democratic voting systems}: Implements electronic voting mechanisms in small committees or distributed systems.\\
-- \textbf{Error detection}: Similar logic is used in majority voting for error correction in data transmission, ensuring reliability~\citep{rosen2019}.
-
+This circuit has applications in:
+\begin{itemize}
+  \item \textbf{Fault-tolerant systems}: Used in redundant systems (e.g., aerospace control systems) to ensure decisions are made based on majority agreement among multiple processors.
+  \item \textbf{Democratic voting systems}: Implements electronic voting mechanisms in small committees or distributed systems.
+  \item \textbf{Error detection}: Similar logic is used in majority voting for error correction in data transmission, ensuring reliability~\citep{rosen2019}.
+\end{itemize}
 \subsubsection*{Qualitative Analysis}
 
 \begin{itemize}
@@ -1259,8 +1263,7 @@ The circuit uses:
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.8]{./images/P4graph.png}
-  \caption{Logic gate diagram for the access control system}
-  \label{fig:access_control_circuit}
+  \caption{Logic gate diagram for the access control system}\label{fig:access_control_circuit}
 \end{figure}
 
 (Note: The diagram would show a NOT gate on \( M \), an AND gate for \( P \land \neg M \), and an OR gate combining \( C \) with the AND output.)
@@ -1511,26 +1514,13 @@ The four Boolean expressions to simplify are:
 
 \subsubsection*{Formula:}
 
-We use the following Boolean algebra identities (Rosen, 2019):
+We use the following Boolean algebra identities~\cite{rosen2019} as shown in Figure~\ref{fig:booleanIdentities}:
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.60]{./images/booleanIdentities.png}
-  \caption{Boolean Identities}
-  \label{fig:booleanIdentities}
+  \caption{Boolean Identities}\label{fig:booleanIdentities}
 \end{figure}
-
-% \begin{itemize}
-% \item Idempotent Law: $x + x = x$ and $x \cdot x = x$
-% \item Absorption Law: $x + xy = x$ and $x(x + y) = x$
-% \item Domination Law: $x + 1 = 1$ and $x \cdot 0 = 0$
-% \item Complement Law: $x + \overline{x} = 1$ and $x \cdot \overline{x} = 0$
-% \item De Morgan's Law: $\overline{x + y} = \overline{x} \cdot \overline{y}$ and $\overline{x \cdot y} = \overline{x} + \overline{y}$
-% \item Distributive Law: $x(y + z) = xy + xz$ and $x + yz = (x + y)(x + z)$
-% \item Commutative Law: $x + y = y + x$ and $xy = yx$
-% \item Associative Law: $(x + y) + z = x + (y + z)$ and $(xy)z = x(yz)$
-% \item Double Negation: $\overline{\overline{x}} = x$
-% \end{itemize}
 
 \subsubsection*{Substitution:}
 
@@ -1543,10 +1533,7 @@ y(y + z) &= y \quad \text{(by Absorption Law: } y(y + z) = y\text{)} \\
 z(z + x) &= z \quad \text{(by Absorption Law: } z(z + x) = z\text{)}
 \end{align*}
 
-Step 2: Substitute the simplified terms back into the expression.
-\[
-x + y + z
-\]
+Step 2: Substitute the simplified terms back into the expression.\[ x + y + z \]
 
 Step 3: Apply the Idempotent Law (no further simplification possible).
 \[
@@ -1798,8 +1785,7 @@ Construct a truth table showing the output $F$ for each BCD input:
 
 \begin{table}[h]
 \centering
-\caption{Truth Table for Divisibility by 3 Checker}
-\label{table:truthTableForDivisibilityBy3}
+\caption{Truth Table for Divisibility by 3 Checker}\label{table:truthTableForDivisibilityBy3}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 w & x & y & z & Decimal digit & F (Divisible by 3) \\
@@ -1845,6 +1831,7 @@ Components Required:
   \item OR gate (4-input) to combine all AND outputs
 
 \end{itemize}
+The circuit is shown in Figure~\ref{fig:logicCircuit}
 
 \begin{figure}[h!]
   \centering
