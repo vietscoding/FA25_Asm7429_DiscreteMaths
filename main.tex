@@ -956,19 +956,18 @@ Thus, a Min-Heap with 116 tasks has a height of 6, allowing efficient task prior
   \item \textbf{Limitations}: Min-Heaps are less effective for searching arbitrary elements (requiring \( O(n) \) time). They are also sensitive to priority ties, which may require additional logic to resolve. For large-scale systems, more complex structures like Fibonacci heaps may offer better amortized performance.
 \end{itemize}
 
-\subsubsection*{Conclusion:}
-
 \section{Use Dijkstra's Algorithm to Find a Shortest Path Spanning Tree in Graph (P4)}\label{sec:P4}
 
 \subsection{State Dijkstra's Algorithm in an undirected graph}
+\subsubsection*{Description:}
+Dijkstra's algorithm finds the shortest path from a single source vertex to all other vertices in a weighted, undirected graph with non-negative edge weights~\citep{rosen2019}. In an undirected graph, edges are bidirectional, meaning the weight from vertex \( u \) to \( v \) equals the weight from \( v \) to \( u \). The algorithm proceeds as follows:
+
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.77]{./images/P4graph.png}
-  \caption{The given undirected graph}
-  \label{fig:p4graph}
+  \caption{The given undirected graph}\label{fig:p4graph}
 \end{figure}
-\subsubsection*{Description:}
-Dijkstra's algorithm finds the shortest path from a single source vertex to all other vertices in a weighted, undirected graph with non-negative edge weights~\citep{rosen2019}. In an undirected graph, edges are bidirectional, meaning the weight from vertex \( u \) to \( v \) equals the weight from \( v \) to \( u \). The algorithm proceeds as follows:
+
 
 \begin{enumerate}
   \item Initialize a distance array \( d \) where \( d[source] = 0 \) and \( d[v] = \infty \) for all other vertices \( v \).
@@ -993,8 +992,7 @@ The algorithm constructs a shortest path spanning tree rooted at the source, wit
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.5]{./images/222findHalminton.png}
-  \caption{The provided undirected graph}
-  \label{fig:222findHalminton}
+  \caption{The provided undirected graph}\label{fig:222findHalminton}
 \end{figure}
 Consider the undirected weighted graph provided (see Figure~\ref{fig:222findHalminton}), with vertices \( A, B, C, D, E, F, G, Z \) and the following edges with weights:
 \begin{itemize}
@@ -1068,12 +1066,9 @@ The minimum is 20, confirming the algorithm's result via \( A \to C \to D \to E 
 
 \subsubsection*{Conclusion:}
 The shortest path length from \( A \) to \( Z \) is 20, achieved via the path \( A \to C \to D \to E \to G \to Z \) with weights 4, 4, 1, 6, and 5.
-
 \[
 \boxed{20}
 \]
-
-
 
 \section{Assess whether an Eulerian and Hamiltonian Circuit Exists in an Undirected Graph (M2)}\label{sec:M2}
 
