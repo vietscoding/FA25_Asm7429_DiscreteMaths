@@ -18,9 +18,3 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{array}
-% \usepackage{showframe} % Hiển thị khung lề
-\usepackage{fancyhdr} % tùy chỉnh header & footer
-\usepackage{layouts}   % Thêm gói layouts để hiển thị kích thước
-% \usepackage{fontspec}
-\usepackage{booktabs} % để \toprule, \midrule, \bottomrule hoạt động (nếu không có, LaTeX sẽ báo lỗi).
-

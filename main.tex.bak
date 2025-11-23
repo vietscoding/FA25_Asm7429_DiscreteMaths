@@ -11,18 +11,18 @@
     includehead,      % Bao gồm header trong printable area
     includefoot       % Bao gồm footer trong printable area
 }
-
-
-
+% \usepackage{showframe} % Hiển thị khung lề
+\usepackage{fancyhdr} % tùy chỉnh header & footer
+\usepackage{layouts}   % Thêm gói layouts để hiển thị kích thước
+% \usepackage{fontspec}
 % \setmainfont{Calibri}
 
 % References & Citiations
 \usepackage{natbib}
-\setcitestyle{aysep={,}}
+
 \usepackage[hidelinks]{hyperref}
 
-\onehalfspacing
-% giãn dòng 1.5
+\onehalfspacing   % giãn dòng 1.5
 
 \bibliographystyle{agsm}     % định dạng Harvard (có thể thay đổi)
 
@@ -35,7 +35,7 @@
 \fancyhead[RE]{\rightmark}  % trang chẵn: Section
 
 % Footer: tác giả + số trang
-\fancyfoot[L]{Written by: Doan Quoc Viet \(-\) BD00536} 
+\fancyfoot[L]{Written by: Doan Quoc Viet - BD00536} 
 \fancyfoot[R]{\thepage}
 
 % Làm Chapter và Section hiện đúng trong header
@@ -61,40 +61,40 @@
 
 
 \section*{Introduction}
-Mathematics is the foundation of the fields of software engineering and information technology (IT), where discrete mathematics plays an important role in solving complex computational problems. Discrete mathematics, which includes fields such as set theory, graph theory, Boolean algebra, and abstract algebra, equips software engineers with the tools to design efficient algorithms, model data structures, and ensure robust system performance. For example, concepts from discrete mathematics are integral to database query optimization, cryptographic protocols, network routing algorithms, and logic circuit design, enabling practical solutions to real-world challenges~\citep{rosen2019}.
+Mathematics is the foundation of the fields of software engineering and information technology (IT), where discrete mathematics plays an important role in solving complex computational problems. Discrete mathematics, which includes fields such as set theory, graph theory, Boolean algebra, and abstract algebra, equips software engineers with the tools to design efficient algorithms, model data structures, and ensure robust system performance. For example, concepts from discrete mathematics are integral to database query optimization, cryptographic protocols, network routing algorithms, and logic circuit design, enabling practical solutions to real-world challenges (Rosen, 2018).
 
-The application of discrete mathematics in software engineering offers significant benefits. It allows developers to create optimized algorithms with improved time and space complexity, as seen in sorting and searching techniques. Furthermore, discrete structures such as graphs facilitate the modeling of relationships in social networks or communication systems. At the same time, Boolean algebra supports the development of reliable digital circuits, and abstract algebra helps understand symmetries in computational problems~\citep{epp2020}. By mastering these concepts, engineers can solve complex problems of accuracy and scalability. This assignment explores the practical applications of discrete mathematics in software engineering through a structured analysis organized into four chapters.
+The application of discrete mathematics in software engineering offers significant benefits. It allows developers to create optimized algorithms with improved time and space complexity, as seen in sorting and searching techniques. Furthermore, discrete structures such as graphs facilitate the modeling of relationships in social networks or communication systems. At the same time, Boolean algebra supports the development of reliable digital circuits, and abstract algebra helps understand symmetries in computational problems (Epp, 2010). By mastering these concepts, engineers can solve complex problems of accuracy and scalability. This assignment explores the practical applications of discrete mathematics in software engineering through a structured analysis organized into four chapters.
 
 % Tham chiếu chéo
 
 \begin{itemize}
-  \item Chapter 1~\hyperref[chap:LO1]{(LO1)} focuses on set theory and its relevance to software engineering.
+  \item Chapter 1 focuses on set theory and its relevance to software engineering \hyperref[chap:LO1]{(LO1)}.
   \begin{itemize}
-    \item In Section 1.1~\hyperref[sec:P1]{(P1)}, operations on algebraic sets will be applied to solve a problem.
-    \item Section 1.2~\hyperref[sec:P1]{(P2)} determines the cardinality of a multiset by factoring it, expressing the result as individual multisets.
-    \item Section 1.3~\hyperref[sec:M1]{(M1)} discusses finding the inverse of a function using appropriate mathematical techniques .
-    \item Finally, Section 1.4~\hyperref[sec:D1]{(D1)} develops proof principles for verifying properties of sets using membership tables and subset relations.
+    \item In Section 1.1, operations on algebraic sets will be applied to solve a problem \hyperref[sec:P1]{(P1)}.
+    \item Section 1.2 determines the cardinality of a multiset by factoring it, expressing the result as individual multisets \hyperref[sec:P1]{(P2)}.
+    \item Section 1.3 discusses finding the inverse of a function using appropriate mathematical techniques \hyperref[sec:M1]{(M1)}.
+    \item Finally, Section 1.4 develops proof principles for verifying properties of sets using membership tables and subset relations \hyperref[sec:D1]{(D1)}.
   \end{itemize}
-  \item Chapter 2~\hyperref[chap:LO2]{(LO2)} reviews graph theory and its role in modeling mathematical structures.
+  \item Chapter 2 reviews graph theory and its role in modeling mathematical structures \hyperref[chap:LO2]{(LO2)}.
   \begin{itemize}
-    \item Section 2.1~\hyperref[sec:P3]{(P3)} models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights.
-    \item Section 2.2~\hyperref[sec:P4]{(P4)} applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph.
-    \item Section 2.3~\hyperref[sec:M2]{(M2)} evaluates the existence of Euler and Hamiltonian cycles in an undirected graph.
-    \item Finally, Section 2.4~\hyperref[sec:D4]{(D4)} constructs a proof of the Five Color Theorem.
+    \item Section 2.1 models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights \hyperref[sec:P3]{(P3)}.
+    \item Section 2.2 applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph \hyperref[sec:P4]{(P4)}.
+    \item Section 2.3 evaluates the existence of Euler and Hamiltonian cycles in an undirected graph \hyperref[sec:M2]{(M2)}.
+    \item Finally, Section 2.4 constructs a proof of the Five Color Theorem \hyperref[sec:D4]{(D4)}.
   \end{itemize}
-  \item Chapter 3~\hyperref[chap:LO3]{(LO3)} investigates solutions to problem situations using Boolean algebra.
+  \item Chapter 3 investigates solutions to problem situations using Boolean algebra (LO3).
   \begin{itemize}
-    \item Section 3.1~\hyperref[sec:P5]{(P5)} discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications.
-    \item Section 3.2~\hyperref[sec:P6]{(P6)} generates truth tables and corresponding Boolean equations from application situations.
-    \item Section 3.3~\hyperref[sec:M3]{(M3)} simplifies Boolean equations using algebraic methods (M3).
-    \item Finally, Section 3.4~\hyperref[sec:D3]{(D3)} designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal.
+    \item Section 3.1 discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications (P5).
+    \item Section 3.2 generates truth tables and corresponding Boolean equations from application situations (P6).
+    \item Section 3.3 simplifies Boolean equations using algebraic methods (M3).
+    \item Finally, Section 3.4 designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal (D3).
   \end{itemize}
-  \item Chapter 4~\hyperref[chap:LO4]{(LO4)} explores concepts applied in abstract algebra.
+  \item Chapter 4 explores concepts applied in abstract algebra (LO4).
   \begin{itemize}
-    \item Section 4.1~\hyperref[sec:P7]{(P7)} describes the distinguishing features of different binary operations performed on the same set.
-    \item Section 4.2~\hyperref[sec:P8]{(P8)} determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem.
-    \item Section 4.3~\hyperref[sec:M4]{(M4)} confirms whether a given set with a binary operation forms a group.
-    \item Finally, Section 4.4~\hyperref[sec:D4]{(D4)} explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design.
+    \item Section 4.1 describes the distinguishing features of different binary operations performed on the same set (P7).
+    \item Section 4.2 determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem (P8).
+    \item Section 4.3 confirms whether a given set with a binary operation forms a group (M4).
+    \item Finally, Section 4.4 explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design (D4).
   \end{itemize}
 
 \end{itemize}
@@ -103,7 +103,9 @@ The application of discrete mathematics in software engineering offers significa
 
 % All sources referenced in this assignment are documented in the References section.
 
-\chapter{Examine Set Theory and Functions Applicable to Software Engineering (LO1)}\label{chap:LO1}  % Đặt nhãn để tham chiếu chéo (cross-references)
+\chapter{Examine Set Theory and Functions Applicable to Software Engineering (LO1)}
+
+\label{chap:LO1}  % Đặt nhãn để tham chiếu chéo (cross-references)
 
 \section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}\label{sec:P1}
 % \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)} 
@@ -208,25 +210,32 @@ The cardinality of the set \( A \cup B \) is $\boxed{110}$.
     \]
 
 \subsubsection*{Substitution:}
-Substitute 116 and 15, respectively, of $|A \cup B|$ and $|A \cap B|$ into equation (1):
   \begin{align*}
-    116 &= |A| + |B| - 15 \\
-    |A| + |B| &= 131. \tag{2}
+    116 = &|A| + |B| - 15 \\
+    &|A| + |B| = 131. \tag{2}
   \end{align*}
 
   For \( |A - B| \):
-  \begin{align*}
-    |A - B| &= |A| - |A \cap B| \\
-         35 &= |A| - 15 \\
-        |A| &= 35 + 15 = 50
-  \end{align*}
+  \[
+  |A - B| = |A| - |A \cap B|.
+  \]
 
+  \[
+  35 = |A| - 15.
+  \]
+
+  \[
+  |A| = 35 + 15 = 50.
+  \]
 
   Substitute \( |A| = 50 \) into equation (2):
-  \begin{align*}
-    50 + |B| &= 131 \\
-    |B| &= 131 - 50 = 81
-  \end{align*}
+  \[
+  50 + |B| = 131.
+  \]
+
+  \[
+  |B| = 131 - 50 = 81.
+  \]
 
 \subsubsection*{Verification:}
   \begin{itemize}
@@ -236,7 +245,7 @@ Substitute 116 and 15, respectively, of $|A \cup B|$ and $|A \cap B|$ into equat
   \end{itemize}
 
 \subsubsection*{Conclusion:}
-Final answer: \boxed{$|B| = 81$}
+Final answer: \boxed{81}
 
 \subsection{How many customers have not purchased anything?}
 
@@ -264,13 +273,17 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
       \item $C$ denote the set of customers who purchased bakery items.
       \item $E$ denote the set of customers who purchased nothing.
     \end{itemize}
-    \item The following Venn diagram (Figure~\ref{fig:venn113}) illustrates the distribution of customers according to the categories they purchased:
+
+% \subsubsection*{Visualization:}
+% 
+    \item The following Venn diagram (see Figure~\ref{fig:venn113}) illustrates the distribution of customers according to the categories they purchased:
     \begin{figure}[h!]
       \centering
       \includegraphics[scale=0.32]{./images/venn113latest.png}
       \caption{A Venn diagram representing the distribution of customers based on their purchasing categories}
       \label{fig:venn113}
     \end{figure}
+
     \item Based on the given data, we refine the above data to support solving the problem in a simpler way by using the concepts of sets and we will use these facts to find the number of customers who purchased nothing:
     \begin{itemize}
       \item $|U| = 356$
@@ -281,7 +294,7 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
       \item $|B \cap C| = 36$
       \item $|A \cap C| = 25$
       \item $|A \cap B \cap C| = 15$
-      \item $|E| = $ ?
+      \item $|E| = $?
     \end{itemize}
   \end{itemize}
 
@@ -292,7 +305,7 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
   |E| = |U| - |A \cup B \cup C| \tag{1}
   \]
 
-  I will use the \textbf{principle of inclusion-exclusion}~\citep{rosen2019} for three sets to determine the number of customers who purchased nothing at the store, which is |E|, by finding $|A \cup B \cup C|$:
+  I will use the \textbf{principle of inclusion-exclusion} for three sets to determine the number of customers who purchased nothing at the store, which is |E|, by finding $|A \cup B \cup C|$:
     \[
     |A \cup B \cup C| = |A| + |B|+|C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C| \tag{2}
     \]
@@ -300,11 +313,11 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
 \subsubsection*{Substitution:}
   Substitute the data we have in the given part into equation (2), we have:
   \begin{align*}
-    |A \cup B \cup C| &= 115 + 96 + 85 - 46 - 36 - 25 + 15 \\
-                      &= (115 + 96 + 85) - (46 + 36 + 25) + 15 \\
-                      &= 296 - 107 + 15 \\
-                      &= 189 + 15 \\
-                      &= 204
+    (2) \Leftrightarrow |A \cup B \cup C| &= 115 + 96 + 85 - 46 - 36 - 25 + 15 \\
+                                          &= (115 + 96 + 85) - (46 + 36 + 25) + 15 \\
+                                          &= 296 - 107 + 15 \\
+                                          &= 189 + 15 \\
+                                          &= 204
   \end{align*}
 
   Substitute $|A \cup B \cup C|$ we just got above and $|U|$ into the equation (1) to find $|E|$, we have:
@@ -324,7 +337,6 @@ To confirm the union calculation step-by-step:
 This matches the result I did above, so the number of customers who purchased nothing is indeed 152.
 \subsubsection*{Conclusion:}
 The number of customers who have not purchased anything is \boxed{152}.
-\newpage
 \section{Determine the Cardinality of a Given Bag (Multiset) (P2)}\label{sec:P2}
 
 \subsection{List the bag of prime factors for each of the provided numbers}
@@ -345,7 +357,7 @@ Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
 We need to find the prime factorization of each number and represent them as bags (multisets), where a bag allows repeated elements, and the multiplicity of each prime factor is the number of times it appears in the factorization.
 
 \subsubsection*{Formula:}
-To find the bag of prime factors for a number, we perform prime factorization by dividing the number by the smallest possible prime numbers repeatedly until the quotient is 1~\citep{burton2010}. The bag contains all prime factors, including repetitions, based on their multiplicity in the factorization.
+To find the bag of prime factors for a number, we perform prime factorization by dividing the number by the smallest possible prime numbers repeatedly until the quotient is 1 \cite{burton2010}. The bag contains all prime factors, including repetitions, based on their multiplicity in the factorization.
 
 \subsubsection*{Substitution:}
 Let’s compute the prime factorization for each number.
@@ -397,8 +409,8 @@ The bags are:
 \subsubsection*{Conclusion:}
 The bags of prime factors are:
 \begin{itemize}
-  \item For \boxed{$\(\overline{1a2} = 152\): \( \{2, 2, 2, 19\} \)$}
-  \item For \boxed{$\(\overline{2b0} = 260\): \( \{2, 2, 5, 13\} \)$}
+  \item For \(\overline{1a2} = 152\): \( \{2, 2, 2, 19\} \)
+  \item For \(\overline{2b0} = 260\): \( \{2, 2, 5, 13\} \)
 \end{itemize}
 
 \subsection{Find the cardinalities}
@@ -420,15 +432,15 @@ From the previous subsection:
 \end{itemize}
 
 \subsubsection*{Formula:}
-For multisets (bags), as defined in~\cite{epp2020}:
+For multisets (bags), as defined in\cite{epp2020}:
 \begin{itemize}
   \item The \textbf{cardinality} of a bag is the total number of elements, counting repetitions.
   \item The \textbf{intersection} \( B_1 \cap B_2 \) contains the elements common to both bags, with the multiplicity of each element being the minimum of its multiplicities in \( B_1 \) and \( B_2 \).
   \item The \textbf{union} \( B_1 \cup B_2 \) contains all elements from both bags, with the multiplicity of each element being the maximum of its multiplicities in \( B_1 \) and \( B_2 \).
-  \item The \textbf{difference} \( B_1 \setminus B_2 \) contains elements in \( B_1 \) that remain after removing elements that appear in \( B_2 \), with multiplicities adjusted accordingly (if an element's multiplicity in \( B_2 \) is less than in \( B_1 \), the difference includes the remaining occurrences).
+  \item The \textbf{difference} \( B_1 \setminus B_2 \) contains elements in \( B_1 \) that remain after removing elements that appear in \( B_2 \), with multiplicities adjusted accordingly (if an element’s multiplicity in \( B_2 \) is less than in \( B_1 \), the difference includes the remaining occurrences).
   \item The cardinality of a bag \( B \), denoted \( |B| \), is the sum of the multiplicities of its distinct elements.
 \end{itemize}
-Additionally, the cardinality of the union can be verified using the inclusion-exclusion principle for multisets~\citep{rosen2019}:
+Additionally, the cardinality of the union can be verified using the inclusion-exclusion principle for multisets \cite{rosen2019}:
 \[
 |B_1 \cup B_2| = |B_1| + |B_2| - |B_1 \cap B_2|
 \]
@@ -506,7 +518,7 @@ To verify:
   \item Intersection: \( \{2, 2\} \) has 2 elements. Matches the minimum multiplicities.
   \item Union: \( \{2, 2, 2, 19, 5, 13\} \) has 6 elements. Matches the maximum multiplicities.
   \item Difference: Removing two 2’s from \( B_1 \) leaves one 2 and one 19, so \( \{2, 19\} \) has 2 elements. Correct.
-  \item Using the inclusion-exclusion principle~\citep{rosen2019}:
+  \item Using the inclusion-exclusion principle \cite{rosen2019}:
     \[
     |B_1 \cup B_2| = |B_1| + |B_2| - |B_1 \cap B_2|
     \]
@@ -536,7 +548,7 @@ The cardinalities are:
 \end{array}
 }
 \]
-\newpage
+
 \section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}\label{sec:M1}
 
 \subsection{Ascertain whether the given functions are invertible}
@@ -554,10 +566,10 @@ Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
   \item First function: \( f: \mathbb{R} \rightarrow \mathbb{R} \), \( f(x) = 6x + 5 \).
   \item Second function: \( f: [-6, +\infty) \rightarrow [0, +\infty) \), \( f(x) = \sqrt{x + 6} \).
 \end{itemize}
-To determine if each function is invertible, we must check if it is bijective (injective and surjective) on its given domain and codomain~\citep{epp2020}. If invertible, we find the inverse by solving \( y = f(x) \) for \( x \) in terms of \( y \).
+To determine if each function is invertible, we must check if it is bijective (injective and surjective) on its given domain and codomain \cite{epp2020}. If invertible, we find the inverse by solving \( y = f(x) \) for \( x \) in terms of \( y \).
 
 \subsubsection*{Formula:}
-A function \( f: A \rightarrow B \) is invertible if it is bijective (both one-to-one and onto)~\citep{epp2020}:
+A function \( f: A \rightarrow B \) is invertible if it is bijective \cite{epp2020}:
 \begin{itemize}
   \item \textbf{Injective} (one-to-one): \( f(x_1) = f(x_2) \implies x_1 = x_2 \).
   \item \textbf{Surjective} (onto): For every \( y \in B \), there exists \( x \in A \) such that \( f(x) = y \).
@@ -668,7 +680,7 @@ f(x) = \sqrt{x + 6}: \quad f^{-1}(x) = x^2 - 6, \quad x \geq 0
 \end{array}
 }
 \]
-\newpage
+
 \subsection{Find \( g \circ f \)}
 
 \subsubsection*{The Problem:}
@@ -683,7 +695,7 @@ Using \( a = 5 \) and \( b = 6 \), we have:
 The composition \( g \circ f \) is defined as \( (g \circ f)(x) = g(f(x)) \).
 
 \subsubsection*{Formula:}
-For functions \( f \) and \( g \), the composition is \( (g \circ f)(x) = g(f(x)) \), where we apply \( f \) first, then \( g \) to the result~\citep{rosen2019}. Since \( f \) is piecewise, we compute \( g(f(x)) \) for each case of \( f \).
+For functions \( f \) and \( g \), the composition is \( (g \circ f)(x) = g(f(x)) \), where we apply \( f \) first, then \( g \) to the result \cite{rosen2019}. Since \( f \) is piecewise, we compute \( g(f(x)) \) for each case of \( f \).
 
 \subsubsection*{Substitution:}
 Since \( f \) is defined piecewise, we compute \( g \circ f \) for each case.
@@ -736,6 +748,12 @@ The piecewise function correctly represents \( g \circ f \).
 \subsubsection*{Conclusion:}
 The composition is:
 \[
+(g \circ f)(x) = \begin{cases} 
+12x + 25, & x < 0 \\
+6x^3 + 31, & x \geq 0 
+\end{cases}
+\]
+\[
 \boxed{
 (g \circ f)(x) = \begin{cases} 
 12x + 25, & x < 0 \\
@@ -743,7 +761,7 @@ The composition is:
 \end{cases}
 }
 \]
-\newpage
+D1
 \section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}\label{sec:D1}
 
 \subsubsection*{The Problem:}
@@ -811,7 +829,7 @@ To verify, consider the logical equivalence of De Morgan's Law. For any element 
 Both expressions describe the same set of elements, confirming the equality.
 
 \subsubsection*{Conclusion:}
-The set equality \boxed{$\( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \)$} is proven by showing mutual subset inclusion.
+The set equality \( \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C} \) is proven by showing mutual subset inclusion.
 
 \subsection{Verify the equality using a membership table}
 
@@ -825,15 +843,11 @@ using a membership table, which lists all possible combinations of membership fo
 \subsubsection*{Formula:}
 A membership table lists whether an element \( x \) belongs to each set (1 for in, 0 for not in) and evaluates both sides of the equality~\citep{rosen2019}. For three sets, there are \( 2^3 = 8 \) combinations. The table compares membership in \( \overline{A \cup B \cup C} \) and \( \overline{A} \cap \overline{B} \cap \overline{C} \). If the columns match, the equality holds.
 
-\subsubsection*{Solution:}
+\subsubsection*{Substitution:}
 Construct the membership table with columns for \( A \), \( B \), \( C \), \( A \cup B \cup C \), \( \overline{A \cup B \cup C} \), \( \overline{A} \), \( \overline{B} \), \( \overline{C} \), and \( \overline{A} \cap \overline{B} \cap \overline{C} \).
 
-\begin{table}[h]
-  \centering
-  \caption{The membership table verifying the equality of the equation}\label{table:membershipTableVerifyingTheEqualityOfTwoSet}
-
+\begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-
 \hline
 \( A \) & \( B \) & \( C \) & \( A \cup B \cup C \) & \( \overline{A \cup B \cup C} \) & \( \overline{A} \) & \( \overline{B} \) & \( \overline{C} \) & \( \overline{A} \cap \overline{B} \cap \overline{C} \) \\
 \hline
@@ -847,7 +861,7 @@ Construct the membership table with columns for \( A \), \( B \), \( C \), \( A 
 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 \textbf{Explanation of columns:}
 \begin{itemize}
@@ -919,7 +933,7 @@ Thus, a BST with 96 nodes has a height of approximately 6, enabling efficient se
 
 \textbf{Qualitative Analysis:}
 \begin{itemize}
-  \item \textbf{Context}: BSTs are used in database systems to index records, allowing fast retrieval of data based on key values (e.g., user IDs in a customer database). For example, a retail database might use a BST to index customer transactions by order ID.
+  \item \textbf{Context}: BSTs are used in database systems to index records, allowing fast retrieval of data based on key values (e.g., user IDs in a customer database). For example, a retail database might use a BST to index customer transactions by order ID.\\
   \item \textbf{Benefits}: BSTs provide efficient search, insertion, and deletion operations when balanced, with \( O(\log n) \) complexity. They support dynamic updates, unlike static arrays, and are simple to implement.
   \item \textbf{Limitations}: If insertions are not randomized, the BST can become unbalanced (e.g., resembling a linked list), leading to \( O(n) \) worst-case complexity. Self-balancing BSTs (e.g., AVL, Red-Black trees) mitigate this but add complexity. Additionally, BSTs may not scale well for very large datasets compared to B-trees used in modern databases.
 \end{itemize}
@@ -941,20 +955,20 @@ Thus, a Min-Heap with 116 tasks has a height of 6, allowing efficient task prior
   \item \textbf{Benefits}: Min-Heaps ensure \( O(\log n) \) insertion and deletion of the minimum element, ideal for dynamic priority queues. Their complete binary tree structure minimizes memory usage and supports efficient array-based implementations.
   \item \textbf{Limitations}: Min-Heaps are less effective for searching arbitrary elements (requiring \( O(n) \) time). They are also sensitive to priority ties, which may require additional logic to resolve. For large-scale systems, more complex structures like Fibonacci heaps may offer better amortized performance.
 \end{itemize}
-\newpage
+
+\subsubsection*{Conclusion:}
 
 \section{Use Dijkstra's Algorithm to Find a Shortest Path Spanning Tree in Graph (P4)}\label{sec:P4}
 
 \subsection{State Dijkstra's Algorithm in an undirected graph}
-\subsubsection*{Description:}
-Dijkstra's algorithm finds the shortest path from a single source vertex to all other vertices in a weighted, undirected graph with non-negative edge weights~\citep{rosen2019}. In an undirected graph, edges are bidirectional, meaning the weight from vertex \( u \) to \( v \) equals the weight from \( v \) to \( u \). The algorithm proceeds as follows:
-
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.77]{./images/P4graph.png}
-  \caption{The given undirected graph}\label{fig:p4graph}
+  \includegraphics[scale=1]{./images/P4graph.png}
+  \caption{The given undirected graph}
+  \label{fig:p4graph}
 \end{figure}
-
+\subsubsection*{Description:}
+Dijkstra's algorithm finds the shortest path from a single source vertex to all other vertices in a weighted, undirected graph with non-negative edge weights~\citep{rosen2019}. In an undirected graph, edges are bidirectional, meaning the weight from vertex \( u \) to \( v \) equals the weight from \( v \) to \( u \). The algorithm proceeds as follows:
 
 \begin{enumerate}
   \item Initialize a distance array \( d \) where \( d[source] = 0 \) and \( d[v] = \infty \) for all other vertices \( v \).
@@ -976,7 +990,7 @@ The algorithm constructs a shortest path spanning tree rooted at the source, wit
 \subsection{Apply Dijkstra's algorithm to determine the shortest path length between vertices \( A \) and \( Z \) in the provided weighted graph}
 
 \subsubsection*{Given:}
-Consider the undirected weighted graph provided (see Figure~\ref{fig:p4graph}), with vertices \( A, B, C, D, E, F, G, Z \) and the following edges with weights:
+Consider the undirected weighted graph provided, with vertices \( A, B, C, D, E, F, G, Z \) and the following edges with weights:
 \begin{itemize}
   \item \( A-B = a \), \( A-C = 4 \)
   \item \( B-D = 6 \)
@@ -1048,200 +1062,34 @@ The minimum is 20, confirming the algorithm's result via \( A \to C \to D \to E 
 
 \subsubsection*{Conclusion:}
 The shortest path length from \( A \) to \( Z \) is 20, achieved via the path \( A \to C \to D \to E \to G \to Z \) with weights 4, 4, 1, 6, and 5.
+
 \[
 \boxed{20}
 \]
-\newpage
-
-\section{Assess whether an Eulerian Circuit and a Hamiltonian Circuit Exist in an Undirected Graph (M2)}\label{sec:M2}
-
-\subsection*{The Problem:}
-
-Assess whether an Euler circuit and a Hamilton circuit exists in an undirected graph as shown in Figure~\ref{fig:findHamilton}.
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.55]{./images/findHalminton.png}
-  \caption{The given undirected graph}\label{fig:findHamilton}
-\end{figure}
-
-% \subsection*{Given:}
-% To determine whether the given undirected graph contains an Euler cycle or a Hamiltonian cycle, we need to define some terms first. According to~\cite{rosen2019}:
-% \begin{quote}``An \textit{Euler circuit} in a graph G is a simple circuit containing every edge of G.''\\``An \textit{Euler path} in G is simple path containing every edge of G.''\end{quote}
-
-% Theorems:
-
-% \begin{enumerate}
-%   \item 
-%   \item 
-% \end{enumerate}
-
-\subsection*{Theory}
-\begin{itemize}
-  \item \textbf{Eulerian Circuit}: A circuit that traverses each edge exactly once and returns to the starting vertex. According to Euler's theorem, an undirected connected graph has an Eulerian circuit if and only if every vertex has even degree~\citep{rosen2019}.
-  \item \textbf{Eulerian Path}: A path that traverses each edge exactly once. Exists if and only if exactly 0 or 2 vertices have odd degree~\citep{rosen2019}.
-  \item \textbf{Hamiltonian Circuit}: A circuit that visits each vertex exactly once and returns to the starting vertex. No simple necessary and sufficient condition exists (NP-complete), but sufficient conditions include~\citep{rosen2019}:
-  \begin{itemize}
-    \item \textbf{Dirac's Theorem}: $\deg(v) \geq n/2$ for all $v$~\citep{rosen2019}.
-    \item \textbf{Ore's Theorem}: For every non-adjacent pair $u, v$, $\deg(u) + \deg(v) \geq n$~\citep{rosen2019}.
-  \end{itemize}
-\end{itemize}
-
-\subsection*{Given}
-The \hyperref[fig:findHamilton]{graph $G$} is a connected undirected graph with 17 vertices:
-\[
-V = \{x, y, c, i, j, k, d, o, p, q, h, n, m, l, e, f, g\}
-\]
-
-\subsection*{Approach:}
-\begin{enumerate}
-  \item Compute the degree of each vertex and classify even/odd.
-  \item Confirm graph connectivity via visual inspection and traversal logic.
-  \item Apply Euler's theorems for circuit and path.
-  \item For Hamiltonian circuit: check Dirac's and Ore's conditions; analyze structure.
-\end{enumerate}
-
-\subsection*{Solution:}
-
-\subsubsection*{Eulerian Circuit and Path}
-An undirected connected graph $G$ has an Eulerian circuit if and only if all its vertices have even degree:
-
-\[
-G \text{ has an Eulerian circuit } \Leftrightarrow (G \text{ connected}) \land (\forall v \in V, 2 \mid \deg(v))
-\]
-
-Degrees of all vertices:
-
-\begin{table}[htbp]
-\centering
-\begin{tabular}{|c|l|c|c|}
-\hline
-Vertex & Edges & $\deg(v)$ & Even? \\ \hline
-$x$ & $x$-$y$, $x$-$d$ & 2 & Yes \\ 
-$y$ & $y$-$x$, $y$-$c$, $y$-$j$ & 3 & No \\ 
-$c$ & $c$-$y$, $c$-$h$ & 2 & Yes \\ 
-$i$ & $i$-$o$, $i$-$j$ & 2 & Yes \\ 
-$j$ & $j$-$i$, $j$-$y$, $j$-$p$, $j$-$k$ & 4 & Yes \\ 
-$k$ & $k$-$j$, $k$-$q$ & 2 & Yes \\ 
-$d$ & $d$-$x$, $d$-$o$, $d$-$e$ & 3 & No \\ 
-$o$ & $o$-$i$, $o$-$d$, $o$-$n$, $o$-$p$ & 4 & Yes \\ 
-$p$ & $p$-$o$, $p$-$j$, $p$-$q$, $p$-$m$ & 4 & Yes \\ 
-$q$ & $q$-$p$, $q$-$k$, $q$-$l$, $q$-$h$ & 4 & Yes \\ 
-$h$ & $h$-$c$, $h$-$q$, $h$-$g$ & 3 & No \\ 
-$n$ & $n$-$o$, $n$-$m$ & 2 & Yes \\ 
-$m$ & $m$-$n$, $m$-$p$, $m$-$f$, $m$-$l$ & 4 & Yes \\ 
-$l$ & $l$-$m$, $l$-$q$ & 2 & Yes \\ 
-$e$ & $e$-$d$, $e$-$f$ & 2 & Yes \\ 
-$f$ & $f$-$e$, $f$-$m$, $f$-$g$ & 3 & No \\ 
-$g$ & $g$-$f$, $g$-$h$ & 2 & Yes \\ \hline
-\end{tabular}
-\caption{Degree analysis of all vertices in~\hyperref[fig:findHamilton]{$G$}}\label{tab:degrees}
-\end{table}
-
-\begin{itemize}
-  \item $V = \{x, y, c, i, j, k, d, o, p, q, h, n, m, l, e, f, g\}$, $|V| = 17$
-  \item $V_{\text{even}} = \{x, c, i, j, k, o, p, q, n, m, l, e, g\}$, $|V_{\text{even}}| = 13$
-  \item $V_{\text{odd}} = \{y, d, h, f\}$, $|V_{\text{odd}}| = 4$
-\end{itemize}
-
-\textbf{Eulerian Circuit}: Requires $|V_{\text{odd}}| = 0$.  
-\[
-|V_{\text{odd}}| = 4 \neq 0 \;\Rightarrow\; \text{No Eulerian circuit.}
-\]
-
-\textbf{Eulerian Path}: Requires $|V_{\text{odd}}| \in \{0, 2\}$.  
-\[
-|V_{\text{odd}}| = 4 \notin \{0, 2\} \Rightarrow \text{No Eulerian path}.
-\]
-
-\subsubsection*{Hamiltonian Circuit}
-Check sufficient conditions:
-
-\begin{itemize}
-  \item \textbf{Dirac's Theorem}: Requires that $\deg(v) \geq \lceil 17/2 \rceil = 9$ for all $v \in V$.  
-  Max degree = 4 $< 9 \Rightarrow$ \textbf{Not satisfied}.
-  
-  \item \textbf{Ore's Theorem}: For any non-adjacent $u, v$: $\deg(u) + \deg(v) \geq 17$.  
-  Counterexamples:
-  \begin{itemize}
-    \item $e$ (deg 2) and $g$ (deg 2), non-adjacent: $2+2=4 < 17$
-    \item $x$ (deg 2) and $g$ (deg 2): $2+2=4 < 17$
-  \end{itemize}
-  $\Rightarrow$ \textbf{Not satisfied}.
-\end{itemize}
-
-Although these are sufficient but not necessary, the graph structure (grid-like with multiple degree-2 vertices acting as bottlenecks) prevents a vertex-covering cycle. Manual attempts (e.g., $x \to y \to j \to p \to m \to f \to g \to h \to q \to l$) result in repetition or omission of vertices.
-
-\textbf{Structural Analysis via Degree-2 Vertices (Bottlenecks)}:
-
-The graph contains eight degree-2 vertices: $\{x, c, i, k, l, e, n, g\}$. In any Hamiltonian circuit, each vertex is visited exactly once, so for a degree-2 vertex $v$ with neighbours $\{u, w\}$, the circuit must traverse the path segment $u \to v \to w$ (or $w \to v \to u$) consecutively. This forces the following \textit{mandatory path segments}:
-
-\begin{itemize}
-  \item $y \to x \to d$ \quad (from vertex $x$)
-  \item $y \to c \to h$ \quad (from vertex $c$)
-  \item $j \to k \to q$ \quad (from vertex $k$)
-  \item $d \to e \to f$ \quad (from vertex $e$)
-  \item $o \to i \to j$ \quad (from vertex $i$)
-  \item $o \to n \to m$ \quad (from vertex $n$)
-  \item $m \to l \to q$ \quad (from vertex $l$)
-  \item $f \to g \to h$ \quad (from vertex $g$)
-\end{itemize}
-
-These constraints create \textit{rigid chains} that must appear intact in any candidate Hamiltonian circuit. Merging them around high-degree vertices (e.g., $y$, $d$, $j$, $q$, $h$, $f$, $m$, $o$) leads to conflicts:
-
-\begin{itemize}
-  \item Vertex $y$ (deg 3) must anchor two chains: $x \gets y \to c$. But $y$ is also connected to $j$, forcing a third edge. The circuit cannot enter and exit $y$ using only two edges while preserving both chains unless $j$ is adjacent in sequence — but $j$ anchors its own chain $j \to k \to q$.
-  
-  \item Similarly, $q$ (deg 4) must absorb chains from $k \to q$ and $l \to q$, but also connects to $p$ and $h$. Closing the cycle requires returning through $h \to g \to f$, which conflicts with the isolated chain $d \to e \to f$.
-  
-  \item The subgraph induced by $\{d, e, f, g, h\}$ forms a constrained cluster linked only via $f$ and $h$, while $\{j, k, q, l, m\}$ forms another. Bridging them without revisiting vertices is impossible under the forced ordering.
-\end{itemize}
-
-Thus, the degree-2 constraints generate \textit{non-mergeable path fragments}, proving no Hamiltonian circuit exists.
-
-\textbf{Forced path segments}:
-\[
-y \to x \to d, \quad y \to c \to h, \quad j \to k \to q, \quad d \to e \to f
-\]
-
-Attempting to combine these:
-\begin{itemize}
-  \item $y$ (deg 3) must connect to $x$, $c$, and $j$. Using $x$-$y$-$c$ forces chains $d \leftarrow x$-$y$-$c \to h$ and $j \to k \to q$.
-  \item The chain $d \to e \to f$ is isolated from $j \to k \to q$ except through high-degree vertices ($q$, $h$), but closing the cycle requires revisiting vertices or skipping some — \textbf{contradiction}.
-\end{itemize}
-
-Thus, no Hamiltonian circuit exists.
-
-\subsection*{Verification:}
-\begin{itemize}
-  \item \textbf{Connectivity}: Confirmed via DFS from $x$ reaches all vertices.
-  \item \textbf{Handshaking Lemma}: $\sum \deg(v) = 52 = 2 \times |E| \Rightarrow |E| = 26$, consistent.
-  \item \textbf{Hamiltonian}: No polynomial algorithm; structural bottlenecks confirm non-existence.
-\end{itemize}
-
-\subsection*{Conclusion:}
-The graph $G$ has \textbf{neither an Eulerian circuit nor path} (due to 4 odd-degree vertices) and \textbf{no Hamiltonian circuit} (failed sufficient conditions and structural constraints).
 
 
-\newpage
+
+\section{Assess whether an Eulerian and Hamiltonian Circuit Exists in an Undirected Graph (M2)}\label{sec:M2}
+
+
 
 \section{Construct a Proof of the Five-Color Theorem (D2)}\label{sec:D2}
 
-\subsection*{The Problem:}
+\subsubsection*{The Problem:}
 Prove the Five-Color Theorem: Every planar graph can be colored with at most five colors such that no two adjacent vertices share the same color.
 
-\subsection*{Given:}
+\subsubsection*{Given:}
 A planar graph \( G = (V, E) \) is a graph that can be embedded in the plane without edge crossings. A proper coloring assigns a color to each vertex such that no two vertices connected by an edge have the same color. We aim to show that \( G \) is 5-colorable, meaning it can be colored using at most five colors (e.g., \{1, 2, 3, 4, 5\})~\citep{rosen2019}.
 
-\subsection*{Proof Strategy:}
+\subsubsection*{Proof Strategy:}
 We use mathematical induction on the number of vertices \( |V| = n \) in the planar graph \( G \), leveraging the fact that every planar graph has at least one vertex of degree at most 5~\citep{diestel2017}. The strategy is:
 \begin{itemize}
   \item \textbf{Base Case}: Verify the theorem for small graphs (e.g., \( n \leq 5 \)).
-  \item \textbf{Inductive Step}: Assume the theorem holds for graphs with fewer than \( n \) vertices. For a graph with \( n \) vertices, remove a vertex of degree at most 5, color the resulting graph with at most five colors, and reintroduce the vertex. For vertices of degree 5, use a Kempe chain argument to adjust colors if necessary to ensure a valid coloring~\citep{rosen2019}.
+  \item \textbf{Inductive Step}: Assume the theorem holds for graphs with fewer than \( n \) vertices. For a graph with \( n \) vertices, remove a vertex of degree at most 5, color the resulting graph with at most five colors, and reintroduce the vertex. For vertices of degree 5, use a Kempe chain argument to adjust colors if necessary to ensure a valid coloring \cite{rosen2019}.
 \end{itemize}
-This approach ensures a proper 5-coloring~\citep{epp2020}.
+This approach ensures a proper 5-coloring~~\citep{epp2020}.
 
-\subsection*{Proof:}
+\subsubsection*{Proof:}
 We proceed by induction on the number of vertices \( n = |V| \).
 
 \textbf{Base Case (\( n \leq 5 \)):}
@@ -1263,7 +1111,7 @@ Since \( n \leq 5 \), five colors are sufficient for the base case.
 Assume that every planar graph with \( k < n \) vertices (\( n \geq 6 \)) can be properly colored with at most five colors.
 
 \textbf{Inductive Step:}
-Consider a planar graph \( G = (V, E) \) with \( n \) vertices. By a standard result in graph theory, every planar graph has at least one vertex of degree at most 5~\citep{diestel2017}. Choose a vertex \( v \in V \) with degree \( \deg(v) \leq 5 \), and let its neighbors be \( \{ u_1, u_2, \ldots, u_k \} \), where \( k \leq 5 \).
+Consider a planar graph \( G = (V, E) \) with \( n \) vertices. By a standard result in graph theory, every planar graph has at least one vertex of degree at most 5 \cite{diestel2017}. Choose a vertex \( v \in V \) with degree \( \deg(v) \leq 5 \), and let its neighbors be \( \{ u_1, u_2, \ldots, u_k \} \), where \( k \leq 5 \).
 
 Form the graph \( G' = G - v \), obtained by removing \( v \) and its incident edges. Since \( G' \) is planar and has \( n-1 \) vertices, by the inductive hypothesis, \( G' \) can be properly colored with at most five colors, say \{1, 2, 3, 4, 5\}.
 
@@ -1297,9 +1145,9 @@ Now, reintroduce vertex \( v \) to form \( G \). We need to assign a color to \(
 
 Thus, in all cases (\( \deg(v) \leq 4 \) or \( \deg(v) = 5 \)), we can assign a color to \( v \) such that the coloring of \( G \) is proper.
 
-By the principle of mathematical induction~\citep{epp2020}, the Five-Color Theorem holds for all planar graphs.
+By the principle of mathematical induction \cite{epp2020}, the Five-Color Theorem holds for all planar graphs.
 
-\subsection*{Verification:}
+\subsubsection*{Verification:}
 The key property is that every planar graph has a vertex of degree at most 5, derived from \( |E| \leq 3n - 6 \) and the degree sum \( 2|E| \leq 6n - 12 \), so the average degree is less than 6. The induction step ensures that:
 \begin{itemize}
   \item For \( \deg(v) \leq 4 \), at least one of the five colors is available.
@@ -1307,7 +1155,7 @@ The key property is that every planar graph has a vertex of degree at most 5, de
 \end{itemize}
 Testing on small planar graphs (e.g., \( K_4 \), \( C_5 \)) confirms that fewer than five colors often suffice, but the proof guarantees five colors are always sufficient. The Kempe chain argument addresses the critical case where all five neighbors have distinct colors, ensuring the proof is complete.
 
-\subsection*{Conclusion:}
+\subsubsection*{Conclusion:}
 The Five-Color Theorem is proven: every planar graph can be properly colored with at most five colors.
 \[
 \boxed{\text{Every planar graph is 5-colorable}}
@@ -1320,7 +1168,7 @@ The Five-Color Theorem is proven: every planar graph can be properly colored wit
 
 \subsection{Introduction to Boolean Algebra in Binary Problems}
 
-Boolean algebra is a mathematical framework used to analyze and design systems involving binary variables, which take values of 0 (false) or 1 (true)~\citep{rosen2019}. It is fundamental in computer science for modeling and solving binary problems, particularly in digital circuit design and logic optimization. This section diagrams binary problems in two real-world domains—digital circuit design for a voting system and network security for access control—illustrating number representation, logic gate usage, and their practical applications.
+Boolean algebra is a mathematical framework used to analyze and design systems involving binary variables, which take values of 0 (false) or 1 (true)\cite{rosen2019}. It is fundamental in computer science for modeling and solving binary problems, particularly in digital circuit design and logic optimization. This section diagrams binary problems in two real-world domains—digital circuit design for a voting system and network security for access control—illustrating number representation, logic gate usage, and their practical applications.
 
 \subsection{Domain 1: Digital Circuit Design for a Voting System}
 \subsubsection*{Problem Description}
@@ -1330,11 +1178,8 @@ Consider a voting system for a three-member committee where a decision is approv
 \subsubsection*{Number Representation}
 
 The inputs \( A \), \( B \), and \( C \) are binary (0 or 1), representing the votes. The output \( Y \) is also binary, where:
-
-\begin{itemize}
-  \item \( Y = 1 \): At least two of \( A \), \( B \), or \( C \) are 1 (decision approved).
-  \item \( Y = 0 \): Fewer than two are 1 (decision rejected).
-\end{itemize}
+- \( Y = 1 \): At least two of \( A \), \( B \), or \( C \) are 1 (decision approved).
+- \( Y = 0 \): Fewer than two are 1 (decision rejected).
 
 The Boolean function for the majority vote can be expressed as:
 \[
@@ -1345,35 +1190,27 @@ This equation outputs 1 when at least two inputs are 1, capturing combinations \
 \subsubsection*{Logic Gate Diagram}
 
 The circuit is implemented using AND, OR, and NOT gates:
-\begin{itemize}
-  \item \textbf{AND gates}: Compute pairwise conjunctions \( A \land B \), \( A \land C \), and \( B \land C \).
-  \item \textbf{OR gate}: Combines the outputs of the AND gates to produce \( Y \).
-\end{itemize}
+- \textbf{AND gates}: Compute pairwise conjunctions \( A \land B \), \( A \land C \), and \( B \land C \).
+- \textbf{OR gate}: Combines the outputs of the AND gates to produce \( Y \).
 
 The logic gate diagram is as follows:
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.5]{./images/logicGateDiagramForVotingSystem.png}
-  \caption{Logic gate diagram for the majority voting system}\label{fig:voting_circuit}
+  \includegraphics[scale=0.8]{./images/P4graph.png}
+  \caption{Logic gate diagram for the majority voting system}
+  \label{fig:voting_circuit}
 \end{figure}
 
-This is another version of the logic gate diagram for the majority voting system, as follows:
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.53]{./images/logicGateDiagramForVotingSystemV2.png}
-  \caption{Another logic gate diagram for the majority voting system}\label{fig:voting_circuit2}
-\end{figure}
+(Note: In practice, the diagram would be drawn using a tool like Logisim or LaTeX’s circuitikz package, showing three AND gates feeding into a single OR gate.)
 
 \subsubsection*{Practical Applications}
 
 This circuit has applications in:
-\begin{itemize}
-  \item \textbf{Fault-tolerant systems}: Used in redundant systems (e.g., aerospace control systems) to ensure decisions are made based on majority agreement among multiple processors.
-  \item \textbf{Democratic voting systems}: Implements electronic voting mechanisms in small committees or distributed systems.
-  \item \textbf{Error detection}: Similar logic is used in majority voting for error correction in data transmission, ensuring reliability~\citep{rosen2019}.
-\end{itemize}
+- \textbf{Fault-tolerant systems}: Used in redundant systems (e.g., aerospace control systems) to ensure decisions are made based on majority agreement among multiple processors.
+- \textbf{Democratic voting systems}: Implements electronic voting mechanisms in small committees or distributed systems.
+- \textbf{Error detection}: Similar logic is used in majority voting for error correction in data transmission, ensuring reliability \cite{rosen2019}.
+
 \subsubsection*{Qualitative Analysis}
 
 \begin{itemize}
@@ -1414,9 +1251,12 @@ The circuit uses:
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.5]{./images/logicGateForAccessControlSystem.png}
-  \caption{Logic gate diagram for the access control system}\label{fig:access_control_circuit}
+  \includegraphics[scale=0.8]{./images/P4graph.png}
+  \caption{Logic gate diagram for the access control system}
+  \label{fig:access_control_circuit}
 \end{figure}
+
+(Note: The diagram would show a NOT gate on \( M \), an AND gate for \( P \land \neg M \), and an OR gate combining \( C \) with the AND output.)
 
 \subsubsection*{Practical Applications}
 
@@ -1424,7 +1264,7 @@ This circuit is used in:
 \begin{itemize}
   \item \textbf{Security systems}: Controls access to buildings, data centers, or restricted areas, ensuring multiple authentication methods.
   \item \textbf{Computer login systems}: Similar logic governs multi-factor authentication, combining passwords, biometrics, or tokens.
-  \item \textbf{Automated control systems}: Used in industrial settings to enforce safety protocols based on multiple conditions~\citep{epp2020}.
+  \item \textbf{Automated control systems}: Used in industrial settings to enforce safety protocols based on multiple conditions \cite{epp2020}.
 \end{itemize}
 
 \subsubsection*{Qualitative Analysis}
@@ -1438,820 +1278,25 @@ This circuit is used in:
 
 Boolean algebra effectively models binary problems in digital circuit design and network security. The voting system demonstrates how majority logic ensures reliable decision-making, while the access control system illustrates multi-factor authentication. Both use AND, OR, and NOT gates to implement Boolean functions, showcasing their versatility in real-world applications. These examples highlight the power of Boolean algebra in simplifying complex binary decisions~\citep{rosen2019}.
 
-\newpage
 
 \section{Produce a Truth Table and Its Corresponding Boolean Equation from an Applicable Scenario (P6)}\label{sec:P6}
-\subsection{Develop the Truth Table and Derive the Corresponding Boolean Equation for Each of the Scenarios}
-In this section, we develop the truth tables and derive the corresponding Boolean equations for the two given scenarios as per the assignment requirements.
-% \subsubsection*{The Problem:}
-% Develop the truth table and derive the corresponding Boolean equation for each of the following scenarios.
-% \begin{enumerate}
-%   \item ``In a secure facility, if the access card is swiped OR the correct PIN is entered AND the security system is NOT in maintenance mode, then the door should unlock''.
-%   \item ``For a computer to successfully log in, either a valid username and password combination must be entered, OR a security token must be provided, but not both''.
-% \end{enumerate}
-% \subsubsection*{Approach:}
-
-% \subsubsection*{Solution:}
-% \subsubsection*{Verification:}
-% \subsubsection*{Conclusion:}
-
-
-% \subsubsection*{The Problem:}
-
-% Generate a truth table for the provided Boolean expression.
-
-% \begin{equation}\label{expression:the provided Boolean expression}
-% xyz + x\overline{y} \overline{z} + \overline{x}y\overline{z} +\overline{x}\overline{y}z
-% \end{equation}
-
-
-% See the expression~\ref{expression:the provided Boolean expression}
-% \subsubsection*{Approach:}
-
-% \subsubsection*{Solution:}
-% \subsubsection*{Verification:}
-% \subsubsection*{Conclusion:}
-
-\subsubsection{Scenario (a): Secure Facility Door Unlock}
-
-The scenario is: ``In a secure facility, if the access card is swiped OR the correct PIN is entered AND the security system is NOT in maintenance mode, then the door should unlock.''
-
-Define the variables:
-\begin{itemize}
-    \item $A$: Access card is swiped (1 = true, 0 = false)
-    \item $P$: Correct PIN is entered (1 = true, 0 = false)
-    \item $M$: Security system is in maintenance mode (1 = true, 0 = false)
-    \item $D$: Door unlocks (1 = true, 0 = false)
-\end{itemize}
-
-The Boolean expression for $D$ is: $D = A + (P \cdot \overline{M})$, where $+$ denotes OR, $\cdot$ denotes AND, and the horizontal bar put above a variable (e.g., $\overline{M}$) denotes NOT\@.
-
-The truth table for this expression is as follows:
-
-\begin{table}[h!]
-\centering
-\caption{The truth table for the expression of the Scenario (a)}
-\label{table:truthTableScenarioA}
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-$A$ & $P$ & $M$ & $\overline{M}$ & $P \cdot \overline{M}$ & $D=A + (P \cdot \overline{M})$ \\
-\hline
-0 & 0 & 0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 1 & 1 & 1 \\
-0 & 1 & 1 & 0 & 0 & 0 \\
-1 & 0 & 0 & 1 & 0 & 1 \\
-1 & 0 & 1 & 0 & 0 & 1 \\
-1 & 1 & 0 & 1 & 1 & 1 \\
-1 & 1 & 1 & 0 & 0 & 1 \\
-\hline
-\end{tabular}
-\end{table}
-
-The corresponding Boolean equation is
-\[
-\boxed{D = A + P \overline{M}}
-\]
-\subsubsection{Scenario (b): Computer Login}
-
-The scenario is: ``For a computer to successfully log in, either a valid username and password combination must be entered OR a security token must be provided, but not both''.
-
-Define the variables:
-\begin{itemize}
-    \item $U$: Valid username and password combination entered (1 = true, 0 = false)
-    \item $T$: Security token provided (1 = true, 0 = false)
-    \item $L$: Successful login (1 = true, 0 = false)
-\end{itemize}
-
-This describes an exclusive OR (XOR) operation: $L = U \oplus T = (U \cdot \overline{T}) + (\overline{U} \cdot T)$.
-
-The truth table for this expression is as follows:
-
-\begin{table}[h!]
-\centering
-\caption{The truth table for the expression of the Scenario (b)}
-\label{table:truthTableScenarioB}
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-$U$ & $T$ & $\overline{U}$ & $\overline{T}$ & $U \cdot \overline{T}$ & $(\overline{U} \cdot T) + (U \cdot \overline{T})$ \\
-\hline
-0 & 0 & 1 & 1 & 0 & 0 \\
-0 & 1 & 1 & 0 & 0 & 1 \\
-1 & 0 & 0 & 1 & 1 & 1 \\
-1 & 1 & 0 & 0 & 0 & 0 \\
-\hline
-\end{tabular}
-\end{table}
-
-The corresponding Boolean equation is 
-
-\[
-\boxed{L = U \oplus T$ or $L = U \overline{T} + \overline{U} T}
-\]
-
-\subsection{Generate a Truth Table for the Provided Boolean Expression}
-
-\subsubsection*{The Problem:}
-Generate a truth table for the provided Boolean expression:
-\[
-F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z
-\]
-
-\subsubsection*{Given:}
-The Boolean expression involves three variables: $x$, $y$, and $z$. Each variable can be either 0 or 1, 
-resulting in $2^3 = 8$ possible combinations. We need to evaluate the expression for each combination 
-and determine the output.
-
-\subsubsection*{Formula:}
-A truth table systematically lists all possible combinations of input variables and their corresponding output values. For a Boolean expression with three variables, the table has $2^3 = 8$ rows. The output for each row is determined by evaluating the expression using the logical operations: AND (·), OR (+), and NOT ($\overline{\phantom{a}}$)~\citep{rosen2019}.
-
-\subsubsection*{Solution:}
-We construct the truth table by evaluating $F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$ for each combination of $x$, $y$, and $z$.
-
-\begin{table}[h!]
-\centering
-\caption{Truth table for the Boolean expression $F(x, y, z)$}
-\label{table:truthTableFxyz}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-\hline
-$x$ & $y$ & $z$ & $\overline{x}$ & $\overline{y}$ & $\overline{z}$ & 
-$xyz$ & $x\overline{y}\overline{z}$ & $\overline{x}y\overline{z}$ & $\overline{x}\overline{y}z$ & $F(x,y,z)$ \\
-\hline
-0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
-\hline
-0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 \\
-\hline
-0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 1 \\
-\hline
-0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-\hline
-1 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 \\
-\hline
-1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
-\hline
-1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
-\hline
-1 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{Explanation of Columns:}
-\begin{itemize}
-\item $x, y, z$: Input variables, each taking values 0 or 1.
-\item $\overline{x}, \overline{y}, \overline{z}$: Complements (NOT operations) of the input variables.
-\item $xyz$: AND of all three variables; output is 1 only when $x = 1$, $y = 1$, and $z = 1$.
-\item $x\overline{y}\overline{z}$: AND of $x$, NOT $y$, and NOT $z$; output is 1 only when $x = 1$, $y = 0$, and $z = 0$.
-\item $\overline{x}y\overline{z}$: AND of NOT $x$, $y$, and NOT $z$; output is 1 only when $x = 0$, $y = 1$, and $z = 0$.
-\item $\overline{x}\overline{y}z$: AND of NOT $x$, NOT $y$, and $z$; output is 1 only when $x = 0$, $y = 0$, and $z = 1$.
-\item $F$: Output of the Boolean expression, which is the OR of the four terms above. It is 1 if any 
-of the four terms is 1, and 0 otherwise.
-\end{itemize}
-
-\textbf{Detailed Row-by-Row Analysis:}
-\begin{enumerate}
-\item Row 1 ($x=0, y=0, z=0$): $xyz = 0$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 0 + 0 + 0 + 0 = 0$.
-\item Row 2 ($x=0, y=0, z=1$): $xyz = 0$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 1 \Rightarrow F = 0 + 0 + 0 + 1 = 1$.
-\item Row 3 ($x=0, y=1, z=0$): $xyz = 0$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 1$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 0 + 0 + 1 + 0 = 1$.
-\item Row 4 ($x=0, y=1, z=1$): $xyz = 0$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 0 + 0 + 0 + 0 = 0$.
-\item Row 5 ($x=1, y=0, z=0$): $xyz = 0$, $x\overline{y}\overline{z} = 1$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 0 + 1 + 0 + 0 = 1$.
-\item Row 6 ($x=1, y=0, z=1$): $xyz = 0$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 0 + 0 + 0 + 0 = 0$.
-\item Row 7 ($x=1, y=1, z=0$): $xyz = 0$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 0 + 0 + 0 + 0 = 0$.
-\item Row 8 ($x=1, y=1, z=1$): $xyz = 1$, $x\overline{y}\overline{z} = 0$, $\overline{x}y\overline{z} = 0$, 
-$\overline{x}\overline{y}z = 0 \Rightarrow F = 1 + 0 + 0 + 0 = 1$.
-\end{enumerate}
-
-\subsubsection*{Verification:}
-
-We verify the results by checking key rows:
-\begin{itemize}
-\item For ($x=0, y=0, z=1$): Only $\overline{x}\overline{y}z$ is true, so $F = 1$. Correct.
-\item For ($x=0, y=1, z=0$): Only $\overline{x}y\overline{z}$ is true, so $F = 1$. Correct.
-\item For ($x=1, y=0, z=0$): Only $x\overline{y}\overline{z}$ is true, so $F = 1$. Correct.
-\item For ($x=1, y=1, z=1$): Only $xyz$ is true, so $F = 1$. Correct.
-\item For ($x=0, y=0, z=0$): None of the four terms are true, so $F = 0$. Correct.
-\item For ($x=0, y=1, z=1$): None of the four terms are true, so $F = 0$. Correct.
-\end{itemize}
-
-\subsubsection*{Conclusion:}
-
-The truth table~\ref{table:truthTableFxyz} shows that the Boolean expression $F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$ outputs 1 for the input combinations: (0,0,1), (0,1,0), (1,0,0), and (1,1,1). These represent the minterms $m_1$, $m_2$, $m_4$, and $m_7$ in standard notation. The expression is 0 for all other input combinations. This truth table can be used to design logic circuits or to simplify the Boolean expression using Karnaugh maps or algebraic methods~\citep{rosen2019}.
-
-The output of the Boolean expression $F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$ is 1 for input combinations (0,0,1), (0,1,0), (1,0,0), and (1,1,1), and 0 for all other combinations.
-
-\newpage
 
 \section{Simplify a Boolean Equation Using Algebraic Methods (M3)}\label{sec:M3}
 
-
-\subsubsection*{The Problem:}
-Simplify the following Boolean expressions using algebraic methods.
-
-\subsubsection*{Given:}
-
-The four Boolean expressions to simplify are:
-\begin{enumerate}
-\item $x(x + y) + y(y + z) + z(z + x)$
-\item $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$
-\item $(x + y)(xz + x\overline{z}) + zx + x$
-\item $\overline{x}(x + y) + (x + y)(x + \overline{y})$
-\end{enumerate}
-
-\subsubsection*{Formula:}
-
-We use the following Boolean algebra identities~\citep{rosen2019} as shown in Figure~\ref{fig:booleanIdentities}:
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.60]{./images/booleanIdentities.png}
-  \caption{Boolean Identities}\label{fig:booleanIdentities}
-\end{figure}
-
-\subsubsection*{Substitution:}
-
-\textbf{Expression 1}: $x(x + y) + y(y + z) + z(z + x)$
-
-Step 1: Apply the Absorption Law to each term.
-\begin{align*}
-x(x + y) &= x \quad \text{(by Absorption Law: } x(x + y) = x\text{)} \\
-y(y + z) &= y \quad \text{(by Absorption Law: } y(y + z) = y\text{)} \\
-z(z + x) &= z \quad \text{(by Absorption Law: } z(z + x) = z\text{)}
-\end{align*}
-
-Step 2: Substitute the simplified terms back into the expression.\[ x + y + z \]
-
-Step 3: Apply the Idempotent Law (no further simplification possible).
-\[
-F_1 = x + y + z
-\]
-
-\textbf{Expression 2}: $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$
-
-Step 1: Expand using the Distributive Law.
-\begin{align*}
-(x + \overline{y})(y + z) &= xy + xz + \overline{y}y + \overline{y}z \\
-&= xy + xz + 0 + \overline{y}z \\
-&= xy + xz + \overline{y}z
-\end{align*}
-
-Step 2: Expand the second term.
-\begin{align*}
-(x + y)(z + \overline{x}) &= xz + x\overline{x} + yz + y\overline{x} \\
-&= xz + 0 + yz + \overline{x}y \\
-&= xz + yz + \overline{x}y
-\end{align*}
-
-Step 3: Combine the two expanded expressions.
-\begin{align*}
-F_2 &= xy + xz + \overline{y}z + xz + yz + \overline{x}y \\
-&= xy + xz + xz + \overline{y}z + yz + \overline{x}y \\
-&= xy + 2xz + \overline{y}z + yz + \overline{x}y
-\end{align*}
-
-Step 4: Apply the Idempotent Law ($xz + xz = xz$).
-\[
-F_2 = xy + xz + \overline{y}z + yz + \overline{x}y
-\]
-
-Step 5: Factor and simplify using Absorption and Distributive Laws.
-\begin{align*}
-F_2 &= xy + \overline{x}y + xz + yz + \overline{y}z \\
-&= y(x + \overline{x}) + xz + z(y + \overline{y}) \\
-&= y \cdot 1 + xz + z \cdot 1 \\
-&= y + xz + z \\
-&= y + z(x + 1) \\
-&= y + z \cdot 1 \\
-&= y + z
-\end{align*}
-
-Therefore:
-\[
-F_2 = y + z
-\]
-
-\textbf{Expression 3}: $(x + y)(xz + x\overline{z}) + zx + x$
-
-Step 1: Simplify the first term inside the parentheses.
-\begin{align*}
-xz + x\overline{z} &= x(z + \overline{z}) \\
-&= x \cdot 1 \\
-&= x
-\end{align*}
-
-Step 2: Substitute back into the original expression.
-\begin{align*}
-F_3 &= (x + y) \cdot x + zx + x \\
-&= x(x + y) + zx + x
-\end{align*}
-
-Step 3: Apply the Absorption Law to $x(x + y) = x$.
-\begin{align*}
-F_3 &= x + zx + x \\
-&= x + x + zx \\
-&= x + zx \quad \text{(by Idempotent Law: } x + x = x\text{)}
-\end{align*}
-
-Step 4: Apply the Absorption Law to $x + zx = x$.
-\begin{align*}
-x + zx &= x(1 + z) \\
-&= x \cdot 1 \\
-&= x
-\end{align*}
-
-Therefore:
-\[
-F_3 = x
-\]
-
-\textbf{Expression 4}: $\overline{x}(x + y) + (x + y)(x + \overline{y})$
-
-Step 1: Expand the first term using the Distributive Law.
-\begin{align*}
-\overline{x}(x + y) &= \overline{x}x + \overline{x}y \\
-&= 0 + \overline{x}y \\
-&= \overline{x}y
-\end{align*}
-
-Step 2: Expand the second term using the Distributive Law.
-\begin{align*}
-(x + y)(x + \overline{y}) &= x \cdot x + x \cdot \overline{y} + y \cdot x + y \cdot \overline{y} \\
-&= x + x\overline{y} + xy + 0 \\
-&= x + x\overline{y} + xy
-\end{align*}
-
-Step 3: Apply the Absorption Law to $x + x\overline{y} + xy = x$.
-\begin{align*}
-x + x\overline{y} + xy &= x(1 + \overline{y} + y) \\
-&= x(1 + 1) \\
-&= x \cdot 1 \\
-&= x
-\end{align*}
-
-Alternatively, we can factor:
-\begin{align*}
-x + x\overline{y} + xy &= x + x(\overline{y} + y) \\
-&= x + x \cdot 1 \\
-&= x + x \\
-&= x
-\end{align*}
-
-Step 4: Combine the results from Steps 1 and 2.
-\begin{align*}
-F_4 &= \overline{x}y + x \\
-&= x + \overline{x}y
-\end{align*}
-
-Step 5: Apply the Absorption Law in its alternative form: $x + \overline{x}y = x + y$.
-\begin{align*}
-x + \overline{x}y &= (x + \overline{x})(x + y) \\
-&= 1 \cdot (x + y) \\
-&= x + y
-\end{align*}
-
-Therefore:
-\[
-F_4 = x + y
-\]
-
-\subsubsection*{Verification:}
-
-
-We verify our results by checking with specific input values:
-
-\subsubsection*{Expression 1: $F_1 = x + y + z$}
-\begin{itemize}
-\item Original: $x(x + y) + y(y + z) + z(z + x)$ with $x=1, y=0, z=0$: $1(1+0) + 0(0+0) + 0(0+1) = 1 + 0 + 0 = 1$
-\item Simplified: $1 + 0 + 0 = 1$ \checkmark
-\end{itemize}
-
-\subsubsection*{Expression 2: $F_2 = y + z$}
-\begin{itemize}
-\item Original: $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$ with $x=1, y=1, z=0$: 
-$(1+0)(1+0) + (1+1)(0+0) = 1 \cdot 1 + 1 \cdot 0 = 1 + 0 = 1$
-\item Simplified: $1 + 0 = 1$ \checkmark
-\end{itemize}
-
-\subsubsection*{Expression 3: $F_3 = x$}
-\begin{itemize}
-\item Original: $(x + y)(xz + x\overline{z}) + zx + x$ with $x=1, y=0, z=1$: 
-$(1+0)(1 \cdot 1 + 1 \cdot 0) + 1 \cdot 1 + 1 = 1 \cdot 1 + 1 + 1 = 1 + 1 + 1 = 1$
-\item Simplified: $1$ \checkmark
-\end{itemize}
-
-\subsubsection*{Expression 4: $F_4 = x + y$}
-\begin{itemize}
-\item Original: $\overline{x}(x + y) + (x + y)(x + \overline{y})$ with $x=0, y=1$: 
-$1(0+1) + (0+1)(0+0) = 1 \cdot 1 + 1 \cdot 0 = 1 + 0 = 1$
-\item Simplified: $0 + 1 = 1$ \checkmark
-\end{itemize}
-
-\subsubsection*{Conclusion:}
-
-The simplified Boolean expressions are:
-
-\begin{table}[h!]
-\centering
-\caption{Simplified Boolean expressions}\label{table:simplified_bool}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Expression} & \textbf{Original} & \textbf{Simplified} \\
-\hline
-1 & $x(x + y) + y(y + z) + z(z + x)$ & $x + y + z$ \\
-\hline
-2 & $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$ & $y + z$ \\
-\hline
-3 & $(x + y)(xz + x\overline{z}) + zx + x$ & $x$ \\
-\hline
-4 & $\overline{x}(x + y) + (x + y)(x + \overline{y})$ & $x + y$ \\
-\hline
-\end{tabular}
-\end{table}
-
-By applying Boolean algebra identities systematically, each expression has been reduced to its simplest form. These simplifications are useful for designing more efficient logic circuits with fewer gates and lower computational complexity~\citep{epp2020}.
-
-\newpage
-
 \section{Design a Complex System Using Logic Gates (D3)}\label{sec:D3}
-
-\subsection{The Problem}
-
-Build a circuit using OR gates, AND gates, and inverters that produces an output of 1 if a decimal digit, encoded using a binary coded decimal expansion, is divisible by 3, and an output of 0 otherwise. Identify the representation of the Boolean function that has the output value.
-
-\subsection{Identify the Boolean Function}
-
-\subsubsection*{Given:}
-
-\begin{itemize}
-  \item We design a divisibility checker for decimal digits (0\-9) encoded in BCD\@.
-  \item Binary Coded Decimal (BCD) uses 4 bits to represent each decimal digit.
-  \item Input: A 4-bit binary number $wxyz$ representing digits 0-9.
-  \item Output: A single bit $F$ that equals 1 if the digit is divisible by 3, and 0 otherwise.
-\end{itemize}
-
-
-
-\subsubsection*{Analysis of Divisibility by 3:}
-First, identify which decimal digits (0--9) are divisible by 3:
-
-- Divisible by 3: 0, 3, 6, 9
-
-- Not divisible by 3: 1, 2, 4, 5, 7, 8
-
-\subsubsection*{BCD Representation:}
-The 4-bit BCD encoding for digits 0--9 is:
-
-\begin{table}[h]
-\centering
-\caption{BCD Representation and Divisibility by 3}
-\label{table:bcdRepresentationAndDivisibilityBy3}
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-Decimal digit & w & x & y & z & Divisible by 3? \\
-\hline
-0 & 0 & 0 & 0 & 0 & Yes (Output = 1) \\
-1 & 0 & 0 & 0 & 1 & No (Output = 0) \\
-2 & 0 & 0 & 1 & 0 & No (Output = 0) \\
-3 & 0 & 0 & 1 & 1 & Yes (Output = 1) \\
-4 & 0 & 1 & 0 & 0 & No (Output = 0) \\
-5 & 0 & 1 & 0 & 1 & No (Output = 0) \\
-6 & 0 & 1 & 1 & 0 & Yes (Output = 1) \\
-7 & 0 & 1 & 1 & 1 & No (Output = 0) \\
-8 & 1 & 0 & 0 & 0 & No (Output = 0) \\
-9 & 1 & 0 & 0 & 1 & Yes (Output = 1) \\
-\hline
-\end{tabular}
-\end{table}
-
-Note: Only consider 0--9. Combinations 1010 to 1111 (10--15) are invalid in BCD → not needed to consider.
-
-\subsubsection*{Truth Table Construction:}
-
-Construct a truth table showing the output $F$ for each BCD input:
-
-\begin{table}[h]
-\centering
-\caption{Truth Table for Divisibility by 3 Checker}\label{table:truthTableForDivisibilityBy3}
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-w & x & y & z & Decimal digit & F (Divisible by 3) \\
-\hline
-0 & 0 & 0 & 0 & 0 & 1 \\
-0 & 0 & 0 & 1 & 1 & 0 \\
-0 & 0 & 1 & 0 & 2 & 0 \\
-0 & 0 & 1 & 1 & 3 & 1 \\
-0 & 1 & 0 & 0 & 4 & 0 \\
-0 & 1 & 0 & 1 & 5 & 0 \\
-0 & 1 & 1 & 0 & 6 & 1 \\
-0 & 1 & 1 & 1 & 7 & 0 \\
-1 & 0 & 0 & 0 & 8 & 0 \\
-1 & 0 & 0 & 1 & 9 & 1 \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsubsection*{Deriving the Boolean Function:}
-
-From the truth table, the output $F = 1$ for minterms: 0, 3, 6, 9.
-
-Express $F$ in Sum of Products (SOP) form:
-
-  \[ F(w, x, y, z) = \overline{w}\overline{x}\overline{y}\overline{z} + \overline{w}\overline{x}yz + \overline{w}xy\overline{z} + w\overline{x}\overline{y}z \]
-
-
-\subsection{Construct a Logic Circuit}
-
-The circuit is implemented using the full minterm expression for clarity:
-
-Components Required:
-
-\begin{itemize}
-  \item Inverters (NOT gates) to generate complements: $\overline{w}, \overline{x}, \overline{y}, \overline{z}$
-  \item AND gates (4-input):
-  \begin{itemize}
-    \item AND gate 1: $\overline{w}\overline{x}\overline{y}\overline{z}$ (for decimal 0)
-    \item AND gate 2: $\overline{w}\overline{x}yz$ (for decimal 3)
-    \item AND gate 3: $\overline{w}xy\overline{z}$ (for decimal 6)
-    \item AND gate 4: $w\overline{x}\overline{y}z$ (for decimal 9)
-  \end{itemize}
-  \item OR gate (4-input) to combine all AND outputs
-
-\end{itemize}
-The circuit is shown in Figure~\ref{fig:logicCircuit}
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.50]{./images/logicCircuit.png}
-  \caption{The Logic Circuit representing the Boolean expression}\label{fig:logicCircuit}
-\end{figure}
-
-\subsection{Conclusion}
-
-\begin{itemize}
-  \item The Boolean function that has the output value of 1 if a decimal digit, encoded using a binary coded decimal expansion, is divisible by 3, and an output of 0 otherwise is \\ \[ \boxed{F(w, x, y, z) = \overline{w}\overline{x}\overline{y}\overline{z} + \overline{w}\overline{x}yz + \overline{w}xy\overline{z} + w\overline{x}\overline{y}z} \]
-  \item The logic circuit is constructed using OR gates, AND gates, and inverters is shown in Figure~\ref{fig:logicCircuit}.
-\end{itemize}
-
-
-
-
 
 \chapter{Explore Applicable Concepts within Abstract Algebra (LO4)}\label{chap:LO4}
 
 \section{Describe the Distinguishing Characteristics of Different Binary Operations that are Performed on the same Set (P7)}\label{sec:P7}
 
-\subsection{Explanation of Attributes of Various Binary Operations Executed Within a Common Set}
-
-A binary operation on a set $S$ is a function $*: S \times S \to S$ that assigns to each ordered pair of elements from $S$ another element in $S$~\citep{rosen2019}. This ensures that the operation is well-defined within the set. Binary operations can exhibit various properties that distinguish their behavior and help classify the algebraic structures they form, such as groups, rings, or fields. Below, I outline the key attributes (properties) of binary operations on a set, with definitions and examples:
-\begin{itemize}
-\item \textbf{Closure}: For the operation to be closed, the result $a * b$ must belong to $S$ for all $a, b \in S$. This is essential for the operation to qualify as binary on $S$~\citep{epp2020}.\\
-\textit{Example}: Addition on the integers ($\mathbb{Z}$) is closed since the sum of any two integers is an integer. However, subtraction on natural numbers ($\mathbb{N}$) is not, as $2 - 3 = -1 \notin \mathbb{N}$.
-\item \textbf{Associativity}: The operation satisfies $(a * b) * c = a * (b * c)$ for all $a, b, c \in S$, allowing unambiguous computation without parentheses~\citep{rosen2019}.\\
-\textit{Example}: Multiplication on real numbers ($\mathbb{R}$) is associative: $(2 \cdot 3) \cdot 4 = 2 \cdot (3 \cdot 4) = 24$. Subtraction on $\mathbb{Z}$ is not: $(5 - 3) - 2 = 0$, but $5 - (3 - 2) = 4$.
-\item \textbf{Commutativity}: If $a * b = b * a$ for all $a, b \in S$, the operation is commutative, meaning the order of operands does not matter~\citep{epp2020}.\\
-\textit{Example}: Addition on $\mathbb{R}$ is commutative: $3 + 5 = 5 + 3$. Division on positive reals is not: $4 / 2 = 2$, but $2 / 4 = 0.5$.
-\item \textbf{Identity Element}: An element $e \in S$ is an identity if $a * e = e * a = a$ for all $a \in S$~\citep{rosen2019}. Not all operations have an identity.\\
-\textit{Example}: For multiplication on $\mathbb{Z}$, 1 is the identity since $a \cdot 1 = a$. For union on subsets of a set, the empty set serves as the identity.
-\item \textbf{Invertibility (Inverses)}: If there is an identity $e$, then for each $a \in S$, an inverse $b \in S$ exists such that $a * b = b * a = e$~\citep{epp2020}.\\
-\textit{Example}: In addition on $\mathbb{Z}$, the inverse of $a$ is $-a$ because $a + (-a) = 0$. Multiplication on non-zero rationals has inverses (reciprocals), but on $\mathbb{Z}$, only $\pm 1$ have inverses.
-\item \textbf{Distributivity}: When two operations $*$ and $\circ$ are defined on $S$, $*$ distributes over $\circ$ if $a * (b \circ c) = (a * b) \circ (a * c)$ and similarly for right distributivity~\citep{rosen2019}.\\
-\textit{Example}: Multiplication distributes over addition in $\mathbb{R}$: $2 \cdot (3 + 4) = (2 \cdot 3) + (2 \cdot 4) = 14$. This property is key in ring structures.
-\item \textbf{Idempotence}: The operation is idempotent if $a * a = a$ for all $a \in S$~\citep{epp2020}.\\
-\textit{Example}: Set intersection is idempotent: $A \cap A = A$. Addition is not, as $1 + 1 = 2 \neq 1$.
-\end{itemize}
-These properties are foundational in abstract algebra. For instance, a set with an associative, commutative operation featuring an identity and inverses forms an abelian group~\citep{rosen2019}. Operations may satisfy some properties but not others, leading to different structures like semigroups (associative only) or monoids (associative with identity).
-
-\subsection{Checking Whether the Operations Applied to Pertinent Sets Qualify as Binary Operations}
-A operation qualifies as binary on a set $S$ only if it is closed, meaning every pair of elements maps to an element in $S$~\citep{epp2020}. We evaluate the given cases accordingly:
-\begin{enumerate}
-\item \textbf{Subtraction on a Set of Natural Numbers}\\
-Operation: $- : \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, where $(x, y) \mapsto x - y$.
-Here, $\mathbb{N}$ typically denotes positive integers {1, 2, 3, \dots} (sometimes including 0, but the issue persists).
-\begin{itemize}
-\item Check closure: For $x = 2, y = 3$, $2 - 3 = -1 \notin \mathbb{N}$. Even if $\mathbb{N}$ includes 0, negative results violate closure~\citep{burton2010}, discusses similar issues in number theory contexts).
-\item Conclusion: This does \textbf{not} qualify as a binary operation on $\mathbb{N}$ due to lack of closure.
-\end{itemize}
-\item \textbf{Exponential Operation on Set of Integers}\\
-Operation: $^ : \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$, where $(x, y) \mapsto x^y$.
-$\mathbb{Z} = \{\dots, -2, -1, 0, 1, 2, \dots\}$.
-\begin{itemize}
-\item Check closure: While $2^3 = 8 \in \mathbb{Z}$ and $(-3)^2 = 9 \in \mathbb{Z}$, problems arise with negative exponents: $2^{-1} = 0.5 \notin \mathbb{Z}$. Additionally, $0^0$ is undefined, and $0^{-1}$ involves division by zero \cite{rosen2019}, notes such operations in discussions of functions and relations).
-\item Conclusion: This does \textbf{not} qualify as a binary operation on $\mathbb{Z}$ because it fails closure and is not defined for all pairs.
-\end{itemize}
-\end{enumerate}
-
-\newpage
 \section{Determine the Order of a Group and the Order of a Subgroup in Given Examples (P8)}\label{sec:P8}
 
-\subsection{Construct the Operation Tables for Group \( G \) with Orders 1, 2, 3, and 4}
+\section{Validate whether a Given Set with a Binary Operation is indeed a Group (M4)}
+\label{sec:M4}
 
-Groups of small orders are classified up to isomorphism, and their operation tables (Cayley tables) illustrate the binary operation. Here, \( e \) is the identity element. For orders 1, 2, and 3, the groups are unique up to isomorphism and cyclic. For order 4, there are two non-isomorphic groups: the cyclic group \( \mathbb{Z}_4 \) and the Klein four-group \( \mathbb{Z}_2 \times \mathbb{Z}_2 \)~\citep{rosen2019}. I will construct tables for the cyclic cases first, and then note the alternative for order 4.
-
-\begin{itemize}
-    \item \textbf{Order 1}: Trivial group \( G = \{e\} \).  
-    The operation table is:  
-    \begin{center}
-    \begin{tabular}{c|c}
-    \toprule
-    \( * \) & \( e \) \\
-    \midrule
-    \( e \) & \( e \) \\
-    \bottomrule
-    \end{tabular}
-    \end{center}
-
-    \item \textbf{Order 2}: Cyclic group \( G = \{e, a\} \), isomorphic to \( \mathbb{Z}_2 \). Operation: \( a * a = e \).  
-    \begin{center}
-    \begin{tabular}{c|cc}
-    \toprule
-    \( * \) & \( e \) & \( a \) \\
-    \midrule
-    \( e \) & \( e \) & \( a \) \\
-    \( a \) & \( a \) & \( e \) \\
-    \bottomrule
-    \end{tabular}
-    \end{center}
-
-    \item \textbf{Order 3}: Cyclic group \( G = \{e, a, b\} \), isomorphic to \( \mathbb{Z}_3 \). Let \( a * a = b \), \( a * b = e \), \( b * b = a \).  
-    \begin{center}
-    \begin{tabular}{c|ccc}
-    \toprule
-    \( * \) & \( e \) & \( a \) & \( b \) \\
-    \midrule
-    \( e \) & \( e \) & \( a \) & \( b \) \\
-    \( a \) & \( a \) & \( b \) & \( e \) \\
-    \( b \) & \( b \) & \( e \) & \( a \) \\
-    \bottomrule
-    \end{tabular}
-    \end{center}
-
-    \item \textbf{Order 4 (Cyclic)}: \( G = \{e, a, b, c\} \), isomorphic to \( \mathbb{Z}_4 \). Let \( a * a = b \), \( a * b = c \), \( a * c = e \), \( b * b = c \), \( b * c = a \), \( c * c = b \).  
-    \begin{center}
-    \begin{tabular}{c|cccc}
-    \toprule
-    \( * \) & \( e \) & \( a \) & \( b \) & \( c \) \\
-    \midrule
-    \( e \) & \( e \) & \( a \) & \( b \) & \( c \) \\
-    \( a \) & \( a \) & \( b \) & \( c \) & \( e \) \\
-    \( b \) & \( b \) & \( c \) & \( e \) & \( a \) \\
-    \( c \) & \( c \) & \( e \) & \( a \) & \( b \) \\
-    \bottomrule
-    \end{tabular}
-    \end{center}
-
-    \item \textbf{Order 4 (Klein four-group)}: \( G = \{e, a, b, c\} \), isomorphic to \( \mathbb{Z}_2 \times \mathbb{Z}_2 \). Each non-identity element has order 2: \( a * a = e \), \( b * b = e \), \( c * c = e \), \( a * b = c \), \( a * c = b \), \( b * c = a \).  
-    \begin{center}
-    \begin{tabular}{c|cccc}
-    \toprule
-    \( * \) & \( e \) & \( a \) & \( b \) & \( c \) \\
-    \midrule
-    \( e \) & \( e \) & \( a \) & \( b \) & \( c \) \\
-    \( a \) & \( a \) & \( e \) & \( c \) & \( b \) \\
-    \( b \) & \( b \) & \( c \) & \( e \) & \( a \) \\
-    \( c \) & \( c \) & \( b \) & \( a \) & \( e \) \\
-    \bottomrule
-    \end{tabular}
-    \end{center}
-\end{itemize}
-
-These tables satisfy group properties: closure, associativity, identity, and inverses~\citep{epp2020}.
-
-\subsection{State Lagrange’s Theorem of Group Theory and Apply It}
-
-\textbf{Lagrange’s Theorem}: If \( G \) is a finite group and \( H \) is a subgroup of \( G \), then the order of \( H \) (denoted \( |H| \)) divides the order of \( G \) (denoted \( |G| \)), i.e., \( |H| \) divides \( |G| \)~\citep{rosen2019}.
-
-Now, consider whether a group \( K \) with order 4 can be a subgroup of a group \( G \) with order 9.  
-By Lagrange’s Theorem, if \( K \) is a subgroup of \( G \), then \( |K| = 4 \) must divide \( |G| = 9 \). However, 4 does not divide 9 because \( 9 / 4 = 2.25 \), which is not an integer (or equivalently, there is no integer \( k \) such that \( 4k = 9 \))~\citep{burton2010}.  
-Therefore, no such subgroup \( K \) exists. This is a direct consequence of the theorem, which constrains possible subgroup orders to the divisors of the group order (for order 9, possible subgroup orders are 1, 3, and 9)~\citep{epp2020}.
+\section{Explore, with the Aid of a Prepared Presentation, the Application of Group Theory Relevant to your Given Example (D4)}\label{sec:D4}
 
 
-\newpage
-\section{Validate whether a Given Set with a Binary Operation is indeed a Group (M4)}\label{sec:M4}
-
-\subsection*{Given Problem}
-
-Let \( S = \mathbb{R} - \{-1\} \) and define the binary operation \( * \) as
-\[
-a * b = a + b + ab \quad \text{for all } a, b \in S.
-\]
-We must verify whether \( (S, *) \) forms a group under this operation by checking the four group axioms: closure, associativity, existence of identity, and existence of inverses \cite{rosen2019}.
-
-\subsection*{Closure}
-
-For any \( a, b \in S \), we have \( a * b = a + b + ab \).  
-Since \( a, b \in \mathbb{R} \), \( a + b + ab \in \mathbb{R} \).  
-We only need to ensure \( a * b \neq -1 \), since \( -1 \notin S \).
-
-Suppose \( a * b = -1 \). Then,
-\[
-a + b + ab = -1 \implies (a + 1)(b + 1) = 0.
-\]
-Hence \( a = -1 \) or \( b = -1 \), which contradicts \( a, b \in S = \mathbb{R} - \{-1\} \).  
-Therefore, \( a * b \neq -1 \), and thus \( a * b \in S \).  
-\[
-\text{Hence, the operation is closed on } S.
-\]
-
-\subsection*{Associativity}
-
-To test associativity, compute both sides of \( (a * b) * c = a * (b * c) \).
-
-\[
-(a * b) * c = (a + b + ab) + c + (a + b + ab)c = a + b + c + ab + ac + bc + abc,
-\]
-\[
-a * (b * c) = a + (b + c + bc) + a(b + c + bc) = a + b + c + ab + ac + bc + abc.
-\]
-
-Since both are identical, the operation is associative.  
-\[
-(a * b) * c = a * (b * c), \quad \forall a,b,c \in S.
-\]
-
-\subsection*{Identity Element}
-
-We seek \( e \in S \) such that \( a * e = e * a = a \) for all \( a \in S \).  
-Using the operation definition:
-\[
-a * e = a + e + ae = a.
-\]
-Simplify:
-\[
-a + e + ae = a \implies e(1 + a) = 0.
-\]
-Thus \( e = 0 \) for all \( a \in S \). Since \( 0 \neq -1 \), we have \( e = 0 \in S \).  
-\[
-\text{Hence, the identity element is } e = 0.
-\]
-
-\subsection*{Inverse Element}
-
-For each \( a \in S \), find \( a' \in S \) such that \( a * a' = e = 0 \):
-\[
-a * a' = a + a' + aa' = 0.
-\]
-Solve for \( a' \):
-\[
-a'(1 + a) = -a \implies a' = \frac{-a}{1 + a}.
-\]
-We must ensure \( a' \in S \), i.e., \( a' \neq -1 \). Suppose \( a' = -1 \):
-\[
-\frac{-a}{1 + a} = -1 \implies -a = -(1 + a) \implies -a = -1 - a \implies 0 = -1,
-\]
-which is false. Thus \( a' \neq -1 \), and \( a' \in S \).  
-\[
-\text{Hence, each element has an inverse in } S.
-\]
-
-\subsection*{Conclusion}
-
-All four group axioms are satisfied: closure, associativity, identity, and inverse. Therefore,
-\[
-(S, *) \text{ is a group under the operation } a * b = a + b + ab.
-\]
-This structure is, in fact, isomorphic to the group \( (\mathbb{R} - \{0\}, \times) \) under the mapping \( f(a) = a + 1 \), since
-\[
-f(a * b) = f(a)f(b).
-\]
-Thus, \( (S, *) \) is a valid group.
-
-\subsection*{Connection Between the Order of a Group and Number of Binary Operations}
-
-Let \( S \) be a finite set with \( |S| = n \). A \textbf{binary operation} on \( S \) is a function
-\[
-*: S \times S \rightarrow S
-\]
-that assigns to each ordered pair \( (a, b) \in S \times S \) an element \( a * b \in S \) \cite{rosen2019}.
-
-\subsubsection*{Total Number of Binary Operations on a Set of Order \( n \)}
-
-- The Cartesian product \( S \times S \) has \( n^2 \) elements.  \\
-- For each pair \( (a, b) \), the binary operation can assign any of the \( n \) elements of \( S \). \\
-- Therefore, the total number of distinct binary operations on \( S \) is
-\[
-\text{Number of binary operations} = n^{n^2}.
-\]
-
-\subsubsection*{Application: Set with 3 Elements}
-
-Let \( |S| = 3 \). Then
-\[
-\text{Number of binary operations} = 3^{3^2} = 3^9 = 19683.
-\]
-
-\subsubsection*{Conclusion}
-
-Hence, for a set containing 3 elements, there are exactly \( 19{,}683 \) possible binary operations that can be defined.  
-This shows the rapid growth of possible operations as the order of the set increases, highlighting the combinatorial nature of algebraic structures~\citep{epp2020}.
-
-\newpage
-\section{Explore the Application of Group Theory Relevant to your Given Example (D4)}\label{sec:D4}
 
 \newpage
 \section*{Conclusion}

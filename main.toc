@@ -1,0 +1,51 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Examine Set Theory and Functions Applicable to Software Engineering (LO1)}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Determine the cardinality of set $A \cup B$}{6}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Determine $| B |$}{7}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}How many customers have not purchased anything?}{8}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Determine the Cardinality of a Given Bag (Multiset) (P2)}{11}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}List the bag of prime factors for each of the provided numbers}{11}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Find the cardinalities}{12}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}{16}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Ascertain whether the given functions are invertible}{16}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Find \( g \circ f \)}{19}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}{21}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Demonstrate that each side is a subset of the other side}{21}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Verify the equality using a membership table}{22}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Analyze Mathematical Structures of Objects Using Graph Theory (LO2)}{24}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Model Contextualized Problems Using Trees, both Quantitatively and Qualitatively (P3)}{24}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}What is a Binary Tree?}{24}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Common Types of Binary Trees}{24}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Discuss Two Notable Instances of Binary Trees}{25}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Use Dijkstra's Algorithm to Find a Shortest Path Spanning Tree in Graph (P4)}{27}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}State Dijkstra's Algorithm in an undirected graph}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Apply Dijkstra's algorithm to determine the shortest path length between vertices \( A \) and \( Z \) in the provided weighted graph}{28}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Assess whether an Eulerian Circuit and a Hamiltonian Circuit Exist in an Undirected Graph (M2)}{31}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Construct a Proof of the Five-Color Theorem (D2)}{35}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Investigate Solutions to Problem Situations Using the Application of Boolean Algebra (LO3)}{38}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diagram a Binary Problem in the Application of Boolean Algebra (P5)}{38}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Introduction to Boolean Algebra in Binary Problems}{38}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Domain 1: Digital Circuit Design for a Voting System}{38}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Domain 2: Network Security for Access Control}{40}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Conclusion}{41}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Produce a Truth Table and Its Corresponding Boolean Equation from an Applicable Scenario (P6)}{42}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Develop the Truth Table and Derive the Corresponding Boolean Equation for Each of the Scenarios}{42}{subsection.3.2.1}%
+\contentsline {subsubsection}{Scenario (a): Secure Facility Door Unlock}{42}{subsubsection*.7}%
+\contentsline {subsubsection}{Scenario (b): Computer Login}{42}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {3.2.2}Generate a Truth Table for the Provided Boolean Expression}{43}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Simplify a Boolean Equation Using Algebraic Methods (M3)}{46}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Design a Complex System Using Logic Gates (D3)}{51}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}The Problem}{51}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Identify the Boolean Function}{51}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Construct a Logic Circuit}{52}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Conclusion}{53}{subsection.3.4.4}%
+\contentsline {chapter}{\numberline {4}Explore Applicable Concepts within Abstract Algebra (LO4)}{54}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Describe the Distinguishing Characteristics of Different Binary Operations that are Performed on the same Set (P7)}{54}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Explanation of Attributes of Various Binary Operations Executed Within a Common Set}{54}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Checking Whether the Operations Applied to Pertinent Sets Qualify as Binary Operations}{55}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Determine the Order of a Group and the Order of a Subgroup in Given Examples (P8)}{56}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Construct the Operation Tables for Group \( G \) with Orders 1, 2, 3, and 4}{56}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}State Lagrange’s Theorem of Group Theory and Apply It}{57}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Validate whether a Given Set with a Binary Operation is indeed a Group (M4)}{58}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Explore the Application of Group Theory Relevant to your Given Example (D4)}{61}{section.4.4}%

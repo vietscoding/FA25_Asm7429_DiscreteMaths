@@ -1,0 +1,34 @@
+@book{epp2020,
+  author    = {Susanna S. Epp},
+  title     = {Discrete Mathematics with Applications},
+  year      = {2020},
+  publisher = {Cengage Learning},
+  address   = {Boston, MA},
+  edition   = {5th}
+}
+
+@book{rosen2019,
+  author    = {Kenneth H. Rosen},
+  title     = {Discrete Mathematics and Its Applications},
+  year      = {2019},
+  publisher = {McGraw-Hill Education},
+  address   = {New York, NY},
+  edition   = {8th}
+}
+
+@book{burton2010,
+  author    = {David M. Burton},
+  title     = {Elementary Number Theory},
+  year      = {2010},
+  publisher = {McGraw-Hill Education},
+  address   = {New York, NY},
+  edition   = {7th}
+}
+
+@book{diestel2017,
+  title = {Graph Theory: 5th Edition},
+  author = {Diestel, R.},
+  year = 2017,
+  series = {Springer Graduate Texts in Mathematics},
+  isbn = {978-3-96134-005-7}
+}
