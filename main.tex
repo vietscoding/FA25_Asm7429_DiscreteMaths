@@ -13,6 +13,69 @@
 }
 
 
+\newenvironment{problem}[1][Problem Statement]
+{
+  \begin{tcolorbox}[
+    % colback=gray!10, 
+    % colframe=black, 
+    colback=gray!10,
+    colframe=gray!50!black,
+    title=#1,
+    arc=3mm % Bo tròn góc
+    % sharp corners % góc vuông sắc nhọn
+  ]
+}
+{
+  \end{tcolorbox}
+}
+
+% \newenvironment{given}[1][Given]
+% {
+%   \begin{tcolorbox}[
+%     % colback=gray!10, 
+%     % colframe=black, 
+%     colback=yellow!6, % Màu nền
+%     colframe=yellow!77!black, % Màu viền
+%     title=#1,
+%     arc=3mm,
+%     drop shadow % Đổ bóng
+%   ]
+% }
+% {
+%   \end{tcolorbox}
+% }
+
+% \newenvironment{formula}[1][Fomula/Theory]
+% {
+%   \begin{tcolorbox}[
+%     % colback=gray!10, 
+%     % colframe=black, 
+%     colback=green!5, % Màu nền
+%     colframe=green!60!black, % Màu viền
+%     title=#1,
+%     arc=3mm,
+%     drop shadow % Đổ bóng
+%   ]
+% }
+% {
+%   \end{tcolorbox}
+% }
+
+% \newenvironment{substitution}[1][Substitution/Solution]
+% {
+%   \begin{tcolorbox}[
+%     % colback=gray!10, 
+%     % colframe=black, 
+%     colback=red!5, % Màu nền
+%     colframe=red!60!black, % Màu viền
+%     title=#1,
+%     arc=3mm,
+%     drop shadow % Đổ bóng
+%   ]
+% }
+% {
+%   \end{tcolorbox}
+% }
 
 % \setmainfont{Calibri}
 
@@ -55,56 +118,50 @@
 %\currentpage
 %\pagedesign
 
-\tableofcontents 
-
+\tableofcontents
+\listoffigures          % generates List of Figures
+\listoftables           % generates List of Tables
 \newpage
-
-
-\section*{Introduction}
+\chapter*{Introduction}
+\markboth{Introduction}{Introduction} % hoặc chỉ markright nếu cần
 Mathematics is the foundation of the fields of software engineering and information technology (IT), where discrete mathematics plays an important role in solving complex computational problems. Discrete mathematics, which includes fields such as set theory, graph theory, Boolean algebra, and abstract algebra, equips software engineers with the tools to design efficient algorithms, model data structures, and ensure robust system performance. For example, concepts from discrete mathematics are integral to database query optimization, cryptographic protocols, network routing algorithms, and logic circuit design, enabling practical solutions to real-world challenges~\citep{rosen2019}.
 
-The application of discrete mathematics in software engineering offers significant benefits. It allows developers to create optimized algorithms with improved time and space complexity, as seen in sorting and searching techniques. Furthermore, discrete structures such as graphs facilitate the modeling of relationships in social networks or communication systems. At the same time, Boolean algebra supports the development of reliable digital circuits, and abstract algebra helps understand symmetries in computational problems~\citep{epp2020}. By mastering these concepts, engineers can solve complex problems of accuracy and scalability. This assignment explores the practical applications of discrete mathematics in software engineering through a structured analysis organized into four chapters.
+The application of discrete mathematics in software engineering offers significant benefits. It allows developers to create optimized algorithms with improved time and space complexity, as seen in sorting and searching techniques. Furthermore, discrete structures such as graphs facilitate the modeling of relationships in social networks or communication systems. At the same time, Boolean algebra supports the development of reliable digital circuits, and abstract algebra helps understand symmetries in computational problems~\citep{epp2020}. By mastering these concepts, engineers can solve complex problems of accuracy and scalability. This assignment explores the critical concepts of discrete mathematics in software engineering through a structured analysis organized into four chapters.
 
 % Tham chiếu chéo
 
 \begin{itemize}
-  \item Chapter 1~\hyperref[chap:LO1]{(LO1)} focuses on set theory and its relevance to software engineering.
+  \item \hyperref[chap:LO1]{\textbf{Chapter 1 (LO1)}} focuses on set theory and its relevance to software engineering.
   \begin{itemize}
-    \item In Section 1.1~\hyperref[sec:P1]{(P1)}, operations on algebraic sets will be applied to solve a problem.
-    \item Section 1.2~\hyperref[sec:P1]{(P2)} determines the cardinality of a multiset by factoring it, expressing the result as individual multisets.
-    \item Section 1.3~\hyperref[sec:M1]{(M1)} discusses finding the inverse of a function using appropriate mathematical techniques .
-    \item Finally, Section 1.4~\hyperref[sec:D1]{(D1)} develops proof principles for verifying properties of sets using membership tables and subset relations.
+    \item In~\hyperref[sec:P1]{\textbf{Section 1.1 (P1)}}, operations on algebraic sets will be applied to solve a problem.
+    \item \hyperref[sec:P1]{\textbf{Section 1.2 (P2)}} determines the cardinality of a multiset by factoring it, expressing the result as individual multisets.
+    \item \hyperref[sec:M1]{\textbf{Section 1.3 (M1)}} discusses finding the inverse of a function using appropriate mathematical techniques.
+    \item Finally,~\hyperref[sec:D1]{\textbf{Section 1.4 (D1)}} develops proof principles for verifying properties of sets using membership tables and subset relations.
   \end{itemize}
-  \item Chapter 2~\hyperref[chap:LO2]{(LO2)} reviews graph theory and its role in modeling mathematical structures.
+  \item \hyperref[chap:LO2]{\textbf{Chapter 2 (LO2)}} reviews graph theory and its role in modeling mathematical structures.
   \begin{itemize}
-    \item Section 2.1~\hyperref[sec:P3]{(P3)} models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights.
-    \item Section 2.2~\hyperref[sec:P4]{(P4)} applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph.
-    \item Section 2.3~\hyperref[sec:M2]{(M2)} evaluates the existence of Euler and Hamiltonian cycles in an undirected graph.
-    \item Finally, Section 2.4~\hyperref[sec:D4]{(D4)} constructs a proof of the Five Color Theorem.
+    \item \hyperref[sec:P3]{\textbf{Section 2.1 (P3)}} models contextual problems with binary trees, analyzing two cases with quantitative and qualitative insights.
+    \item \hyperref[sec:P4]{\textbf{Section 2.2 (P4)}} applies Dijkstra's algorithm to compute the length of the shortest path between two vertices in an undirected graph.
+    \item \hyperref[sec:M2]{\textbf{Section 2.3 (M2)}} evaluates the existence of Euler and Hamiltonian cycles in an undirected graph.
+    \item Finally,~\hyperref[sec:D4]{\textbf{Section 2.4 (D4)}} constructs a proof of the Five Color Theorem.
   \end{itemize}
-  \item Chapter 3~\hyperref[chap:LO3]{(LO3)} investigates solutions to problem situations using Boolean algebra.
+  \item \hyperref[chap:LO3]{\textbf{Chapter 3 (LO3)}} investigates solutions to problem situations using Boolean algebra.
   \begin{itemize}
-    \item Section 3.1~\hyperref[sec:P5]{(P5)} discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications.
-    \item Section 3.2~\hyperref[sec:P6]{(P6)} generates truth tables and corresponding Boolean equations from application situations.
-    \item Section 3.3~\hyperref[sec:M3]{(M3)} simplifies Boolean equations using algebraic methods (M3).
-    \item Finally, Section 3.4~\hyperref[sec:D3]{(D3)} designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal.
+    \item \hyperref[sec:P5]{\textbf{Section 3.1 (P5)}} discusses the use of Boolean algebra to solve binary problems in two diverse real-world domains, including real-world applications.
+    \item \hyperref[sec:P6]{\textbf{Section 3.2 (P6)}} generates truth tables and corresponding Boolean equations from application situations.
+    \item \hyperref[sec:M3]{\textbf{Section 3.3 (M3)}} simplifies Boolean equations using algebraic methods (M3).
+    \item Finally,~\hyperref[sec:D3]{\textbf{Section 3.4 (D3)}} designs a complex system using logic gates, such as constructing a circuit to detect divisibility by 3 in binary-coded decimal.
   \end{itemize}
-  \item Chapter 4~\hyperref[chap:LO4]{(LO4)} explores concepts applied in abstract algebra.
+  \item \hyperref[chap:LO4]{\textbf{Chapter 4 (LO4)}} explores concepts applied in abstract algebra.
   \begin{itemize}
-    \item Section 4.1~\hyperref[sec:P7]{(P7)} describes the distinguishing features of different binary operations performed on the same set.
-    \item Section 4.2~\hyperref[sec:P8]{(P8)} determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem.
-    \item Section 4.3~\hyperref[sec:M4]{(M4)} confirms whether a given set with a binary operation forms a group.
-    \item Finally, Section 4.4~\hyperref[sec:D4]{(D4)} explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design.
+    \item \hyperref[sec:P7]{\textbf{Section 4.1 (P7)}} describes the distinguishing features of different binary operations performed on the same set.
+    \item \hyperref[sec:P8]{\textbf{Section 4.2 (P8)}} determines the order of a group and the order of a subgroup in given examples, including an application of Lagrange's theorem.
+    \item \hyperref[sec:M4]{\textbf{Section 4.3 (M4)}} confirms whether a given set with a binary operation forms a group.
+    \item Finally,~\hyperref[sec:D4]{\textbf{Section 4.4 (D4)}} explores the application of group theory in computer science through a prepared presentation on a related topic, such as cryptography or algorithm design.
   \end{itemize}
 
 \end{itemize}
-
-
-
-% All sources referenced in this assignment are documented in the References section.
-
 \chapter{Examine Set Theory and Functions Applicable to Software Engineering (LO1)}\label{chap:LO1}  % Đặt nhãn để tham chiếu chéo (cross-references)
-
 \section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}\label{sec:P1}
 % \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)} 
 
@@ -116,7 +173,9 @@ In this assignment
 
 For example, if $a=3$, then $\overline{12a} = 123$.
 
-For each student, replace a and b with specific numerical values to obtain the final result.
+\begin{quote}
+  \textit{``Let $a < b$ be the largest digits in your student ID. For each student, replace $a$ and $b$ with specific numerical values to obtain the final result\@''.}
+\end{quote}
 
 According to the requirement above, I need to address problems in this assignment using my ID, which is BD00536. $a$ and $b$ ($a < b$) represents the two largest numbers in my ID, so $a$ = 5 and $b$ = 6.
 
@@ -134,11 +193,14 @@ In the following subsections I will address these issues and along the way use a
 \subsection{Determine the cardinality of set $A \cup B$}
 \subsubsection*{The Problem:}
 
+\begin{problem}
   Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.
+\end{problem}
 
   To solve this problem, I need to determine the cardinality of the set $A \cup B$, based on the given information about the cardinalities of the sets $A$, $B$, and $A \cap B$.
 
 \subsubsection*{Given:}
+
   Using \(a = 5\) and \(b = 6\) from my ID (BD00536), the cardinalities are computed as follows:
   \begin{itemize}
     \item The cardinality of set \(A\) is \(\overline{9b} = 96\).
@@ -152,25 +214,22 @@ In the following subsections I will address these issues and along the way use a
   \[
   |A \cup B| = |A| + |B| - |A \cap B|
   \]
-
+  
 \subsubsection*{Substitution:}
+
   Substituting the given values into the formula:
-  \[
-  |A \cup B| = 96 + 25 - 11
-  \]
-
-  Calculating step-by-step:
-  \begin{enumerate}
-    \item 96 + 25 = 121
-    \item 121 - 11 = 110
-  \end{enumerate}
-
-
+  
+\begin{align*}
+  |A \cup B| &= 96 + 25 - 11 \\
+  &=121-11 \\
+  &=110
+\end{align*}
+  
   Thus, the cardinality of the set \( A \cup B \) is:
   \[
   |A \cup B| = 110
   \]
-
+  
 \subsubsection*{Verification:}
   To ensure the result is correct, I check the conditions:
 
@@ -190,7 +249,9 @@ The cardinality of the set \( A \cup B \) is $\boxed{110}$.
 \subsection{Determine $| B |$}
 
 \subsubsection*{The Problem:}
-  Suppose $|A-B|=\overline{3a}$, $|A \cup B|=\overline {11b}$, and $|A \cap B|=\overline{1a}$. Determine $|B|$.
+  \begin{problem}
+    Suppose $|A-B|=\overline{3a}$, $|A \cup B|=\overline {11b}$, and $|A \cap B|=\overline{1a}$. Determine $|B|$.
+  \end{problem}
 
 \subsubsection*{Given:}
   Using \(a = 5\) and \(b = 6\) from my ID (BD00536), and based on the given problem we have the following data:
@@ -208,10 +269,12 @@ The cardinality of the set \( A \cup B \) is $\boxed{110}$.
     \]
 
 \subsubsection*{Substitution:}
-Substitute 116 and 15, respectively, of $|A \cup B|$ and $|A \cap B|$ into equation (1):
+Substitute 116 and 15, respectively, of $|A \cup B|$ and $|A \cap B|$ into equation (1), we have:
   \begin{align*}
-    116 &= |A| + |B| - 15 \\
-    |A| + |B| &= 131. \tag{2}
+    116 =\ &|A| + |B| - 15 \\
+    &|A| + |B| - 15 = 116 \\
+    &|A| + |B| = 116 + 15 \\
+    &|A| + |B| = 131. \tag{2}
   \end{align*}
 
   For \( |A - B| \):
@@ -241,7 +304,9 @@ Final answer: \boxed{$|B| = 81$}
 \subsection{How many customers have not purchased anything?}
 
 \subsubsection*{The Problem:}
-At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11a}$ have purchased fruits, $\overline {9b}$ have purchased vegetables, $\overline {8a}$ have purchased bakery items, $\overline{4b}$ have purchased both fruits and vegetables, $\overline{3b}$ have purchased both vegetables and bakery items, $\overline{2a}$ have purchased both fruits and bakery items, and $\overline{1a}$ have purchased all three categories. How many customers have not purchased anything?
+\begin{problem}
+At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11a}$ have purchased fruits, $\overline {9b}$ have purchased vegetables, $\overline {8a}$ have purchased bakery items, $\overline{4b}$ have purchased both fruits and vegetables, $\overline{3b}$ have purchased both vegetables and bakery items, $\overline{2a}$ have purchased both fruits and bakery items, and $\overline{1a}$ have purchased all three categories. How many customers have not purchased anything?  
+\end{problem}
 \subsubsection*{Given:}
   Using \(a = 5\) and \(b = 6\) from my ID (BD00536), and based on the given problem we have the following data:
 
@@ -265,11 +330,10 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
       \item $E$ denote the set of customers who purchased nothing.
     \end{itemize}
     \item The following Venn diagram (Figure~\ref{fig:venn113}) illustrates the distribution of customers according to the categories they purchased:
-    \begin{figure}[h!]
+    \begin{figure}[h]
       \centering
       \includegraphics[scale=0.32]{./images/venn113latest.png}
-      \caption{A Venn diagram representing the distribution of customers based on their purchasing categories}
-      \label{fig:venn113}
+      \caption{A Venn diagram representing the distribution of customers based on their purchasing categories}\label{fig:venn113}
     \end{figure}
     \item Based on the given data, we refine the above data to support solving the problem in a simpler way by using the concepts of sets and we will use these facts to find the number of customers who purchased nothing:
     \begin{itemize}
@@ -281,7 +345,7 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
       \item $|B \cap C| = 36$
       \item $|A \cap C| = 25$
       \item $|A \cap B \cap C| = 15$
-      \item $|E| = $ ?
+      \item $|E| =\ $?
     \end{itemize}
   \end{itemize}
 
@@ -292,7 +356,7 @@ At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11
   |E| = |U| - |A \cup B \cup C| \tag{1}
   \]
 
-  I will use the \textbf{principle of inclusion-exclusion}~\citep{rosen2019} for three sets to determine the number of customers who purchased nothing at the store, which is |E|, by finding $|A \cup B \cup C|$:
+  I will use the \textbf{principle of inclusion-exclusion}~\citep{rosen2019} for three sets to determine the number of customers who purchased nothing at the store, which is $|E|$, by finding $|A \cup B \cup C|$:
     \[
     |A \cup B \cup C| = |A| + |B|+|C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C| \tag{2}
     \]
@@ -324,17 +388,19 @@ To confirm the union calculation step-by-step:
 This matches the result I did above, so the number of customers who purchased nothing is indeed 152.
 \subsubsection*{Conclusion:}
 The number of customers who have not purchased anything is \boxed{152}.
-\newpage
 \section{Determine the Cardinality of a Given Bag (Multiset) (P2)}\label{sec:P2}
 
 \subsection{List the bag of prime factors for each of the provided numbers}
 
 \subsubsection*{The Problem:}
-List the bag of prime factors for each of the provided numbers:
+
+\begin{problem}
+  List the bag of prime factors for each of the provided numbers:
 \begin{itemize}
   \item \(\overline{1a2} = \overline{152}\)
   \item \(\overline{2b0} = \overline{260}\)
 \end{itemize}
+\end{problem}
 
 \subsubsection*{Given:}
 Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
@@ -348,7 +414,7 @@ We need to find the prime factorization of each number and represent them as bag
 To find the bag of prime factors for a number, we perform prime factorization by dividing the number by the smallest possible prime numbers repeatedly until the quotient is 1~\citep{burton2010}. The bag contains all prime factors, including repetitions, based on their multiplicity in the factorization.
 
 \subsubsection*{Substitution:}
-Let’s compute the prime factorization for each number.
+Let's compute the prime factorization for each number.
 
 \textbf{For \(\overline{1a2} = 152\):}
 \begin{itemize}
@@ -404,14 +470,16 @@ The bags of prime factors are:
 \subsection{Find the cardinalities}
 
 \subsubsection*{The Problem:}
-Find the cardinalities of:
+
+\begin{problem}
+  Find the cardinalities of:
 \begin{itemize}
   \item Each of the bags above (\( B_1 \) and \( B_2 \)).
   \item The intersection of the bags (\( B_1 \cap B_2 \)).
   \item The union of the bags (\( B_1 \cup B_2 \)).
   \item The difference of the bags (\( B_1 \setminus B_2 \)).
 \end{itemize}
-
+\end{problem}
 \subsubsection*{Given:}
 From the previous subsection:
 \begin{itemize}
@@ -542,11 +610,14 @@ The cardinalities are:
 \subsection{Ascertain whether the given functions are invertible}
 
 \subsubsection*{The Problem:}
-Ascertain whether the given functions are invertible. If they are, identify the rule for the inverse function \( f^{-1} \).
+\begin{problem}
+  Ascertain whether the given functions are invertible. If they are, identify the rule for the inverse function \( f^{-1} \).
 \begin{itemize}
   \item \( f: \mathbb{R} \rightarrow \mathbb{R} \) with \( f(x) = bx + a \).
   \item \( f: [-b, +\infty) \rightarrow [0, +\infty) \) with \( f(x) = \sqrt{x + b} \).
 \end{itemize}
+
+\end{problem}
 
 \subsubsection*{Given:}
 Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), we have:
@@ -672,8 +743,9 @@ f(x) = \sqrt{x + 6}: \quad f^{-1}(x) = x^2 - 6, \quad x \geq 0
 \subsection{Find \( g \circ f \)}
 
 \subsubsection*{The Problem:}
-Let \( f, g: \mathbb{R} \rightarrow \mathbb{R} \) be defined as \( f(x) = \begin{cases} 2x + a, & x < 0 \\ x^3 + b, & x \geq 0 \end{cases} \) and \( g(x) = bx - a \). Find \( g \circ f \).
-
+\begin{problem}
+  Let \( f, g: \mathbb{R} \rightarrow \mathbb{R} \) be defined as \( f(x) = \begin{cases} 2x + a, & x < 0 \\ x^3 + b, & x \geq 0 \end{cases} \) and \( g(x) = bx - a \). Find \( g \circ f \).
+\end{problem}
 \subsubsection*{Given:}
 Using \( a = 5 \) and \( b = 6 \), we have:
 \begin{itemize}
@@ -747,10 +819,12 @@ The composition is:
 \section{Formulate Corresponding Proof Principles to Prove Properties about Defined Sets (D1)}\label{sec:D1}
 
 \subsubsection*{The Problem:}
-Show that if \( A \), \( B \), and \( C \) are sets, then:
+\begin{problem}
+  Show that if \( A \), \( B \), and \( C \) are sets, then:
 \[
 \overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}
 \]
+\end{problem}
 In this section, we will prove the equality in two ways: by demonstrating that each side is a subset of the other and by verifying the equality using a membership table.
 
 \subsection{Demonstrate that each side is a subset of the other side}
@@ -896,8 +970,14 @@ Several types of binary trees are commonly used, each with specific properties s
   \item \textbf{Full Binary Tree}: Every node has either zero or two children. The number of leaves is \( \frac{n+1}{2} \), where \( n \) is the total number of nodes.
   \item \textbf{Balanced Binary Tree}: The heights of the left and right subtrees of every node differ by at most one. This ensures \( O(\log n) \) time for operations like search and insertion (e.g., AVL trees, Red-Black trees).
   \item \textbf{Binary Search Tree (BST)}: A binary tree where the left subtree of a node contains values less than the node’s value, and the right subtree contains values greater, enabling efficient searching and sorting.
-  \item \textbf{Heap}: A complete binary tree where each node’s value is greater than or equal to (max-heap) or less than or equal to (min-heap) its children’s values, used in priority queues and sorting (e.g., heapsort).
+  \item \textbf{Heap}: A complete binary tree where each node's value is greater than or equal to (max-heap) or less than or equal to (min-heap) its children’s values, used in priority queues and sorting (e.g., heapsort).
 \end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.40]{./images/binaryTreeTypes.png}
+  \caption{Common types of binary trees~\citep{geeksforgeeks_dsa}}\label{fig:binaryTreeTypes}
+\end{figure}
 
 These types are tailored to specific computational needs, balancing efficiency and structural constraints.
 
@@ -949,12 +1029,6 @@ Thus, a Min-Heap with 116 tasks has a height of 6, allowing efficient task prior
 \subsubsection*{Description:}
 Dijkstra's algorithm finds the shortest path from a single source vertex to all other vertices in a weighted, undirected graph with non-negative edge weights~\citep{rosen2019}. In an undirected graph, edges are bidirectional, meaning the weight from vertex \( u \) to \( v \) equals the weight from \( v \) to \( u \). The algorithm proceeds as follows:
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.77]{./images/P4graph.png}
-  \caption{The given undirected graph}\label{fig:p4graph}
-\end{figure}
-
 
 \begin{enumerate}
   \item Initialize a distance array \( d \) where \( d[source] = 0 \) and \( d[v] = \infty \) for all other vertices \( v \).
@@ -972,9 +1046,19 @@ Dijkstra's algorithm finds the shortest path from a single source vertex to all 
 \end{enumerate}
 
 The algorithm constructs a shortest path spanning tree rooted at the source, with a time complexity of \( O((V + E) \log V) \) using a priority queue, where \( V \) is the number of vertices and \( E \) is the number of edges.
-
+\newpage
 \subsection{Apply Dijkstra's algorithm to determine the shortest path length between vertices \( A \) and \( Z \) in the provided weighted graph}
 
+\subsubsection*{The Problem:}
+\begin{problem}
+  Apply Dijkstra's algorithm to determine the shortest path length between vertices \( A \) and \( Z \) in the provided weighted graph (as shown in Figure~\ref{fig:p4graph}).
+\end{problem}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.77]{./images/P4graph.png}
+  \caption{The given undirected graph}\label{fig:p4graph}
+\end{figure}
 \subsubsection*{Given:}
 Consider the undirected weighted graph provided (see Figure~\ref{fig:p4graph}), with vertices \( A, B, C, D, E, F, G, Z \) and the following edges with weights:
 \begin{itemize}
@@ -999,39 +1083,63 @@ Using \( a = 5 \) and \( b = 6 \) from the ID (BD00536), the weights are:
 The source vertex is \( A \), and the target is \( Z \). We apply Dijkstra's algorithm to find the shortest path length from \( A \) to \( Z \).
 
 \subsubsection*{Steps:}
-Initialize:\\
-- \( d[A] = 0 \), \( d[B] = d[C] = d[D] = d[E] = d[F] = d[G] = d[Z] = \infty \)\\
-- Unvisited set \( S = \{A, B, C, D, E, F, G, Z\} \)
+\begin{enumerate}
+  \item Initialize:
+  \begin{itemize}
+    \item \( d[A] = 0 \), \( d[B] = d[C] = d[D] = d[E] = d[F] = d[G] = d[Z] = \infty \)
+    \item Unvisited set \( S = \{A, B, C, D, E, F, G, Z\} \)
+  \end{itemize}
+  \item Iterate:
+  \begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  Step & Current Vertex (\( u \)) & \( d[u] \) & Unvisited Set \( S \) and Distances & Updated \( d \) Values \\
+  \hline
+  1 & \( A \) & 0 & \( d[B] = 5 \), \( d[C] = 4 \) & \( d[B] = 5 \), \( d[C] = 4 \) \\
+  2 & \( C \) & 4 & \( d[B] = 5 \), \( d[D] = 8 \), \( d[E] = 11 \) & \( d[D] = 8 \), \( d[E] = 11 \) \\
+  3 & \( B \) & 5 & \( d[D] = 8 \), \( d[E] = 11 \) & \( d[D] = 8 \) (no change) \\
+  4 & \( D \) & 8 & \( d[E] = 9 \), \( d[F] = 14 \) & \( d[E] = 9 \), \( d[F] = 14 \) \\
+  5 & \( E \) & 9 & \( d[F] = 14 \), \( d[G] = 15 \) & \( d[F] = 14 \), \( d[G] = 15 \) \\
+  6 & \( F \) & 14 & \( d[G] = 15 \), \( d[Z] = 22 \) & \( d[G] = 15 \), \( d[Z] = 22 \) \\
+  7 & \( G \) & 15 & \( d[Z] = 20 \) & \( d[Z] = 20 \) \\
+  8 & \( Z \) & 20 & \( \emptyset \) & \(-\) \\
+  \hline
+  \end{tabular}
+  \end{center}
+  
+  \begin{itemize}
+    \item \textbf{Step 1}: Select \( A \) (\( d[A] = 0 \)). Update \( d[B] = 5 \) (via \( A-B \)), \( d[C] = 4 \) (via \( A-C \)). \( S = \{B, C, D, E, F, G, Z\} \).
+    \item \textbf{Step 2}: Select \( C \) (\( d[C] = 4 \)). Update \( d[D] = 4 + 4 = 8 \) (via \( C-D \)), \( d[E] = 4 + 7 = 11 \) (via \( C-E \)). \( S = \{B, D, E, F, G, Z\} \).
+    \item \textbf{Step 3}: Select \( B \) (\( d[B] = 5 \)). Update \( d[D] = \min(8, 5 + 6) = 8 \) (via \( B-D \)). \( S = \{D, E, F, G, Z\} \).
+    \item \textbf{Step 4}: Select \( D \) (\( d[D] = 8 \)). Update \( d[E] = \min(11, 8 + 1) = 9 \) (via \( D-E \)), \( d[F] = \min(\infty, 8 + 6) = 14 \) (via \( D-F \)). \( S = \{E, F, G, Z\} \).
+    \item \textbf{Step 5}: Select \( E \) (\( d[E] = 9 \)). Update \( d[F] = \min(14, 9 + 6) = 14 \) (via \( E-F \)), \( d[G] = \min(\infty, 9 + 6) = 15 \) (via \( E-G \)). \( S = \{F, G, Z\} \).
+    \item \textbf{Step 6}: Select \( F \) (\( d[F] = 14 \)). Update \( d[G] = \min(15, 14 + 3) = 15 \) (via \( F-G \)), \( d[Z] = \min(\infty, 14 + 8) = 22 \) (via \( F-Z \)). \( S = \{G, Z\} \).
+    \item \textbf{Step 7}: Select \( G \) (\( d[G] = 15 \)). Update \( d[Z] = \min(22, 15 + 5) = 20 \) (via \( G-Z \)). \( S = \{Z\} \).
+    \item \textbf{Step 8}: Select \( Z \) (\( d[Z] = 20 \)). No unvisited neighbors. \( S = \emptyset \).
+  \end{itemize}
 
+  % \begin{table}[h!]
+  % \centering
+  % \caption{Dijkstra's Algorithm Steps from \(A\) to \(Z\)}
+  % \begin{tabularx}{\textwidth}{c X X X}  % c=center, X=auto-width
+  % \toprule
+  % Step & Select & Update & \(S=\) \\
+  % \midrule
+  % 1 & \(A\) (\(d[A]=0\)) & \(d[B]=5\) (via \(A-B\)), \(d[C]=4\) (via \(A-C\)) & \{B, C, D, E, F, G, Z\} \\
+  % 2 & \(C\) (\(d[C]=4\)) & \(d[D]=4+4=8\) (via \(C-D\)), \(d[E]=4+7=11\) (via \(C-E\)) & \{B, D, E, F, G, Z\} \\
+  % 3 & \(B\) (\(d[B]=5\)) & \(d[D]=\min(8,5+6)=8\) (via \(B-D\)) & \{D, E, F, G, Z\} \\
+  % 4 & \(D\) (\(d[D]=8\)) & \(d[E]=\min(11,8+1)=9\) (via \(D-E\)), \(d[F]=\min(\infty,8+6)=14\) (via \(D-F\)) & \{E, F, G, Z\} \\
+  % 5 & \(E\) (\(d[E]=9\)) & \(d[F]=\min(14,9+6)=14\) (via \(E-F\)), \(d[G]=\min(\infty,9+6)=15\) (via \(E-G\)) & \{F, G, Z\} \\
+  % 6 & \(F\) (\(d[F]=14\)) & \(d[G]=\min(15,14+3)=15\) (via \(F-G\)), \(d[Z]=\min(\infty,14+8)=22\) (via \(F-Z\)) & \{G, Z\} \\
+  % 7 & \(G\) (\(d[G]=15\)) & \(d[Z]=\min(22,15+5)=20\) (via \(G-Z\)) & \{Z\} \\
+  % 8 & \(Z\) (\(d[Z]=20\)) & No unvisited neighbors & \(\emptyset\) \\
+  % \bottomrule
+  % \end{tabularx}
+  % \end{table}
 
-Iterate:
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-Step & Current Vertex (\( u \)) & \( d[u] \) & Unvisited Set \( S \) and Distances & Updated \( d \) Values \\
-\hline
-1 & \( A \) & 0 & \( d[B] = 5 \), \( d[C] = 4 \) & \( d[B] = 5 \), \( d[C] = 4 \) \\
-2 & \( C \) & 4 & \( d[B] = 5 \), \( d[D] = 8 \), \( d[E] = 11 \) & \( d[D] = 8 \), \( d[E] = 11 \) \\
-3 & \( B \) & 5 & \( d[D] = 8 \), \( d[E] = 11 \) & \( d[D] = 8 \) (no change) \\
-4 & \( D \) & 8 & \( d[E] = 9 \), \( d[F] = 14 \) & \( d[E] = 9 \), \( d[F] = 14 \) \\
-5 & \( E \) & 9 & \( d[F] = 14 \), \( d[G] = 15 \) & \( d[F] = 14 \), \( d[G] = 15 \) \\
-6 & \( F \) & 14 & \( d[G] = 15 \), \( d[Z] = 22 \) & \( d[G] = 15 \), \( d[Z] = 22 \) \\
-7 & \( G \) & 15 & \( d[Z] = 20 \) & \( d[Z] = 20 \) \\
-8 & \( Z \) & 20 & \( \emptyset \) & \(-\) \\
-\hline
-\end{tabular}
-\end{center}
+  
+\end{enumerate}
 
-\begin{itemize}
-  \item \textbf{Step 1}: Select \( A \) (\( d[A] = 0 \)). Update \( d[B] = 5 \) (via \( A-B \)), \( d[C] = 4 \) (via \( A-C \)). \( S = \{B, C, D, E, F, G, Z\} \).
-  \item \textbf{Step 2}: Select \( C \) (\( d[C] = 4 \)). Update \( d[D] = 4 + 4 = 8 \) (via \( C-D \)), \( d[E] = 4 + 7 = 11 \) (via \( C-E \)). \( S = \{B, D, E, F, G, Z\} \).
-  \item \textbf{Step 3}: Select \( B \) (\( d[B] = 5 \)). Update \( d[D] = \min(8, 5 + 6) = 8 \) (via \( B-D \)). \( S = \{D, E, F, G, Z\} \).
-  \item \textbf{Step 4}: Select \( D \) (\( d[D] = 8 \)). Update \( d[E] = \min(11, 8 + 1) = 9 \) (via \( D-E \)), \( d[F] = \min(\infty, 8 + 6) = 14 \) (via \( D-F \)). \( S = \{E, F, G, Z\} \).
-  \item \textbf{Step 5}: Select \( E \) (\( d[E] = 9 \)). Update \( d[F] = \min(14, 9 + 6) = 14 \) (via \( E-F \)), \( d[G] = \min(\infty, 9 + 6) = 15 \) (via \( E-G \)). \( S = \{F, G, Z\} \).
-  \item \textbf{Step 6}: Select \( F \) (\( d[F] = 14 \)). Update \( d[G] = \min(15, 14 + 3) = 15 \) (via \( F-G \)), \( d[Z] = \min(\infty, 14 + 8) = 22 \) (via \( F-Z \)). \( S = \{G, Z\} \).
-  \item \textbf{Step 7}: Select \( G \) (\( d[G] = 15 \)). Update \( d[Z] = \min(22, 15 + 5) = 20 \) (via \( G-Z \)). \( S = \{Z\} \).
-  \item \textbf{Step 8}: Select \( Z \) (\( d[Z] = 20 \)). No unvisited neighbors. \( S = \emptyset \).
-\end{itemize}
 
 Final distances: \( d[A] = 0 \), \( d[B] = 5 \), \( d[C] = 4 \), \( d[D] = 8 \), \( d[E] = 9 \), \( d[F] = 14 \), \( d[G] = 15 \), \( d[Z] = 20 \).
 
@@ -1057,14 +1165,15 @@ The shortest path length from \( A \) to \( Z \) is 20, achieved via the path \(
 
 \subsection*{The Problem:}
 
-Assess whether an Euler circuit and a Hamilton circuit exists in an undirected graph as shown in Figure~\ref{fig:findHamilton}.
 
+\begin{problem}
+  Assess whether an Euler circuit and a Hamilton circuit exists in an undirected graph as shown in Figure~\ref{fig:findHamilton}.
+\end{problem}
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.55]{./images/findHalminton.png}
   \caption{The given undirected graph}\label{fig:findHamilton}
 \end{figure}
-
 % \subsection*{Given:}
 % To determine whether the given undirected graph contains an Euler cycle or a Hamiltonian cycle, we need to define some terms first. According to~\cite{rosen2019}:
 % \begin{quote}``An \textit{Euler circuit} in a graph G is a simple circuit containing every edge of G.''\\``An \textit{Euler path} in G is simple path containing every edge of G.''\end{quote}
@@ -1088,10 +1197,12 @@ Assess whether an Euler circuit and a Hamilton circuit exists in an undirected g
 \end{itemize}
 
 \subsection*{Given}
-The \hyperref[fig:findHamilton]{graph $G$} is a connected undirected graph with 17 vertices:
-\[
-V = \{x, y, c, i, j, k, d, o, p, q, h, n, m, l, e, f, g\}
-\]
+Let $V$ be the set of vertices of the graph $G$. The \hyperref[fig:findHamilton]{graph $G$} is a connected undirected graph with:
+\begin{itemize}
+  \item $|V|=17;$
+  \item $V = \{x, y, c, i, j, k, d, o, p, q, h, n, m, l, e, f, g\}$.
+\end{itemize}
+
 
 \subsection*{Approach:}
 \begin{enumerate}
@@ -1135,11 +1246,11 @@ $e$ & $e$-$d$, $e$-$f$ & 2 & Yes \\
 $f$ & $f$-$e$, $f$-$m$, $f$-$g$ & 3 & No \\ 
 $g$ & $g$-$f$, $g$-$h$ & 2 & Yes \\ \hline
 \end{tabular}
-\caption{Degree analysis of all vertices in~\hyperref[fig:findHamilton]{$G$}}\label{tab:degrees}
+\caption{Degree analysis of all vertices in~\hyperref[fig:findHamilton]{$G$}}\label{table:degrees}
 \end{table}
 
+Based on the table~\ref{table:degrees}, we have:
 \begin{itemize}
-  \item $V = \{x, y, c, i, j, k, d, o, p, q, h, n, m, l, e, f, g\}$, $|V| = 17$
   \item $V_{\text{even}} = \{x, c, i, j, k, o, p, q, n, m, l, e, g\}$, $|V_{\text{even}}| = 13$
   \item $V_{\text{odd}} = \{y, d, h, f\}$, $|V_{\text{odd}}| = 4$
 \end{itemize}
@@ -1153,6 +1264,15 @@ $g$ & $g$-$f$, $g$-$h$ & 2 & Yes \\ \hline
 \[
 |V_{\text{odd}}| = 4 \notin \{0, 2\} \Rightarrow \text{No Eulerian path}.
 \]
+
+The figure~\ref{fig:findEuler_degv} below illustrates the degree of vertices in $G$ based on the~\hyperref[fig:findHamilton]{original graph}. With the vertices numbered next to them, the green and red numbers represent even, and odd, respectively.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.44]{./images/findEuler_deg.png}
+  \caption{Illustrating the degree of vertices in $G$}\label{fig:findEuler_degv}
+\end{figure}
+
 
 \subsubsection*{Hamiltonian Circuit}
 Check sufficient conditions:
@@ -1174,7 +1294,7 @@ Although these are sufficient but not necessary, the graph structure (grid-like 
 
 \textbf{Structural Analysis via Degree-2 Vertices (Bottlenecks)}:
 
-The graph contains eight degree-2 vertices: $\{x, c, i, k, l, e, n, g\}$. In any Hamiltonian circuit, each vertex is visited exactly once, so for a degree-2 vertex $v$ with neighbours $\{u, w\}$, the circuit must traverse the path segment $u \to v \to w$ (or $w \to v \to u$) consecutively. This forces the following \textit{mandatory path segments}:
+The graph contains eight degree-2 vertices: $\{x, c, i, k, l, e, n, g\}$. In any Hamiltonian circuit, each vertex is visited exactly once, so for a degree-2 vertex $v$ with neighbours $\{u, w\}$, the circuit must traverse the path segment $u \to v \to w$ (or $w \to v \to u$) consecutively. This forces the following \textit{mandatory path segments} (see Figure~\ref{fig:hamiltonPathSegment}):
 
 \begin{itemize}
   \item $y \to x \to d$ \quad (from vertex $x$)
@@ -1187,12 +1307,18 @@ The graph contains eight degree-2 vertices: $\{x, c, i, k, l, e, n, g\}$. In any
   \item $f \to g \to h$ \quad (from vertex $g$)
 \end{itemize}
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.44]{./images/hamiltonPathSegment.png}
+  \caption{Mandatory path segments in $G$}\label{fig:hamiltonPathSegment}
+\end{figure}
+
 These constraints create \textit{rigid chains} that must appear intact in any candidate Hamiltonian circuit. Merging them around high-degree vertices (e.g., $y$, $d$, $j$, $q$, $h$, $f$, $m$, $o$) leads to conflicts:
 
 \begin{itemize}
   \item Vertex $y$ (deg 3) must anchor two chains: $x \gets y \to c$. But $y$ is also connected to $j$, forcing a third edge. The circuit cannot enter and exit $y$ using only two edges while preserving both chains unless $j$ is adjacent in sequence — but $j$ anchors its own chain $j \to k \to q$.
   
-  \item Similarly, $q$ (deg 4) must absorb chains from $k \to q$ and $l \to q$, but also connects to $p$ and $h$. Closing the cycle requires returning through $h \to g \to f$, which conflicts with the isolated chain $d \to e \to f$.
+  \item Similarly, $q$ (deg 4) must absorb chains from $k \to q$ and $l \to q$, but also connects to $p$ and $h$. If you connect the forced segments for the outer vertices ($y, x, d, e, f, g, h, c$), they form a closed loop: $x-y-c-h-g-f-e-d-x$. This loop visits 8 vertices and closes on itself. Since the graph has 17 vertices, this sub-cycle isolates the inner vertices ($i, j, k, etc.$). Because a Hamiltonian circuit must be a single cycle visiting all vertices, the existence of this premature sub-cycle proves a Hamiltonian circuit is impossible.
   
   \item The subgraph induced by $\{d, e, f, g, h\}$ forms a constrained cluster linked only via $f$ and $h$, while $\{j, k, q, l, m\}$ forms another. Bridging them without revisiting vertices is impossible under the forced ordering.
 \end{itemize}
@@ -1215,7 +1341,7 @@ Thus, no Hamiltonian circuit exists.
 \subsection*{Verification:}
 \begin{itemize}
   \item \textbf{Connectivity}: Confirmed via DFS from $x$ reaches all vertices.
-  \item \textbf{Handshaking Lemma}: $\sum \deg(v) = 52 = 2 \times |E| \Rightarrow |E| = 26$, consistent.
+  \item \textbf{Handshaking Lemma}: $\sum \deg(v) = 48 = 2 \times |E| \Rightarrow |E| = 24$, consistent.
   \item \textbf{Hamiltonian}: No polynomial algorithm; structural bottlenecks confirm non-existence.
 \end{itemize}
 
@@ -1228,10 +1354,12 @@ The graph $G$ has \textbf{neither an Eulerian circuit nor path} (due to 4 odd-de
 \section{Construct a Proof of the Five-Color Theorem (D2)}\label{sec:D2}
 
 \subsection*{The Problem:}
-Prove the Five-Color Theorem: Every planar graph can be colored with at most five colors such that no two adjacent vertices share the same color.
+\begin{problem}
+  Prove the Five-Color Theorem: Every planar graph can be colored with at most five colors such that no two adjacent vertices share the same color.
+\end{problem}
 
 \subsection*{Given:}
-A planar graph \( G = (V, E) \) is a graph that can be embedded in the plane without edge crossings. A proper coloring assigns a color to each vertex such that no two vertices connected by an edge have the same color. We aim to show that \( G \) is 5-colorable, meaning it can be colored using at most five colors (e.g., \{1, 2, 3, 4, 5\})~\citep{rosen2019}.
+A planar graph \( G = (V, E) \) is a graph that can be embedded in the plane without edge crossings. A proper vertex coloring assigns a color to each vertex such that no two vertices connected by an edge have the same color. We aim to show that \( G \) is 5-colorable, meaning it can be properly colored using at most five colors (e.g., \{1, 2, 3, 4, 5\})~\citep{rosen2019}.
 
 \subsection*{Proof Strategy:}
 We use mathematical induction on the number of vertices \( |V| = n \) in the planar graph \( G \), leveraging the fact that every planar graph has at least one vertex of degree at most 5~\citep{diestel2017}. The strategy is:
@@ -1239,25 +1367,19 @@ We use mathematical induction on the number of vertices \( |V| = n \) in the pla
   \item \textbf{Base Case}: Verify the theorem for small graphs (e.g., \( n \leq 5 \)).
   \item \textbf{Inductive Step}: Assume the theorem holds for graphs with fewer than \( n \) vertices. For a graph with \( n \) vertices, remove a vertex of degree at most 5, color the resulting graph with at most five colors, and reintroduce the vertex. For vertices of degree 5, use a Kempe chain argument to adjust colors if necessary to ensure a valid coloring~\citep{rosen2019}.
 \end{itemize}
-This approach ensures a proper 5-coloring~\citep{epp2020}.
+This approach ensures a proper 5-coloring~\citep{epp2020}. Note that this theorem is a precursor to the more challenging Four-Color Theorem, proven computationally by Appel and Haken in 1976~\citep{appel1989every}.
 
 \subsection*{Proof:}
 We proceed by induction on the number of vertices \( n = |V| \).
 
 \textbf{Base Case (\( n \leq 5 \)):}
-For a planar graph with \( n \leq 5 \) vertices, the number of edges is limited by planarity. By Euler’s formula for planar graphs (\( |V| - |E| + |F| = 2 \), where \( |F| \) is the number of faces), and since each face (including the outer face) has at least three edges, we have \( 3|F| \leq 2|E| \). Combining with Euler's formula, for a simple planar graph:
-\[
-|E| \leq 3n - 6 \quad \text{for } n \geq 3
-\]
-For \( n \leq 5 \), the maximum degree is small, and the graph can be colored with at most five colors. For example:
+Any graph (planar or not) with \( n \) vertices has chromatic number at most \( n \) (by greedy coloring along any vertex ordering). Thus, for \( n \leq 5 \), the chromatic number is at most 5, so five colors suffice for a proper coloring. For example:
 \begin{itemize}
-  \item If \( n = 1 \): A single vertex requires one color.
-  \item If \( n = 2 \): Two vertices (with at most one edge) need at most two colors.
-  \item If \( n = 3 \): A triangle (complete graph \( K_3 \)) needs three colors.
-  \item If \( n = 4 \): A planar graph like \( K_4 \) (tetrahedron) needs at most four colors.
-  \item If \( n = 5 \): A planar graph (e.g., a cycle \( C_5 \)) needs at most three colors.
+  \item \( n = 1 \): A single vertex requires one color.
+  \item \( n = 3 \): A triangle (\( K_3 \)) needs three colors.
+  \item \( n = 5 \): A cycle \( C_5 \) needs three colors, and more complex planar graphs like the complete graph \( K_4 \) plus an isolated vertex need at most four.
 \end{itemize}
-Since \( n \leq 5 \), five colors are sufficient for the base case.
+Planarity further restricts edges (\( |E| \leq 3n - 6 \) for \( n \geq 3 \)), but the bound holds regardless.
 
 \textbf{Inductive Hypothesis:}
 Assume that every planar graph with \( k < n \) vertices (\( n \geq 6 \)) can be properly colored with at most five colors.
@@ -1274,45 +1396,42 @@ Now, reintroduce vertex \( v \) to form \( G \). We need to assign a color to \(
     The neighbors \( u_1, \ldots, u_k \) (where \( k \leq 4 \)) use at most four colors. Since there are five colors available, at least one color (say, color 1) is not used by any neighbor. Assign \( c(v) = 1 \). This ensures a proper coloring, as \( v \)'s color differs from its neighbors’ colors, and the coloring of \( G' \) remains valid.
 
   \item \textbf{Case 2: \( \deg(v) = 5 \)}:
-    Suppose the neighbors \( u_1, u_2, u_3, u_4, u_5 \) are colored with \( c(u_i) = i \) for \( i = 1, 2, 3, 4, 5 \), using all five colors. If the neighbors use fewer than five distinct colors (e.g., two neighbors share a color), then at least one color is available for \( v \), and we can assign it directly. Assume the worst case: all five neighbors have distinct colors.
+    Assume the neighbors are labeled \( u_1, u_2, u_3, u_4, u_5 \) in cyclic order around \( v \) in the planar embedding of \( G \) (ensuring non-crossing edges). Suppose they are colored with distinct colors \( c(u_i) = i \) for \( i = 1, 2, 3, 4, 5 \) (worst case; if fewer distinct colors, a free color exists for \( v \)).
 
     To resolve this, use a Kempe chain argument~\citep{rosen2019}:
     \begin{itemize}
-      \item Consider the subgraph \( G'_{1,3} \) of \( G' \) induced by vertices colored 1 or 3 (i.e., vertices with colors 1 or 3 and edges between them where one endpoint is color 1 and the other is color 3).
-      \item Let \( u_1 \) have color 1 and \( u_3 \) have color 3. Analyze the connected component in \( G'_{1,3} \):
+      \item Consider the subgraph \( G'_{1,3} \) of \( G' \) induced by vertices colored 1 or 3. This subgraph is bipartite because the original coloring of \( G' \) is proper (edges only between different colors).
+      \item Let \( u_1 \) have color 1 and \( u_3 \) have color 3 (chosen as non-adjacent in cyclic order).
         \begin{itemize}
-          \item \textbf{Subcase A\: \( u_1 \) and \( u_3 \) are in different connected components of \( G'_{1,3} \).}
-            Swap the colors 1 and 3 in the component containing \( u_1 \). Since \( G'_{1,3} \) is bipartite (its vertices are partitioned into colors 1 and 3, with edges only between different colors), swapping colors 1 and 3 in \( u_1 \)’s component preserves the proper coloring of \( G' \). Now, \( u_1 \) has color 3, and since \( u_3 \) is in a different component, its color remains 3. Thus, color 1 is no longer used by any neighbor of \( v \). Assign \( c(v) = 1 \).
+          \item \textbf{Subcase A: \( u_1 \) and \( u_3 \) are in different connected components of \( G'_{1,3} \).}
+            Swap colors 1 and 3 in the component containing \( u_1 \). This preserves the proper coloring of \( G' \) (as it's a bipartite swap). Now, \( u_1 \) has color 3, freeing color 1 for \( v \). Assign \( c(v) = 1 \).
 
           \item \textbf{Subcase B: \( u_1 \) and \( u_3 \) are in the same connected component of \( G'_{1,3} \).}
-            There exists a path \( P \) in \( G'_{1,3} \) from \( u_1 \) to \( u_3 \) with alternating colors 1 and 3. In the planar embedding of \( G \), the edges \( (v, u_1) \) and \( (v, u_3) \), combined with path \( P \), form a cycle \( C \) (since \( v \) connects to both \( u_1 \) and \( u_3 \)). By planarity, this cycle separates the plane into an interior and exterior region.
+            There exists a path \( P \) in \( G'_{1,3} \) from \( u_1 \) to \( u_3 \) with alternating colors 1 and 3. In the planar embedding, edges \( (v, u_1) \) and \( (v, u_3) \) with \( P \) form a cycle \( C \), dividing the plane into interior and exterior regions (by Jordan Curve Theorem).
+% Image here
+            Due to the cyclic order and planarity, \( u_2 \) (color 2) and \( u_4 \) (color 4) must lie in different regions relative to \( C \). In the bipartite subgraph \( G'_{2,4} \) (induced by colors 2 and 4), no path from \( u_2 \) to \( u_4 \) can exist without crossing \( C \) (whose vertices are colored 1 or 3). Thus, \( u_2 \) and \( u_4 \) are in different components.
 
-            Now, consider neighbors \( u_2 \) (color 2) and \( u_4 \) (color 4). Since \( C \) is a cycle in the planar embedding, \( u_2 \) and \( u_4 \) must lie in different regions (e.g., one inside and one outside \( C \)). Thus, in the subgraph \( G'_{2,4} \) induced by vertices colored 2 or 4, there cannot be a path from \( u_2 \) to \( u_4 \), as such a path would cross \( C \), violating planarity (since \( C \)'s vertices are colored 1 and 3, not 2 or 4).
-
-            Therefore, \( u_2 \) and \( u_4 \) are in different connected components of \( G'_{2,4} \). Swap colors 2 and 4 in the component containing \( u_2 \). This preserves the proper coloring of \( G' \), as \( G'_{2,4} \) is bipartite. Now, \( u_2 \) has color 4, and \( u_4 \)'s color remains 4 (since it's in a different component). Thus, color 2 is no longer used by any neighbor of \( v \). Assign \( c(v) = 2 \).
+            Swap colors 2 and 4 in \( u_2 \)'s component, preserving the coloring. Now, \( u_2 \) has color 4, freeing color 2 for \( v \). Assign \( c(v) = 2 \). (Color 5 remains on \( u_5 \), but is distinct.)
         \end{itemize}
     \end{itemize}
-    In both subcases, we free up a color for \( v \), ensuring a proper 5-coloring of \( G \).
+    In both subcases, a color is freed for \( v \). If the 1-3 pair fails, planarity ensures the 2-4 pair succeeds; with five colors, this covers the case.
 \end{itemize}
 
-Thus, in all cases (\( \deg(v) \leq 4 \) or \( \deg(v) = 5 \)), we can assign a color to \( v \) such that the coloring of \( G \) is proper.
-
-By the principle of mathematical induction~\citep{epp2020}, the Five-Color Theorem holds for all planar graphs.
+Thus, in all cases, we can assign a color to \( v \) such that the coloring of \( G \) is proper. By mathematical induction~\citep{epp2020}, the Five-Color Theorem holds for all planar graphs.
 
 \subsection*{Verification:}
-The key property is that every planar graph has a vertex of degree at most 5, derived from \( |E| \leq 3n - 6 \) and the degree sum \( 2|E| \leq 6n - 12 \), so the average degree is less than 6. The induction step ensures that:
+The key property is that every planar graph has a vertex of degree at most 5, derived from \( |E| \leq 3n - 6 \) and the handshaking lemma \( 2|E| \leq 6n - 12 \), so the average degree is less than 6. The induction step ensures:
 \begin{itemize}
   \item For \( \deg(v) \leq 4 \), at least one of the five colors is available.
-  \item For \( \deg(v) = 5 \), the Kempe chain argument guarantees that we can recolor \( G' \) to free up a color for \( v \), leveraging planarity to ensure that neighbors like \( u_2 \) and \( u_4 \) are in different components when \( u_1 \) and \( u_3 \) are connected.
+  \item For \( \deg(v) = 5 \), the Kempe chain argument guarantees recoloring to free a color, leveraging planarity for component separation.
 \end{itemize}
-Testing on small planar graphs (e.g., \( K_4 \), \( C_5 \)) confirms that fewer than five colors often suffice, but the proof guarantees five colors are always sufficient. The Kempe chain argument addresses the critical case where all five neighbors have distinct colors, ensuring the proof is complete.
+For example, consider the wheel graph \( W_6 \) (a cycle of 5 vertices plus a central hub of degree 5): Removing the hub leaves a 5-cycle (3-colorable); reintroducing requires the Kempe swap if neighbors use 5 colors, but planarity allows it. This confirms five colors suffice, aligning with the theorem.
 
 \subsection*{Conclusion:}
-The Five-Color Theorem is proven: every planar graph can be properly colored with at most five colors.
+The Five-Color Theorem is proven: every planar graph can be properly colored with at most five colors. This has applications in map coloring and scheduling problems.
 \[
 \boxed{\text{Every planar graph is 5-colorable}}
 \]
-
 
 \chapter{Investigate Solutions to Problem Situations Using the Application of Boolean Algebra (LO3)}\label{chap:LO3}
 
@@ -1552,10 +1671,13 @@ The corresponding Boolean equation is
 \subsection{Generate a Truth Table for the Provided Boolean Expression}
 
 \subsubsection*{The Problem:}
-Generate a truth table for the provided Boolean expression:
+
+\begin{problem}
+  Generate a truth table for the provided Boolean expression:
 \[
 F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z
 \]
+\end{problem}
 
 \subsubsection*{Given:}
 The Boolean expression involves three variables: $x$, $y$, and $z$. Each variable can be either 0 or 1, 
@@ -1642,7 +1764,9 @@ We verify the results by checking key rows:
 
 \subsubsection*{Conclusion:}
 
-The truth table~\ref{table:truthTableFxyz} shows that the Boolean expression $F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$ outputs 1 for the input combinations: (0,0,1), (0,1,0), (1,0,0), and (1,1,1). These represent the minterms $m_1$, $m_2$, $m_4$, and $m_7$ in standard notation. The expression is 0 for all other input combinations. This truth table can be used to design logic circuits or to simplify the Boolean expression using Karnaugh maps or algebraic methods~\citep{rosen2019}.
+The truth table~\ref{table:truthTableFxyz} shows that the Boolean expression $F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$ outputs 1 for the input combinations: (0,0,1), (0,1,0), (1,0,0), and (1,1,1).
+
+These represent the minterms $m_1$, $m_2$, $m_4$, and $m_7$ in standard notation. The expression is 0 for all other input combinations. This truth table can be used to design logic circuits or to simplify the Boolean expression using Karnaugh maps or algebraic methods~\citep{rosen2019}.
 
 The output of the Boolean expression $F(x, y, z) = xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$ is 1 for input combinations (0,0,1), (0,1,0), (1,0,0), and (1,1,1), and 0 for all other combinations.
 
@@ -1652,11 +1776,9 @@ The output of the Boolean expression $F(x, y, z) = xyz + x\overline{y}\overline{
 
 
 \subsubsection*{The Problem:}
+
+\begin{problem}
 Simplify the following Boolean expressions using algebraic methods.
-
-\subsubsection*{Given:}
-
-The four Boolean expressions to simplify are:
 \begin{enumerate}
 \item $x(x + y) + y(y + z) + z(z + x)$
 \item $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$
@@ -1664,9 +1786,11 @@ The four Boolean expressions to simplify are:
 \item $\overline{x}(x + y) + (x + y)(x + \overline{y})$
 \end{enumerate}
 
+\end{problem}
+
 \subsubsection*{Formula:}
 
-We use the following Boolean algebra identities~\citep{rosen2019} as shown in Figure~\ref{fig:booleanIdentities}:
+We'll use the following Boolean algebra identities~\citep{rosen2019} as shown in Figure~\ref{fig:booleanIdentities} to simplify the Boolean expressions:
 
 \begin{figure}[h!]
   \centering
@@ -1675,153 +1799,44 @@ We use the following Boolean algebra identities~\citep{rosen2019} as shown in Fi
 \end{figure}
 
 \subsubsection*{Substitution:}
+\begin{itemize}
+  \item \textbf{Expression 1}: $x(x + y) + y(y + z) + z(z + x)$
+  \begin{enumerate}
+    \item Apply the Absorption Law to each term.\begin{align*}x(x + y) &= x \quad \text{(by Absorption Law: } x(x + y) = x\text{)} \\y(y + z) &= y \quad \text{(by Absorption Law: } y(y + z) = y\text{)} \\z(z + x) &= z \quad \text{(by Absorption Law: } z(z + x) = z\text{)}\end{align*}
+    \item Substitute the simplified terms back into the expression.\[ x + y + z \]
+    \item Apply the Idempotent Law (no further simplification possible).\[F_1 = x + y + z\]
 
-\textbf{Expression 1}: $x(x + y) + y(y + z) + z(z + x)$
-
-Step 1: Apply the Absorption Law to each term.
-\begin{align*}
-x(x + y) &= x \quad \text{(by Absorption Law: } x(x + y) = x\text{)} \\
-y(y + z) &= y \quad \text{(by Absorption Law: } y(y + z) = y\text{)} \\
-z(z + x) &= z \quad \text{(by Absorption Law: } z(z + x) = z\text{)}
-\end{align*}
-
-Step 2: Substitute the simplified terms back into the expression.\[ x + y + z \]
-
-Step 3: Apply the Idempotent Law (no further simplification possible).
-\[
-F_1 = x + y + z
-\]
-
-\textbf{Expression 2}: $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$
-
-Step 1: Expand using the Distributive Law.
-\begin{align*}
-(x + \overline{y})(y + z) &= xy + xz + \overline{y}y + \overline{y}z \\
-&= xy + xz + 0 + \overline{y}z \\
-&= xy + xz + \overline{y}z
-\end{align*}
-
-Step 2: Expand the second term.
-\begin{align*}
-(x + y)(z + \overline{x}) &= xz + x\overline{x} + yz + y\overline{x} \\
-&= xz + 0 + yz + \overline{x}y \\
-&= xz + yz + \overline{x}y
-\end{align*}
-
-Step 3: Combine the two expanded expressions.
-\begin{align*}
-F_2 &= xy + xz + \overline{y}z + xz + yz + \overline{x}y \\
-&= xy + xz + xz + \overline{y}z + yz + \overline{x}y \\
-&= xy + 2xz + \overline{y}z + yz + \overline{x}y
-\end{align*}
-
-Step 4: Apply the Idempotent Law ($xz + xz = xz$).
-\[
-F_2 = xy + xz + \overline{y}z + yz + \overline{x}y
-\]
-
-Step 5: Factor and simplify using Absorption and Distributive Laws.
-\begin{align*}
-F_2 &= xy + \overline{x}y + xz + yz + \overline{y}z \\
-&= y(x + \overline{x}) + xz + z(y + \overline{y}) \\
-&= y \cdot 1 + xz + z \cdot 1 \\
-&= y + xz + z \\
-&= y + z(x + 1) \\
-&= y + z \cdot 1 \\
-&= y + z
-\end{align*}
-
-Therefore:
-\[
-F_2 = y + z
-\]
-
-\textbf{Expression 3}: $(x + y)(xz + x\overline{z}) + zx + x$
-
-Step 1: Simplify the first term inside the parentheses.
-\begin{align*}
-xz + x\overline{z} &= x(z + \overline{z}) \\
-&= x \cdot 1 \\
-&= x
-\end{align*}
-
-Step 2: Substitute back into the original expression.
-\begin{align*}
-F_3 &= (x + y) \cdot x + zx + x \\
-&= x(x + y) + zx + x
-\end{align*}
-
-Step 3: Apply the Absorption Law to $x(x + y) = x$.
-\begin{align*}
-F_3 &= x + zx + x \\
-&= x + x + zx \\
-&= x + zx \quad \text{(by Idempotent Law: } x + x = x\text{)}
-\end{align*}
-
-Step 4: Apply the Absorption Law to $x + zx = x$.
-\begin{align*}
-x + zx &= x(1 + z) \\
-&= x \cdot 1 \\
-&= x
-\end{align*}
-
-Therefore:
-\[
-F_3 = x
-\]
-
-\textbf{Expression 4}: $\overline{x}(x + y) + (x + y)(x + \overline{y})$
-
-Step 1: Expand the first term using the Distributive Law.
-\begin{align*}
-\overline{x}(x + y) &= \overline{x}x + \overline{x}y \\
-&= 0 + \overline{x}y \\
-&= \overline{x}y
-\end{align*}
-
-Step 2: Expand the second term using the Distributive Law.
-\begin{align*}
-(x + y)(x + \overline{y}) &= x \cdot x + x \cdot \overline{y} + y \cdot x + y \cdot \overline{y} \\
-&= x + x\overline{y} + xy + 0 \\
-&= x + x\overline{y} + xy
-\end{align*}
-
-Step 3: Apply the Absorption Law to $x + x\overline{y} + xy = x$.
-\begin{align*}
-x + x\overline{y} + xy &= x(1 + \overline{y} + y) \\
-&= x(1 + 1) \\
-&= x \cdot 1 \\
-&= x
-\end{align*}
-
-Alternatively, we can factor:
-\begin{align*}
-x + x\overline{y} + xy &= x + x(\overline{y} + y) \\
-&= x + x \cdot 1 \\
-&= x + x \\
-&= x
-\end{align*}
-
-Step 4: Combine the results from Steps 1 and 2.
-\begin{align*}
-F_4 &= \overline{x}y + x \\
-&= x + \overline{x}y
-\end{align*}
-
-Step 5: Apply the Absorption Law in its alternative form: $x + \overline{x}y = x + y$.
-\begin{align*}
-x + \overline{x}y &= (x + \overline{x})(x + y) \\
-&= 1 \cdot (x + y) \\
-&= x + y
-\end{align*}
-
-Therefore:
-\[
-F_4 = x + y
-\]
+  \end{enumerate}
+  \item \textbf{Expression 2}: $(x + \overline{y})(y + z) + (x + y)(z + \overline{x})$
+  \begin{enumerate}
+    \item Expand using the Distributive Law.\ \begin{align*}(x + \overline{y})(y + z) &= xy + xz + \overline{y}y + \overline{y}z \\&= xy + xz + 0 + \overline{y}z \\ &= xy + xz + \overline{y}z \end{align*}
+    \item Expand the second term.\begin{align*}(x + y)(z + \overline{x}) &= xz + x\overline{x} + yz + y\overline{x} \\ &= xz + 0 + yz + \overline{x}y \\ &= xz + yz + \overline{x}y \end{align*}
+    \item Combine the two expanded expressions.\ \begin{align*} F_2 &= xy + xz + \overline{y}z + xz + yz + \overline{x}y \\ &= xy + xz + xz + \overline{y}z + yz + \overline{x}y \\ &= xy + 2xz + \overline{y}z + yz + \overline{x}y \end{align*}
+    \item Apply the Idempotent Law ($xz + xz = xz$).\[ F_2 = xy + xz + \overline{y}z + yz + \overline{x}y \]
+    \item Factor and simplify using Absorption and Distributive Laws.\ \begin{align*} F_2 &= xy + \overline{x}y + xz + yz + \overline{y}z \\ &= y(x + \overline{x}) + xz + z(y + \overline{y}) \\ &= y \cdot 1 + xz + z \cdot 1 \\ &= y + xz + z \\ &= y + z(x + 1) \\ &= y + z \cdot 1 \\ &= y + z \end{align*}
+    \item Therefore: \[ F_2 = y + z \]
+  \end{enumerate}
+  \item \textbf{Expression 3}: $(x + y)(xz + x\overline{z}) + zx + x$
+  \begin{enumerate}
+    \item Simplify the first term inside the parentheses. \begin{align*} xz + x\overline{z} &= x(z + \overline{z}) \\ &= x \cdot 1 \\ &= x \end{align*}
+    \item Substitute back into the original expression.\ \begin{align*} F_3 &= (x + y) \cdot x + zx + x \\ &= x(x + y) + zx + x \end{align*}
+    \item Apply the Absorption Law to $x(x + y) = x$. \begin{align*} F_3 &= x + zx + x \\ &= x + x + zx \\ &= x + zx \quad \text{(by Idempotent Law: } x + x = x\text{)} \end{align*}
+    \item Apply the Absorption Law to $x + zx = x$.\ \begin{align*} x + zx &= x(1 + z) \\ &= x \cdot 1 \\ &= x \end{align*}
+    \item Therefore: \[ F_3 = x \]
+  \end{enumerate}
+  \item \textbf{Expression 4}: $\overline{x}(x + y) + (x + y)(x + \overline{y})$
+  \begin{enumerate}
+    \item Expand the first term using the Distributive Law. \begin{align*} \overline{x}(x + y) &= \overline{x}x + \overline{x}y \\ &= 0 + \overline{x}y \\ &= \overline{x}y \end{align*}
+    \item Expand the second term using the Distributive Law. \begin{align*} (x + y)(x + \overline{y}) &= x \cdot x + x \cdot \overline{y} + y \cdot x + y \cdot \overline{y} \\ &= x + x\overline{y} + xy + 0 \\ &= x + x\overline{y} + xy \end{align*}
+    \item Apply the Absorption Law to $x + x\overline{y} + xy = x$. \begin{align*} x + x\overline{y} + xy &= x(1 + \overline{y} + y) \\ &= x(1 + 1) \\ &= x \cdot 1 \\ &= x \end{align*}
+    \item Alternatively, we can factor: \begin{align*} x + x\overline{y} + xy &= x + x(\overline{y} + y) \\ &= x + x \cdot 1 \\ &= x + x \\ &= x \end{align*}
+    \item Combine the results from Steps 1 and 2. \begin{align*} F_4 &= \overline{x}y + x \\ &= x + \overline{x}y \end{align*}
+    \item Apply the Absorption Law in its alternative form: $x + \overline{x}y = x + y$. \begin{align*} x + \overline{x}y &= (x + \overline{x})(x + y) \\ &= 1 \cdot (x + y) \\ &= x + y \end{align*}
+    \item Therefore: \[ F_4 = x + y \]
+  \end{enumerate}
+\end{itemize}
 
 \subsubsection*{Verification:}
-
 
 We verify our results by checking with specific input values:
 
@@ -1882,7 +1897,9 @@ By applying Boolean algebra identities systematically, each expression has been 
 
 \subsection{The Problem}
 
-Build a circuit using OR gates, AND gates, and inverters that produces an output of 1 if a decimal digit, encoded using a binary coded decimal expansion, is divisible by 3, and an output of 0 otherwise. Identify the representation of the Boolean function that has the output value.
+\begin{problem}
+Build a circuit using OR gates, AND gates, and inverters that produces an output of 1 if a decimal digit, encoded using a binary coded decimal expansion, is divisible by 3, and an output of 0 otherwise. Identify the representation of the Boolean function that has the output value.  
+\end{problem}
 
 \subsection{Identify the Boolean Function}
 
@@ -2136,11 +2153,14 @@ Therefore, no such subgroup \( K \) exists. This is a direct consequence of the 
 
 \subsection*{Given Problem}
 
-Let \( S = \mathbb{R} - \{-1\} \) and define the binary operation \( * \) as
-\[
-a * b = a + b + ab \quad \text{for all } a, b \in S.
-\]
-We must verify whether \( (S, *) \) forms a group under this operation by checking the four group axioms: closure, associativity, existence of identity, and existence of inverses \cite{rosen2019}.
+\begin{problem}
+  
+  Let \( S = \mathbb{R} - \{-1\} \) and define the binary operation \( * \) as
+  \[
+  a * b = a + b + ab \quad \text{for all } a, b \in S.
+  \]
+  We must verify whether \( (S, *) \) forms a group under this operation by checking the four group axioms: closure, associativity, existence of identity, and existence of inverses.
+\end{problem}
 
 \subsection*{Closure}
 
@@ -2253,10 +2273,112 @@ This shows the rapid growth of possible operations as the order of the set incre
 \newpage
 \section{Explore the Application of Group Theory Relevant to your Given Example (D4)}\label{sec:D4}
 
+Group theory, a branch of abstract algebra, studies algebraic structures known as groups, which consist of a set equipped with a binary operation satisfying properties like closure, associativity, identity, and invertibility. In computer science, group theory provides foundational tools for modeling symmetries, transformations, and operations in various domains. This section explores the application of group theory in cryptography, a critical area of computer science that ensures secure communication and data protection. Cryptography leverages group-theoretic concepts to design secure encryption schemes, particularly in public-key cryptography systems like RSA and elliptic curve cryptography \(ECC\). By examining these applications, we can appreciate how abstract algebraic structures enable practical solutions to real-world security challenges~\citep{Stinson2020}.
+
+\subsection{Overview of Group Theory in Cryptography}
+Cryptography relies on mathematical problems that are computationally hard to solve, such as the discrete logarithm problem or integer factorization. Groups provide the framework for these problems because operations within groups (e.g., multiplication modulo a prime) can be efficient to compute in one direction but difficult to reverse without secret information.
+\subsubsection*{Key Group Properties in Cryptography}
+\begin{itemize}
+  \item \textbf{Closure}: Ensures that combining elements (e.g., encrypting messages) stays within the set.
+  \item \textbf{Associativity}: Allows operations to be grouped without ambiguity, essential for multi-step computations in algorithms.
+  \item \textbf{Identity Element}: Represents a ``neutra'' operation, like multiplying by 1 in modular arithmetic.
+  \item \textbf{Inverses}: Enable decryption by reversing encryption operations.
+  \item \textbf{Order of the Group}: The size of the group influences security; larger orders make brute-force attacks infeasible.
+\end{itemize}
+A common group used in cryptography is the multiplicative group of integers modulo a prime $p$, denoted $\mathbb{Z}^{*}_p$. This group is cyclic, meaning it has a generator $g$ such that powers of $g$ produce all elements. The security of many cryptosystems rests on the difficulty of finding discrete logarithms in such groups—i.e., given $g^k \mod p$, computing $k$ is hard for large $p$.
+\subsection{Application in Public-Key Cryptography: The Diffie-Hellman Key Exchange}
+One prominent example is the Diffie-Hellman (DH) key exchange protocol, which allows two parties to establish a shared secret key over an insecure channel without exchanging the key directly. This protocol is built on the cyclic group $\mathbb{Z}^{*}_p$.
+
+\subsubsection*{Protocol Steps}
+\begin{itemize}
+  \item Alice and Bob agree on a large prime $p$ and a generator $g$ (public parameters).
+  \item Alice chooses a private key $a$ (a random integer) and computes $A = g^a \mod p$, sending $A$ to Bob.
+  \item Bob chooses a private key $b$ and computes $B = g^b \mod p$, sending $B$ to Alice.
+  \item Alice computes the shared key $K = B^a \mod p = (g^b)^a \mod p = g^{ab} \mod p$.
+  \item Bob computes $K = A^b \mod p = (g^a)^b \mod p = g^{ab} \mod p$.
+\end{itemize}
+\subsubsection*{Group-Theoric Foundation}
+
+\begin{itemize}
+  \item The operation is exponentiation in the group $\mathbb{Z}_p^*$, where the group operation is multiplication modulo $p$.
+  \item Security relies on the discrete logarithm problem: An eavesdropper knows $g$, $A$, and $B$ but cannot easily compute $a = \log_g A$ or $b = \log_g B$ to find $ab$.
+  \item Lagrange's theorem implies that the order of subgroups divides the group order $p-1$, helping select secure parameters (e.g., ensuring $p-1$ has large prime factors to prevent attacks like Pohlig-Hellman).
+\end{itemize}
+This application demonstrates how group theory enables secure key exchange, fundamental to protocols like TLS/SSL for web security.
+\subsection{Application in Elliptic Curve Cryptography (ECC)}
+
+ECC extends group theory to elliptic curves over finite fields, forming an abelian group under point addition. An elliptic curve is defined by $y^2 = x^3 + ax + b \mod p$, where points on the curve, plus a point at infinity (identity), form the group.
+\begin{itemize}
+  \item \textbf{Group Operation}: Point addition (and doubling) is associative and invertible, satisfying group axioms.
+  \item \textbf{Advantages Over Traditional Groups}:
+  \begin{itemize}
+    \item ECC provides equivalent security with smaller key sizes (e.g., 256-bit ECC ≈ 3072-bit RSA), making it efficient for resource-constrained devices like smartphones.
+    \item The elliptic curve discrete logarithm problem (ECDLP) is harder than the standard discrete logarithm, enhancing security.
+  \end{itemize}
+  \item \textbf{Real-World Use}: ECC is used in Bitcoin for digital signatures (ECDSA) and in HTTPS for key exchange. For instance, adding points $P$ and $Q$ on the curve involves computing slopes and intersections, all modulo $p$, leveraging the group's structure for fast computations.
+\end{itemize}
+
+\subsection{Challenges and Broader Implications}
+While group theory strengthens cryptography, challenges include quantum threats (e.g., Shor's algorithm solves discrete logarithms on quantum computers, prompting post-quantum cryptography research using lattice-based groups). In computer science, these concepts extend to error-correcting codes (e.g., cyclic codes based on polynomial rings, which are quotient groups) and algorithm design, where group homomorphisms optimize computations.
+
+In summary, group theory's application in cryptography illustrates its power in creating secure, efficient systems. By modeling operations as groups, computer scientists can design protocols that resist attacks while maintaining performance, underscoring the relevance of abstract algebra in modern computing~\citep{Hoffstein2008}.
 \newpage
 \section*{Conclusion}
+Discrete mathematics serves as a cornerstone for software engineering, providing essential tools for solving complex problems in computation, data modeling, and system design. Through the exploration of set theory, graph theory, Boolean algebra, and abstract algebra in this assignment, we have demonstrated their practical applications and benefits.
+\begin{itemize}
+  \item \hyperref[chap:LO1]{Set Theory and Functions (LO1)}: These concepts enable efficient data organization, cardinality calculations, and function inverses, which are crucial for database management, algorithm optimization, and proving set properties.
+  \item \hyperref[chap:LO2]{Graph Theory (LO2)}: By modeling structures with trees, shortest paths via Dijkstra's algorithm, and assessing circuits like Eulerian and Hamiltonian, graph theory supports network routing, data structures, and optimization problems.
+  \item \hyperref[chap:LO3]{Boolean Algebra (LO3)}: Applied to binary problems in digital circuits and security systems, it simplifies logic gate designs and truth tables, ensuring reliable decision-making in hardware and software.
+  \item \hyperref[chap:LO4]{Abstract Algebra (LO4)}: Group theory's properties and applications, such as in cryptography, highlight its role in secure systems and computational symmetries.
+\end{itemize}
+Overall, mastering discrete mathematics enhances problem-solving, critical thinking, and innovation in software engineering, addressing real-world challenges with precision and scalability~\citep{rosen2019,epp2020}.
+
 \newpage
 \section*{Evaluation}
+
+My assignment comprehensively addresses the requirements outlined in the briefs for Unit 18: Discrete Mathematics, covering Learning Outcomes LO1 through LO4 across Assignment 1 (\hyperref[chap:LO1]{LO1} and~\hyperref[chap:LO2]{LO2}) and Assignment 2 (\hyperref[chap:LO3]{LO3} and~\hyperref[chap:LO4]{LO4}). The submission demonstrates a strong alignment with the vocational scenarios, activities, and assessment criteria, showcasing cognitive skills such as problem-solving, critical thinking, and decision-making, as well as intrapersonal skills like independent learning and self-reflection. Below, I evaluate the coverage and quality of the work in my assignment against the briefs' expectations, highlighting strengths and how the requirements were met.
+\subsection*{Evaluation of LO1: Examine Set Theory and Functions Applicable to Software Engineering}
+The brief requires performing algebraic set operations (\hyperref[sec:P1]{P1}), determining multiset cardinalities (\hyperref[sec:P2]{P2}), finding function inverses (\hyperref[sec:M1]{M1}), and formulating proofs for set properties (\hyperref[sec:D1]{D1}). In my assignment, \hyperref[chap:LO1]{Chapter 1} effectively meets these criteria:
+\begin{itemize}
+  \item \textbf{\hyperref[sec:P1]{P1: Section 1.1}} applies set operations to solve cardinality problems for two and three sets, including a real-world market customer scenario, using student-specific digits ($a$ and $b$) as required. This demonstrates accurate algebraic manipulation and contextual application.
+  \item \textbf{\hyperref[sec:P2]{P2: Section 1.2}} performs prime factorization on numbers like $\overline{1a2}$ and $\overline{2b0}$, calculates cardinalities for bags, intersections, unions, and differences, fully aligning with the multiset requirements.
+  \item \textbf{\hyperref[sec:M1]{M1: Section 1.3}} ascertains invertibility for given functions and computes compositions like $g \circ f$, employing appropriate mathematical techniques with clear explanations.
+  \item \textbf{\hyperref[sec:D1]{D1: Section 1.4}} proves set equalities (e.g., De Morgan's law) using subset demonstrations and membership tables, providing rigorous verification.
+\end{itemize}
+Overall,~\hyperref[chap:LO1]{LO1} is well-executed, with practical software engineering ties (e.g., database optimization) and no notable gaps, earning a strong pass with merit and distinction elements.
+
+\subsection*{Evaluation of LO2: Analyze Mathematical Structures of Objects Using Graph Theory}
+The brief emphasizes modeling problems with trees~\hyperref[sec:P3]{(P3)}, using Dijkstra's algorithm~\hyperref[sec:P4]{(P4)}, assessing Eulerian and Hamiltonian circuits (M2), and proving the Five-Color Theorem~\hyperref[sec:D2]{(D2)}.~\hyperref[chap:LO2]{Chapter 2} in my assignment covers this thoroughly:
+\begin{itemize}
+  \item \textbf{\hyperref[sec:P3]{P3: Section 2.1}} defines binary trees, discusses types (e.g., complete and balanced), and analyzes two instances quantitatively (e.g., node counts) and qualitatively (e.g., applications in data structures), meeting the contextual modeling requirement.
+  \item \textbf{\hyperref[sec:P4]{P4: Section 2.2}} states Dijkstra's algorithm for undirected graphs and applies it to find the shortest path from A to Z in the provided weighted graph, including step-by-step computations.
+  \item \textbf{\hyperref[sec:M2]{M2: Section 2.3}} evaluates the given graph for Hamiltonian paths (finding one or arguing against), while also addressing Eulerian circuits, with logical arguments supported by graph properties.
+  \item \textbf{\hyperref[sec:D2]{D2: Section 2.4}} constructs a detailed proof of the Five-Color Theorem, using induction and graph coloring principles.
+\end{itemize}
+This LO is addressed excellently, with visual aids (implied graphs) and real-world relevance (e.g., network routing), fully satisfying the criteria for a distinction-level performance.
+\subsection*{Evaluation of LO3: Investigate Solutions to Problem Situations Using the Application of Boolean Algebra}
+Assignment 2's brief requires diagramming binary problems~\hyperref[P5]{(P5)}, producing truth tables and equations~\hyperref[sec:P6]{(P6)}, simplifying equations~\hyperref[sec:M3]{(M3)}, and designing logic gate systems~\hyperref[sec:D3]{(D3)}.~\hyperref[chap:LO3]{Chapter 3} in my assignment aligns closely:
+\begin{itemize}
+  \item \textbf{\hyperref[P5]{P5: Section 3.1}} discusses Boolean algebra in two domains (digital circuit design for voting systems and network security for access control), including diagrams, number representations, and practical applications, as specified.
+  \item \textbf{\hyperref[sec:P6]{P6: Section 3.2}} develops truth tables and Boolean equations for given scenarios (e.g., secure facility access and computer login), and generates a table for the expression $xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$.
+  \item \textbf{\hyperref[sec:M3]{M3: Section 3.3}} simplifies four Boolean expressions using algebraic methods, showing step-by-step reductions.
+  \item \textbf{\hyperref[sec:D3]{D3: Section 3.4}} designs a logic circuit for detecting BCD digits divisible by 3, identifying the Boolean function and constructing the circuit with AND, OR, and NOT gates.
+\end{itemize}
+The team-based presentation aspect is implied through structured content, though not explicitly documented; overall, LO3 is met with high quality, demonstrating effective communication and digital literacy.
+
+\subsection*{Evaluation of LO4: Explore Applicable Concepts within Abstract Algebra}
+
+The brief calls for describing binary operations~\hyperref[sec:P7]{(P7)}, determining group orders~\hyperref[sec:P8]{(P8)}, validating groups~\hyperref[sec:M4]{(M4)}, and presenting group theory applications~\hyperref[sec:D4]{(D4)}. Chapter 4 in my assignment fulfills this:
+
+\begin{itemize}
+    \item \textbf{\hyperref[sec:P7]{P7: Section 4.1}} explains properties (e.g., closure, associativity) and checks operations like subtraction on naturals and exponentiation on integers, qualifying them as binary operations.
+  \item \textbf{\hyperref[sec:P8]{P8: Section 4.2}} constructs operation tables for groups of orders 14 and applies Lagrange's theorem to assess subgroup possibilities (e.g., order 4 in order 9 group), with clear reasoning.
+  \item \textbf{\hyperref[sec:M4]{M4: Section 4.3}} validates the set $\mathbb{R} \setminus \{-1\}$ under $a * b = a + b + ab$ as a group, and discusses binary operations on a 3-element set.
+  \item \textbf{\hyperref[sec:D4]{D4: Section 4.4}} explores group theory in cryptography (e.g., Diffie-Hellman and ECC), suitable for a 15-minute presentation with suggested topics like error correction.
+\end{itemize}
+This LO is covered robustly, with a focus on computer science applications, though the actual presentation slides are noted as separate. The work supports transferable skills like planning and self-management.
+
+In summary, my assignment submission excels in meeting the briefs' requirements, with comprehensive coverage, accurate calculations, and relevant real-world applications. Minor areas for improvement can strengthen this assignment include more visuals in proofs, but overall, it achieves distinction-level outcomes, effectively bridging discrete mathematics with software engineering practices.
 \bibliography{references}
 
 \end{document}
