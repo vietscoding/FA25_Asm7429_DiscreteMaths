@@ -87,8 +87,6 @@
 \onehalfspacing
 % giãn dòng 1.5
 
-\bibliographystyle{agsm}     % định dạng Harvard (có thể thay đổi)
-
 % Đặt kiểu header/footer
 \pagestyle{fancy}
 \fancyhf{} % xóa sạch mặc định
@@ -107,8 +105,12 @@
 \renewcommand{\sectionmark}[1]{%
   \markright{\thesection. #1}} % Cập nhật \rightmark khi có Section mới
 
+% \renewcommand{\cftchappresnum}{Chapter\ }
+% \renewcommand{\cftchappresnum}{Chapter\ }
+% \renewcommand{\cftchapaftersnum}{.}
 
-
+% \renewcommand{\bibname}{References}s
+% \renewcommand{\cftchapfont}{\bfseries}
 \begin{document}
 % Dùng title case cho các chapter và tiêu đề sau chapter (1.1)
 % Không viết hoa: mạo từ (a, an, the), giới từ (in, of,...), liên từ đồng đẳng (and, or, but)
@@ -117,10 +119,43 @@
 % Hiển thị sơ đồ bố cục chi tiết (chỉ chạy một lần để xem)
 %\currentpage
 %\pagedesign
+\makeatletter
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      Chapter~#1\hfil \hb@xt@\@pnumwidth{\hss #2}\par
+    \endgroup
+  \fi}
+\makeatother
+
+\makeatletter
+\def\thebibliography#1{\chapter*{REFERENCES\@mkboth
+{REFERENCES}{REFERENCES}}\list
+{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+\advance\leftmargin\labelsep
+\usecounter{enumi}}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax}
+\makeatother
+
 
 \tableofcontents
+\newpage
+
 \listoffigures          % generates List of Figures
+\newpage
+
 \listoftables           % generates List of Tables
+
 \newpage
 \chapter*{Introduction}
 \markboth{Introduction}{Introduction} % hoặc chỉ markright nếu cần
@@ -178,14 +213,6 @@ For example, if $a=3$, then $\overline{12a} = 123$.
 \end{quote}
 
 According to the requirement above, I need to address problems in this assignment using my ID, which is BD00536. $a$ and $b$ ($a < b$) represents the two largest numbers in my ID, so $a$ = 5 and $b$ = 6.
-
-I will address the issues listed below in the respective subsections in this Section:
-
-\begin{itemize}
-  \item Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.
-  \item Suppose $|A-B|=\overline{3a}$, $|A \cup B|=\overline {11b}$, and $|A \cap B|=\overline{1a}$. Determine $|B|$.
-  \item At a local market, there are $\overline {35b}$ customers. Suppose $\overline {11a}$ have purchased fruits, $\overline {9b}$ have purchased vegetables, $\overline {8a}$ have purchased bakery items, $\overline{4b}$ have purchased both fruits and vegetables, $\overline{3b}$ have purchased both vegetables and bakery items, $\overline{2a}$ have purchased both fruits and bakery items, and $\overline{1a}$ have purchased all three categories. How many customers have not purchased anything?
-\end{itemize}
 
 In the following subsections I will address these issues and along the way use a = 5 and b = 6 as the two largest digits in my ID to demonstrate.
 
@@ -2357,9 +2384,9 @@ The brief emphasizes modeling problems with trees~\hyperref[sec:P3]{(P3)}, using
 \end{itemize}
 This LO is addressed excellently, with visual aids (implied graphs) and real-world relevance (e.g., network routing), fully satisfying the criteria for a distinction-level performance.
 \subsection*{Evaluation of LO3: Investigate Solutions to Problem Situations Using the Application of Boolean Algebra}
-Assignment 2's brief requires diagramming binary problems~\hyperref[P5]{(P5)}, producing truth tables and equations~\hyperref[sec:P6]{(P6)}, simplifying equations~\hyperref[sec:M3]{(M3)}, and designing logic gate systems~\hyperref[sec:D3]{(D3)}.~\hyperref[chap:LO3]{Chapter 3} in my assignment aligns closely:
+Assignment 2's brief requires diagramming binary problems~\hyperref[sec:P5]{(P5)}, producing truth tables and equations~\hyperref[sec:P6]{(P6)}, simplifying equations~\hyperref[sec:M3]{(M3)}, and designing logic gate systems~\hyperref[sec:D3]{(D3)}.~\hyperref[chap:LO3]{Chapter 3} in my assignment aligns closely:
 \begin{itemize}
-  \item \textbf{\hyperref[P5]{P5: Section 3.1}} discusses Boolean algebra in two domains (digital circuit design for voting systems and network security for access control), including diagrams, number representations, and practical applications, as specified.
+  \item \textbf{\hyperref[sec:P5]{P5: Section 3.1}} discusses Boolean algebra in two domains (digital circuit design for voting systems and network security for access control), including diagrams, number representations, and practical applications, as specified.
   \item \textbf{\hyperref[sec:P6]{P6: Section 3.2}} develops truth tables and Boolean equations for given scenarios (e.g., secure facility access and computer login), and generates a table for the expression $xyz + x\overline{y}\overline{z} + \overline{x}y\overline{z} + \overline{x}\overline{y}z$.
   \item \textbf{\hyperref[sec:M3]{M3: Section 3.3}} simplifies four Boolean expressions using algebraic methods, showing step-by-step reductions.
   \item \textbf{\hyperref[sec:D3]{D3: Section 3.4}} designs a logic circuit for detecting BCD digits divisible by 3, identifying the Boolean function and constructing the circuit with AND, OR, and NOT gates.
@@ -2379,8 +2406,9 @@ The brief calls for describing binary operations~\hyperref[sec:P7]{(P7)}, determ
 This LO is covered robustly, with a focus on computer science applications, though the actual presentation slides are noted as separate. The work supports transferable skills like planning and self-management.
 
 In summary, my assignment submission excels in meeting the briefs' requirements, with comprehensive coverage, accurate calculations, and relevant real-world applications. Minor areas for improvement can strengthen this assignment include more visuals in proofs, but overall, it achieves distinction-level outcomes, effectively bridging discrete mathematics with software engineering practices.
+% \bibliography{references}
+\bibliographystyle{agsm}     % định dạng Harvard (có thể thay đổi)
 \bibliography{references}
-
 \end{document}
 
 % Run as following order:
