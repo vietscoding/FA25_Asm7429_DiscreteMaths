@@ -200,23 +200,68 @@ The application of discrete mathematics in software engineering offers significa
 \section{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)}\label{sec:P1}
 % \sectionmark{Perform Algebraic Set Operations in a Formulated Mathematical Problem (P1)} 
 
-In this assignment
-\begin{itemize}
-  \item the symbol $\overline{9b}$ denotes a two-digit natural number,
-  \item the symbol $\overline{12a}$ represents a three-digit natural number.
-\end{itemize}
-
-For example, if $a=3$, then $\overline{12a} = 123$.
-
+\subsection{Overview of Set Theory}
+\subsubsection{Definition of a Set:}
 \begin{quote}
-  \textit{``Let $a < b$ be the largest digits in your student ID. For each student, replace $a$ and $b$ with specific numerical values to obtain the final result\@''.}
+  \textit{A \textbf{set} is an unordered collection of distinct objects, called \textbf{elements} or \textbf{members} of the set~\citep{rosen2019}.}
 \end{quote}
 
-According to the requirement above, I need to address problems in this assignment using my ID, which is BD00536. $a$ and $b$ ($a < b$) represents the two largest numbers in my ID, so $a$ = 5 and $b$ = 6.
+For example:
+\begin{itemize}
+  \item The set $V$ of all vowels in the English alphabet can be written as $V = \{ a,e,i,o,u \}$.
+  \item The set $O$ of odd positive integers less than 10 can be expressed by $O = \{1, 3, 5, 7, 9\}$.
+\end{itemize}
 
-In the following subsections I will address these issues and along the way use a = 5 and b = 6 as the two largest digits in my ID to demonstrate.
+\subsubsection{Notation:}
+\begin{itemize}
+  \item Sets are usually denoted by \textbf{capital letters} (e.g, $A, B, S$)
+  \item Elements in sets are usually denoted by \textbf{lowercase letters} (e.g, $a,b,c$)
+  \item Methods of listing elements in a set:
+  \begin{itemize}
+    \item \textbf{Roster Method}: Listing all elements inside curly braces $\{ \}$. For example, the set $A$ of even positive integers less than 10 is $A = \{ 2,4,6,8 \}$.
+    \item \textbf{Set-Builder Notation}: Defining the elements by a property they share. For example, $B = \{ x \mid x \text{ is an integer and } x > 0 \}$ (read as ``the set of all $x$ such that $x$ is an integer and $x$ is greater than 0'').
+  \end{itemize}
+  \item \textbf{Membership}: The notation $x \in A$ means ``$x$ is an element of $A$''. The notation $x \notin A$ means ``$x$ is not an element of $A$''\@.
+  \item \textbf{Cardinality}: The cardinality of a set $A$, denoted $|A|$, is the number of distinct elements in the set.
+\end{itemize}
+\subsubsection{Special Sets:}
+\begin{itemize}
+  \item \textbf{Empty Set ($\emptyset$ or $\{\}$)}: The set that contains \textbf{no elements}~\citep{rosen2019}.
+  \item \textbf{Universal Set ($U$)}: The set of \textbf{all possible elements} under consideration in a specific context~\citep{rosen2019}.
+  \item \textbf{Subsets}: Set $A$ is a \textbf{subset} of set $B$, denoted $A \subseteq B$, if every element of $A$ is also an element of $B$~\citep{rosen2019}.
+  \item \textbf{Proper Subsets}: $A$ is a \textbf{proper subset} of $B$, denoted $A \subset B$, if $A \subseteq B$ and $A \neq B$~\citep{rosen2019}.
+\end{itemize}
+\subsubsection{Set Operations:}
+Set operations allow us to combine or compare sets to form new sets, some well-known set operations are presented in the Table~\ref{table:setOperations}.
+\begin{table}[h]
+    \centering
+    \caption{Set operations~\citep{rosen2019,epp2020}}\label{table:setOperations}
+    \begin{tabular}{|l|c|l|p{7.7cm}|}
+        \hline
+        \textbf{Operation} & \textbf{Notation} & \textbf{Definition} & \textbf{Description} \\ \hline
+        Union & $A \cup B$ & $\{x \mid x \in A \text{ or } x \in B\}$ & The set containing all elements in either $A$ or $B$ (or both). \\ \hline
+        Intersection & $A \cap B$ & $\{x \mid x \in A \text{ and } x \in B\}$ & The set containing all elements common to both $A$ and $B$. \\ \hline
+        Difference & $A - B$ (or $A \setminus B$) & $\{x \mid x \in A \text{ and } x \notin B\}$ & The set of elements in $A$ that are not in $B$ \\ \hline
+        Complement & $\bar{A}$ (or $A^c$) & $\{x \mid x \in U \text{ and } x \notin A\}$ & The set of elements in the Universal Set $U$ that are not in $A$. (Note: $\bar{A} = U - A$) \\ \hline
+    \end{tabular}
+\end{table}
 
+The~\hyperref[fig:setOperations]{Figure}~\ref{fig:setOperations} shows different Venn diagrams representing the different set operations we discussed.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.70]{./images/setOperations.png}
+  \caption{Venn diagrams for set operations~\citep{rosen2019}}\label{fig:setOperations}
+\end{figure}
+
+\subsection{Applications of Set Theory}
+Set theory is foundational to many areas:
+\begin{enumerate}
+  \item \textbf{Logic}: Sets are used to represent \textbf{truth sets} of propositions~\citep{rosen2019}.
+  \item \textbf{Relations and Functions}: Both are defined in terms of sets and ordered pairs (which are defined using sets). For example, a function $f$ from set $A$ to set $B$ is a subset of the Cartesian product $A \times B$~\citep{rosen2019}.
+  \item \textbf{Counting (Combinatorics)}: The \textbf{Principle of Inclusion-Exclusion} is based on set operations (union and intersection) to count the elements in the union of multiple sets~\citep{rosen2019}.
+  \item \textbf{Computer Science}: Data structures like \textbf{hash tables} and \texttt{linked lists} often implement the abstract concept of a set. Set operations are directly used in \textbf{database queries} (e.g., SQL's \texttt{UNION}, \texttt{INTERSECT}).
+\end{enumerate}
 \subsection{Determine the cardinality of set $A \cup B$}
 \subsubsection*{The Problem:}
 
@@ -224,17 +269,18 @@ In the following subsections I will address these issues and along the way use a
   Let $A$ and $B$ be two non-empty finite sets. Assume that cardinalities of the sets $A$, $B$, and $A \cap B$ are $\overline{9b}$, $\overline{2a}$, and $a + b$, respectively. Determine the cardinality of set $A \cup B$.
 \end{problem}
 
-  To solve this problem, I need to determine the cardinality of the set $A \cup B$, based on the given information about the cardinalities of the sets $A$, $B$, and $A \cap B$.
+  
 
 \subsubsection*{Given:}
+To solve this problem, I need to determine the cardinality of the set $A \cup B$, based on the given data about the cardinalities of the sets $A$, $B$, and $A \cap B$.
 
-  Using \(a = 5\) and \(b = 6\) from my ID (BD00536), the cardinalities are computed as follows:
+Using \(a = 5\) and \(b = 6\) from my ID (BD00536), the cardinalities of $A$, $B$ and $A \cap B$ are computed as follows:
   \begin{itemize}
-    \item The cardinality of set \(A\) is \(\overline{9b} = 96\).
-    \item The cardinality of set \(B\) is \(\overline{2a} = 25\).
-    \item The cardinality of set \(A \cap B\) is \(a + b = 5 + 6 = 11\).
+    \item \( |A| = \overline{9b} = 96\).
+    \item \( |B| = \overline{2a} = 25\).
+    \item \( |A \cap B| = a + b = 5 + 6 = 11\).
   \end{itemize}
-  I need to find the cardinality of the set \(A \cup B\).
+  I need to determine \(|A \cup B|\).
 
 \subsubsection*{Formula:}
   The cardinality of the union of two sets is given by the \textbf{inclusion-exclusion principle}~\citep{rosen2019}:
@@ -244,7 +290,7 @@ In the following subsections I will address these issues and along the way use a
   
 \subsubsection*{Substitution:}
 
-  Substituting the given values into the formula:
+  Substituting the given values into the equation above, we have:
   
 \begin{align*}
   |A \cup B| &= 96 + 25 - 11 \\
@@ -252,7 +298,7 @@ In the following subsections I will address these issues and along the way use a
   &=110
 \end{align*}
   
-  Thus, the cardinality of the set \( A \cup B \) is:
+  Thus, the cardinality of \( A \cup B \) is:
   \[
   |A \cup B| = 110
   \]
@@ -633,6 +679,7 @@ The cardinalities are:
 \]
 \newpage
 \section{Determine the Inverse of a Function Using Appropriate Mathematical Techniques (M1)}\label{sec:M1}
+\subsection{Overview of Functions}
 
 \subsection{Ascertain whether the given functions are invertible}
 
@@ -1252,6 +1299,7 @@ Degrees of all vertices:
 
 \begin{table}[htbp]
 \centering
+\caption{Degree analysis of all vertices in~\hyperref[fig:findHamilton]{$G$}}\label{table:degrees}
 \begin{tabular}{|c|l|c|c|}
 \hline
 Vertex & Edges & $\deg(v)$ & Even? \\ \hline
@@ -1273,7 +1321,6 @@ $e$ & $e$-$d$, $e$-$f$ & 2 & Yes \\
 $f$ & $f$-$e$, $f$-$m$, $f$-$g$ & 3 & No \\ 
 $g$ & $g$-$f$, $g$-$h$ & 2 & Yes \\ \hline
 \end{tabular}
-\caption{Degree analysis of all vertices in~\hyperref[fig:findHamilton]{$G$}}\label{table:degrees}
 \end{table}
 
 Based on the table~\ref{table:degrees}, we have:
@@ -1636,8 +1683,7 @@ The truth table for this expression is as follows:
 
 \begin{table}[h!]
 \centering
-\caption{The truth table for the expression of the Scenario (a)}
-\label{table:truthTableScenarioA}
+\caption{The truth table for the expression of the Scenario (a)}\label{table:truthTableScenarioA}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 $A$ & $P$ & $M$ & $\overline{M}$ & $P \cdot \overline{M}$ & $D=A + (P \cdot \overline{M})$ \\
@@ -1675,8 +1721,7 @@ The truth table for this expression is as follows:
 
 \begin{table}[h!]
 \centering
-\caption{The truth table for the expression of the Scenario (b)}
-\label{table:truthTableScenarioB}
+\caption{The truth table for the expression of the Scenario (b)}\label{table:truthTableScenarioB}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 $U$ & $T$ & $\overline{U}$ & $\overline{T}$ & $U \cdot \overline{T}$ & $(\overline{U} \cdot T) + (U \cdot \overline{T})$ \\
@@ -1719,8 +1764,7 @@ We construct the truth table by evaluating $F(x, y, z) = xyz + x\overline{y}\ove
 
 \begin{table}[h!]
 \centering
-\caption{Truth table for the Boolean expression $F(x, y, z)$}
-\label{table:truthTableFxyz}
+\caption{Truth table for the Boolean expression $F(x, y, z)$}\label{table:truthTableFxyz}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 $x$ & $y$ & $z$ & $\overline{x}$ & $\overline{y}$ & $\overline{z}$ & 
@@ -1953,8 +1997,7 @@ The 4-bit BCD encoding for digits 0--9 is:
 
 \begin{table}[h]
 \centering
-\caption{BCD Representation and Divisibility by 3}
-\label{table:bcdRepresentationAndDivisibilityBy3}
+\caption{BCD Representation and Divisibility by 3}\label{table:bcdRepresentationAndDivisibilityBy3}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 Decimal digit & w & x & y & z & Divisible by 3? \\
